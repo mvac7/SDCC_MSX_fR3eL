@@ -1,0 +1,117 @@
+# MSX fR3eL SDCC Libraries
+
+```
+Authors: mvac7 [mvac7303b@gmail.com]
+         Fubukimaru (Linux Makefiles)
+Architecture: MSX
+Format: C Object (SDCC .rel)
+Programming language: C and Z80 assembler
+```
+
+# WORK IN PROCESS!
+
+## About MSX fR3eL  
+
+This repository compiles all the fR3eL libraries for the development in C language of MSX applications with the SDCC cross compiler.
+
+Most of the libraries use the BIOS of the MSX System, with what is achieved lightness and compatibility but not speed. 
+
+It will not be a problem, for most of the cases where the use is controlled, but if you need to perform tasks that work with large volumes of data (such as dynamic graphics), you may need to program more optimal functions and adapted to your needs.
+
+Unlike other libraries that are more homogeneous, here you can find in some cases several libraries addressing the same task in different ways (as in the case of SPRITES). That is so you can choose the solution that best suits your needs.
+
+You can improve them, cut what you need or transform them to other compilers, for your personal projects or you can share them with the community. 
+
+The main reason that has led me to create this project is learning and to use them in my MSX application development.
+ 
+You can use it freely, but keep in mind that there are better and more complete libraries, such as [Fusion-C](https://github.com/ericb59/Fusion-C-v1.2) by [Eric Boez](https://github.com/ericb59). 
+
+The choice is yours.
+
+mvac7
+
+
+
+## Acknowledgments
+  
+I want to give a special thanks to all those who freely share their knowledge with the MSX developer community.
+
+* Avelino Herrera > [WEB](http://msx.atlantes.org/index_es.html)
+* Nerlaska > [Blog](http://albertodehoyonebot.blogspot.com.es)
+* Marq/Lieves!Tuore > [Marq](http://www.kameli.net/marq/) [Lieves!Tuore](http://www.kameli.net/lt/)
+* [Fubukimaru](https://github.com/Fubukimaru) > [Blog](http://www.gamerachan.org/fubu/)
+* Andrear > [Blog](http://andrear.altervista.org/home/msxsoftware.php)
+* Sapphire/Z80ST > [WEB](http://z80st.auic.es/)
+* Fernando García > [youTube](https://www.youtube.com/user/bitvision)
+* Eric Boez > [gitHub](https://github.com/ericb59)
+* MSX Assembly Page > [WEB](http://map.grauw.nl/resources/msxbios.php)
+* Portar MSX Tech Doc > [WEB](http://nocash.emubase.de/portar.htm)
+* MSX Resource Center > [WEB](http://www.msx.org/)
+* Karoshi MSX Community (RIP 2007-2020)
+* BlueMSX emulator >> [WEB](http://www.bluemsx.com/)
+* OpenMSX emulator >> [WEB](http://openmsx.sourceforge.net/)
+* Meisei emulator >> ?
+
+
+
+## Requirements
+
+* Small Device C Compiler (SDCC) v3.9 http://sdcc.sourceforge.net/
+* Hex2bin v2.5 http://hex2bin.sourceforge.net/ 
+
+
+
+ 
+## List of Libraries
+
+They are divided into three groups, since in some cases they have been developed to work in specific execution environments: ROMs or MSX-DOS.
+
+### To develop MSX ROMs:
+
+- **MSX 8/16K 8000h ROM startup file (CRT)** [(gitHub project)](https://github.com/mvac7/SDCC_startup_MSX816kROM8000)
+- **MSX 8/16K 4000h ROM startup file (CRT)** [(gitHub project)](https://github.com/mvac7/SDCC_startup_MSX816kROM4000)
+- **MSX 32K 4000h ROM startup file (CRT)** [(gitHub project)](https://github.com/mvac7/SDCC_startup_MSX32kROM4000)
+- **Keyboard MSX ROM Library** - _Functions for reading the keyboard of MSX computers._ [(gitHub project)](https://github.com/mvac7/SDCC_KEYBOARD_MSXROM_Lib)
+- **Joystick MSX ROM Library** - _Basic functions for reading Joystick controllers or Cursor Keys._ [(gitHub project)](https://github.com/mvac7/SDCC_JOYSTICK_MSXROM_Lib)
+- **Textmode MSX ROM Library** - _Functions for starting and printing in text modes._ [(gitHub project)](https://github.com/mvac7/SDCC_TEXTMODE_MSXROM_Lib)
+- **VDP TMS9918A MSX ROM Library** - _Basic functions to work with the TMS9918A video processor using the MSX BIOS._ [(gitHub project)](https://github.com/mvac7/SDCC_VDP_TMS9918A_MSXROM_Lib)
+- **SPRITES MSX ROM Library** - _Functions to facilitate the use of Sprites of the TMS9918A._ [(gitHub project)](https://github.com/mvac7/SDCC_VDP_SPRITES_MSXROM_Lib)
+- **SPRITES 12 MSX ROM Library** - _Basic functions for managing Sprites with facilities to work with G3 mode (Screen 4)._ [(gitHub project)](https://github.com/mvac7/SDCC_VDP_SPRITES_12_MSXROM_Lib)
+- **SPRITES Small MSX ROM Library** - _Functions for the initialization of Sprites and the PUTSPRITE function._ [(gitHub project)](https://github.com/mvac7/SDCC_VDP_SPRITES_S_MSXROM_Lib)
+
+
+### To develop MSX-DOS applications (.COM):
+
+- **Keyboard MSX-DOS Library** - _Functions for reading the keyboard of MSX computers._ [(gitHub project)](https://github.com/mvac7/SDCC_KEYBOARD_MSXDOS_Lib)
+- **Joystick MSX-DOS Library** - _Basic functions for reading Joystick controllers or Cursor Keys._ [(gitHub project)](https://github.com/mvac7/SDCC_JOYSTICK_MSXDOS_Lib)
+- **Textmode MSX-DOS Library** - _Functions for starting and printing in text modes._ [(gitHub project)](https://github.com/mvac7/SDCC_TEXTMODE_MSXDOS_Lib)
+
+
+### To develop anything:
+
+- **MSX Z80 Memory Library** - _Basic functions for Z80's memory and page slots/sublots access._ [(gitHub project)](https://github.com/mvac7/SDCC_MEMORY_MSX_Lib)
+- **VDP TMS9918A Library** - _Functions to work with the TMS9918A without using the MSX BIOS._ [(gitHub project)](https://github.com/mvac7/SDCC_VDP_TMS9918A_Lib) 
+- **VDP SPRITES Library** - _Functions to facilitate the use of Sprites of the TMS9918A._ [(gitHub project)](https://github.com/mvac7/SDCC_VDP_SPRITES_Lib)
+- **VDP VPRINT Library** - _Functions Library for display text strings in the graphic modes of the TMS9918A (G1 and G2)._ [(gitHub project)](https://github.com/mvac7/SDCC_VDP_VPRINT_Lib)
+- **String BASICs Library** - _Basic functions for the treatment of Character Arrays in SDCC, similar to those of MSX BASIC._ [(gitHub project)](https://github.com/mvac7/SDCC_STRING_B_Lib)
+- **PSG AY-3-8910 Library** - _Basic functions to work with PSG AY-3-8910 or compatible._ [(gitHub project)](https://github.com/mvac7/SDCC_AY38910_Lib)
+- **PSG AY-3-8910 playFX Library** - _Functions for playing sound effects with the AY-3-8910._ [(gitHub project)](https://github.com/mvac7/SDCC_AY38910_playFX_Lib)
+- **PT3 Player Library for MSX** - _SDCC PT3 Player (Vortex Tracker) Library for MSX._ [(gitHub project)](https://github.com/mvac7/SDCC_PT3player)
+- **WYZ Player Library for MSX** - _SDCC WYZ Tracker Player Library for MSX._ [(gitHub project)](https://github.com/mvac7/SDCC_WYZplayer)
+- **Z80 RLEWB decompress** - _C functions and Z80 Assembler source for decompress RLEWB data encoding._ [(gitHub project)](https://github.com/mvac7/Z80_RLEWB)
+
+
+
+## C libraries for MSX and documentation
+
+- Libraries for SDCC by Avelino Herrera [Link](http://msx.avelinoherrera.com/index_en.html)
+  
+- Libraries for SDCC by Konamiman [Link](https://www.konamiman.com/msx/msx-e.html#sdcc)
+
+- MSXLib for SDCC by Marq [Link](http://www.kameli.net/marq/?page_id=974) --> Get it with svn co svn://www.kameli.net/marq/msxlib
+
+- GFX lib for Hitech-C by Janonne [Link](https://github.com/jannone/msx-gfxlib)
+
+- Fusion-C for SDCC by Eric Boez [Link](https://github.com/ericb59/Fusion-C-v1.2)
+
+- Tutorial práctico de desarrollo de videojuegos para ordenadores MSX (por Frederic García Nieto) [PDF](https://riunet.upv.es/bitstream/handle/10251/145214/Memoria.pdf?sequence=2)
