@@ -1,22 +1,10 @@
 /* =============================================================================
-  SDCC MSX ROM JOYSTICK Functions Library (object type)
-  Version: 1.2
-  Author: mvac7/303bcn
-  Architecture: MSX
-  Format: C Object (SDCC .rel)
-  Programming language: C
-  WEB: 
-  mail: mvac7303b@gmail.com
+  Joystick MSX SDCC Library (fR3eL Project)
+  Version: header v1.2
 
   Description:
     Opensource library with functions to access to joysticks or keyboard 
     cursors keys. 
-    
-  History of versions:
-    v1.2 (11/03/2018) current version
-    v1.1 (03/03/2017) 
-    v1.0 (01/02/2016)
-
 ============================================================================= */
 
 #ifndef __JOYSTICK_H__

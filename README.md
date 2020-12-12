@@ -1,8 +1,12 @@
-# MSX fR3eL SDCC Libraries
+# MSX fR3eL SDCC Libraries Project
 
 ```
-Authors: mvac7 [mvac7303b@gmail.com]
+Authors: 
+         mvac7 [mvac7303b@gmail.com]
          Fubukimaru (Linux Makefiles)
+         Ramones and Adrear (mouse Library)
+         S.V.Bulba, Dioniso, MSXKun and SapphiRe (PT3 Player)
+         WYZ/Iggy Rock (WYZ Player) 
 Architecture: MSX
 Format: C Object (SDCC .rel)
 Programming language: C and Z80 assembler
@@ -10,14 +14,16 @@ Programming language: C and Z80 assembler
 
 # WORK IN PROCESS!
 
-## About MSX fR3eL  
+## About MSX fR3eL Project 
 
 This repository compiles all the fR3eL libraries for the development in C language of MSX applications with the SDCC cross compiler.
 
+It also provides startups (CRTs) and Makefiles for different types of application formats (ROM or MSX-DOS), in a directory structure prepared to start a project.
+
 Most of the libraries use the BIOS of the MSX System, with what is achieved lightness and compatibility but not speed. 
 
-It will not be a problem, for most of the cases where the use is controlled, but if you need to perform tasks that work with large volumes of data (such as dynamic graphics), you may need to program more optimal functions and adapted to your needs.
-
+It will not be a problem, for most of the cases where the use is controlled, but if you need to perform tasks that work with large volumes of data (such as dynamic graphics), you may need to program more optimal functions and adapted to the requirements of your project.
+                                                                                                                                                                                   
 Unlike other libraries that are more homogeneous, here you can find in some cases several libraries addressing the same task in different ways (as in the case of SPRITES). That is so you can choose the solution that best suits your needs.
 
 You can improve them, cut what you need or transform them to other compilers, for your personal projects or you can share them with the community. 
@@ -32,6 +38,13 @@ mvac7
 
 
 
+## Requirements
+
+* Small Device C Compiler (SDCC) v3.9 http://sdcc.sourceforge.net/
+* Hex2bin v2.5 http://hex2bin.sourceforge.net/ 
+
+
+
 ## Acknowledgments
   
 I want to give a special thanks to all those who freely share their knowledge with the MSX developer community.
@@ -41,7 +54,11 @@ I want to give a special thanks to all those who freely share their knowledge wi
 * Marq/Lieves!Tuore > [Marq](http://www.kameli.net/marq/) [Lieves!Tuore](http://www.kameli.net/lt/)
 * [Fubukimaru](https://github.com/Fubukimaru) > [Blog](http://www.gamerachan.org/fubu/)
 * Andrear > [Blog](http://andrear.altervista.org/home/msxsoftware.php)
+* Ramones > [MSXblog](https://www.msxblog.es/tutoriales-de-programacion-en-ensamblador-ramones/)
 * Sapphire/Z80ST > [WEB](http://z80st.auic.es/)
+* S.V.Bulba > [WEB](http://bulba.at.kz)
+* Dioniso > dioniso072@yahoo.es
+* MSXKun/Paxanga soft > [WEB](http://paxangasoft.retroinvaders.com/)
 * Fernando García > [youTube](https://www.youtube.com/user/bitvision)
 * Eric Boez > [gitHub](https://github.com/ericb59)
 * MSX Assembly Page > [WEB](http://map.grauw.nl/resources/msxbios.php)
@@ -51,14 +68,6 @@ I want to give a special thanks to all those who freely share their knowledge wi
 * BlueMSX emulator >> [WEB](http://www.bluemsx.com/)
 * OpenMSX emulator >> [WEB](http://openmsx.sourceforge.net/)
 * Meisei emulator >> ?
-
-
-
-## Requirements
-
-* Small Device C Compiler (SDCC) v3.9 http://sdcc.sourceforge.net/
-* Hex2bin v2.5 http://hex2bin.sourceforge.net/ 
-
 
 
  
@@ -96,6 +105,7 @@ They are divided into three groups, since in some cases they have been developed
 - **String BASICs Library** - _Basic functions for the treatment of Character Arrays in SDCC, similar to those of MSX BASIC._ [(gitHub project)](https://github.com/mvac7/SDCC_STRING_B_Lib)
 - **PSG AY-3-8910 Library** - _Basic functions to work with PSG AY-3-8910 or compatible._ [(gitHub project)](https://github.com/mvac7/SDCC_AY38910_Lib)
 - **PSG AY-3-8910 playFX Library** - _Functions for playing sound effects with the AY-3-8910._ [(gitHub project)](https://github.com/mvac7/SDCC_AY38910_playFX_Lib)
+- **Mouse MSX Library** - _Basic functions for reading mouse controller of MSX computers._ [(gitHub project)](https://github.com/mvac7/SDCC_MOUSE_MSX_Lib) 
 - **PT3 Player Library for MSX** - _SDCC PT3 Player (Vortex Tracker) Library for MSX._ [(gitHub project)](https://github.com/mvac7/SDCC_PT3player)
 - **WYZ Player Library for MSX** - _SDCC WYZ Tracker Player Library for MSX._ [(gitHub project)](https://github.com/mvac7/SDCC_WYZplayer)
 - **Z80 RLEWB decompress** - _C functions and Z80 Assembler source for decompress RLEWB data encoding._ [(gitHub project)](https://github.com/mvac7/Z80_RLEWB)
