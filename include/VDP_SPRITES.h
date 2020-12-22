@@ -1,16 +1,9 @@
 /* ============================================================================= 
-  SDCC MSX ROM SPRITE Functions Library (object type)
-  Version: 1.0
-  Author: mvac7/303bcn
-  Architecture: MSX
-  Format: header (.h)
-  Programming language: C
-  WEB: 
-  mail: mvac7303b@gmail.com                
+  VDP SPRITES MSX SDCC Library (fR3eL Project)          
 ============================================================================= */
 
-#ifndef  __VDP_SPRITE_H__
-#define  __VDP_SPRITE_H__
+#ifndef  __VDP_SPRITES_H__
+#define  __VDP_SPRITES_H__
 
 
 // boolean
@@ -19,25 +12,6 @@
   typedef enum {false = 0, true = 1} boolean;
 #endif
 
-
-
-/* =============================================================================
- SetSpritesSize
- Description: Set size type for the sprites.
- Input:       [char] size: 0=8x8; 1=16x16
- Output:      -
-============================================================================= */
-void SetSpritesSize(char size);
-
-
-
-/* =============================================================================
- SetSpritesZoom
- Description: Set zoom type for the sprites.
- Input:       [boolean] zoom: false/0 = x1; true/1 = x2
- Output:      -
-============================================================================= */
-void SetSpritesZoom(char zoom);
 
 
 

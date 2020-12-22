@@ -1,6 +1,14 @@
-// MSX System Variables v0.9 17/05/2018
-// definitions & texts by MSX Assembly Page
-// http://map.grauw.nl/resources/msxsystemvars.php
+/* ----------------------------------------------------------------------------- 
+MSX System Variables v0.82 26/4/2019
+
+definitions & texts by:
+
+- MSX Assembly Page
+  http://map.grauw.nl/resources/msxsystemvars.php
+  
+- MSX Resource Center (MRC)
+  https://www.msx.org/wiki/System_variables_and_work_area
+----------------------------------------------------------------------------- */
 
 #ifndef  __MSXSYSTEMVARS_H__
 #define  __MSXSYSTEMVARS_H__
@@ -35,7 +43,8 @@
 */
 
 #define MSXVER  0x002D	//1	MSX version number
-/*0 = MSX 1
+/*
+0 = MSX 1
 1 = MSX 2
 2 = MSX 2+
 3 = MSX turbo R
@@ -67,26 +76,27 @@
 #define LINLEN	0xF3B0	//1	Width for the current text mode
 #define CRTCNT	0xF3B1	//1	Number of lines on screen
 #define CLMLST	0xF3B2	//1	Column space. It’s uncertain what this address actually stores
-#define TXTNAM	0xF3B3	//2	BASE(0) - SCREEN 0 name table
-#define TXTCOL	0xF3B5	//2	BASE(1) - SCREEN 0 color table
-#define TXTCGP	0xF3B7	//2	BASE(2) - SCREEN 0 character pattern table
-#define TXTATR	0xF3B9	//2	BASE(3) - SCREEN 0 Sprite Attribute Table
-#define TXTPAT	0xF3BB	//2	BASE(4) - SCREEN 0 Sprite Pattern Table
-#define T32NAM	0xF3B3	//2	BASE(5) - SCREEN 1 name table
-#define T32COL	0xF3B5	//2	BASE(6) - SCREEN 1 color table
-#define T32CGP	0xF3B7	//2	BASE(7) - SCREEN 1 character pattern table
-#define T32ATR	0xF3B9	//2	BASE(8) - SCREEN 1 sprite attribute table
-#define T32PAT	0xF3BB	//2	BASE(9) - SCREEN 1 sprite pattern table
-#define GRPNAM	0xF3B3	//2	BASE(10) - SCREEN 2 name table
-#define GRPCOL	0xF3B5	//2	BASE(11) - SCREEN 2 color table
-#define GRPCGP	0xF3B7	//2	BASE(12) - SCREEN 2 character pattern table
-#define GRPATR	0xF3B9	//2	BASE(13) - SCREEN 2 sprite attribute table
-#define GRPPAT	0xF3BB	//2	BASE(14) - SCREEN 2 sprite pattern table
-#define MLTNAM	0xF3B3	//2	BASE(15) - SCREEN 3 name table
-#define MLTCOL	0xF3B5	//2	BASE(16) - SCREEN 3 color table
-#define MLTCGP	0xF3B7	//2	BASE(17) - SCREEN 3 character pattern table
-#define MLTATR	0xF3B9	//2	BASE(18) - SCREEN 3 sprite attribute table
-#define MLTPAT	0xF3BB	//2	BASE(19) - SCREEN 3 sprite pattern table
+#define TXTNAM	0xF3B3	//2	BASE(0)  - SCREEN 0 name table
+#define TXTCOL	0xF3B5	//2	BASE(1)  - SCREEN 0 color table
+#define TXTCGP	0xF3B7	//2	BASE(2)  - SCREEN 0 character pattern table
+#define TXTATR	0xF3B9	//2	BASE(3)  - SCREEN 0 Sprite Attribute Table
+#define TXTPAT	0xF3BB	//2	BASE(4)  - SCREEN 0 Sprite Pattern Table
+#define T32NAM	0xF3BD	//2	BASE(5)  - SCREEN 1 name table
+#define T32COL	0xF3BF	//2	BASE(6)  - SCREEN 1 color table
+#define T32CGP	0xF3C1	//2	BASE(7)  - SCREEN 1 character pattern table
+#define T32ATR	0xF3C3	//2	BASE(8)  - SCREEN 1 sprite attribute table
+#define T32PAT	0xF3C5	//2	BASE(9)  - SCREEN 1 sprite pattern table
+#define GRPNAM	0xF3C7	//2	BASE(10) - SCREEN 2 name table
+#define GRPCOL	0xF3C9	//2	BASE(11) - SCREEN 2 color table
+#define GRPCGP	0xF3CB	//2	BASE(12) - SCREEN 2 character pattern table
+#define GRPATR	0xF3CD	//2	BASE(13) - SCREEN 2 sprite attribute table
+#define GRPPAT	0xF3CF	//2	BASE(14) - SCREEN 2 sprite pattern table
+#define MLTNAM	0xF3D1	//2	BASE(15) - SCREEN 3 name table
+#define MLTCOL	0xF3D3	//2	BASE(16) - SCREEN 3 color table
+#define MLTCGP	0xF3D5	//2	BASE(17) - SCREEN 3 character pattern table
+#define MLTATR	0xF3D7	//2	BASE(18) - SCREEN 3 sprite attribute table
+#define MLTPAT	0xF3D9	//2	BASE(19) - SCREEN 3 sprite pattern table
+
 #define CLIKSW	0xF3DB	//1	
                         // =0 when key press click disabled
                         // =1 when key press click enabled
@@ -142,42 +152,57 @@
 #define ASPCT2	0xF40D	//2	Horizontal / Vertical aspect for CIRCLE command
 #define ENDPRG	0xF40F	//5	Pointer for the RESUME NEXT command
 #define ERRFLG	0xF414	//1	Basic Error code
-#define LPTPOS	0xF415	//1	Position of the printer head
+#define LPTPOS	 0xF415	//1	Position of the printer head
 //Is read by Basic function LPOS and used by LPRINT Basic command
-#define PRTFLG	0xF416	//1	Printer output flag is read by OUTDO
+#define PRTFLG	 0xF416	//1	Printer output flag is read by OUTDO
 //=0 to print to screen
 //=1 to print to printer
-#define NTMSXP	0xF417	//1	Printer type is read by OUTDO. SCREEN ,,,n writes to this address
+#define NTMSXP	 0xF417	//1	Printer type is read by OUTDO. SCREEN ,,,n writes to this address
 //=0 for MSX printer
 //=1 for non-MSX printer
-#define RAWPRT	0xF418	//1	Raw printer output is read by OUTDO
+#define RAWPRT	 0xF418	//1	Raw printer output is read by OUTDO
 //=0 to convert tabs and unknown characters to spaces and remove graphical headers
 //=1 to send data just like it gets it
-#define VLZADR	0xF419	//2	Address of data that is temporarilly replaced by ‘O’ when Basic function VAL("") is running
-#define VLZDAT	0xF41B	//1	Original value that was in the address pointed to with VLZADR
-#define CURLIN	0xF41C	//2	Line number the Basic interpreter is working on, in direct mode it will be filled with #FFFF
+#define VLZADR	 0xF419	//2	Address of data that is temporarilly replaced by ‘O’ when Basic function VAL("") is running
+#define VLZDAT	 0xF41B	//1	Original value that was in the address pointed to with VLZADR
+#define CURLIN	 0xF41C	//2	Line number the Basic interpreter is working on, in direct mode it will be filled with #FFFF
+
+//Display
+#define NKSTR    0xF87F //(160B) Texts for function keys.
+#define CGPNT    0xF91F //(3B) Location of the character font used to initialise screen. CGPNT = Slot ID / CGPNT+1 = Address
+#define NAMBAS   0xF922 //(2B) Current pattern name table address.
+#define CGPBAS   0xF924 //(2B) Current pattern generator table address.
+#define PATBAS   0xF926 //(2B) Current sprite generator table address.
+#define ATRBAS   0xF928 //(2B) Current sprite attribute table address.
+#define CLOC     0xF92A //(2B) Cursor location.
+#define CMASK    0xF92C //(1B) Graphic cursor mask (SCREEN 2 to 4) or ordinate (SCREEN 5 to 12).
+#define MINDEL   0xF92D //(2B) Work area used by instruction LINE of Basic.
+#define MAXDEL   0xF92F //(2B) End of the work area used by instruction LINE of Basic.
+
+
+
 //#F91F	1	Character set SlotID
 //#F920	2	Character set address
-#define EXBRSA	0xFAF8	//1	Slot address of the SUBROM (EXtended Bios-Rom Slot Address)
+#define EXBRSA	 0xFAF8	//1	Slot address of the SUBROM (EXtended Bios-Rom Slot Address)
 
-#define DRVINF	0xFB21	//(1B)	Nr. of drives connected to disk interface 1
-              //0xFB22	  (1B)	Slot address of disk interface 1
-              //0xFB23	  (1B)	Nr. of drives connected to disk interface 2
-              //0xFB24	  (1B)	Slot address of disk interface 2
-              //0xFB25	  (1B)	Nr. of drives connected to disk interface 3
-              //0xFB26	  (1B)	Slot address of disk interface 3
-              //0xFB27	  (1B)	Nr. of drives connected to disk interface 4
-              //0xFB28	  (1B)	Slot address of disk interface 4
+#define DRVINF	 0xFB21	//1	Nr. of drives connected to disk interface 1
+//#FB22	1	Slot address of disk interface 1
+//#FB23	1	Nr. of drives connected to disk interface 2
+//#FB24	1	Slot address of disk interface 2
+//#FB25	1	Nr. of drives connected to disk interface 3
+//#FB26	1	Slot address of disk interface 3
+//#FB27	1	Nr. of drives connected to disk interface 4
+//#FB28	1	Slot address of disk interface 4
 
-#define EXPTBL	0xFCC1	//(1B)	Slot 0: #80 = expanded, 0 = not expanded. Also slot address of the main BIOS-ROM.
-              //0xFCC2	  (1B)	Slot 1: #80 = expanded, 0 = not expanded.
-              //0xFCC3	  (1B)	Slot 2: #80 = expanded, 0 = not expanded.
-              //0xFCC4	  (1B)	Slot 3: #80 = expanded, 0 = not expanded.
+#define EXPTBL	  0xFCC1	//1	Slot 0: #80 = expanded, 0 = not expanded. Also slot address of the main BIOS-ROM.
+#define EXPTBL1	  0xFCC2	//1	Slot 1: #80 = expanded, 0 = not expanded.
+#define EXPTBL2	  0xFCC3	//1	Slot 2: #80 = expanded, 0 = not expanded.
+#define EXPTBL3	  0xFCC4	//1	Slot 3: #80 = expanded, 0 = not expanded.
 
-#define SLTTBL	  0xFCC5	//(1B)	Mirror of slot 0 secondary slot selection register.
-                //0xFCC6    (1B)	Mirror of slot 1 secondary slot selection register.
-                //0xFCC7    (1B)	Mirror of slot 2 secondary slot selection register.
-                //0xFCC8    (1B)	Mirror of slot 3 secondary slot selection register.
+#define SLTTBL	  0xFCC5	//1	Mirror of slot 0 secondary slot selection register.
+#define SLTTBL1   0xFCC6	//1	Mirror of slot 1 secondary slot selection register.
+#define SLTTBL2   0xFCC7	//1	Mirror of slot 2 secondary slot selection register.
+#define SLTTBL3   0xFCC8	//1	Mirror of slot 3 secondary slot selection register.
 
 #define RG08SAV   0xFFE7    //Content of VDP(09) register (R#08)
 #define RG09SAV   0xFFE8    //Content of VDP(10) register (R#09)
@@ -203,7 +228,7 @@
 //#define 0xFFFD              Temporary stack pointer storage
 
 
-#define SLTSL   0xFFFF //(all slots)	1	Secondary slot select register. Reading returns the inverted previously written value.
+#define SLTSL     0xFFFF //(all slots)	1	Secondary slot select register. Reading returns the inverted previously written value.
 
 
 #endif

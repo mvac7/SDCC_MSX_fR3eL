@@ -54,10 +54,11 @@ I want to give a special thanks to all those who freely share their knowledge wi
 * Marq/Lieves!Tuore > [Marq](http://www.kameli.net/marq/) [Lieves!Tuore](http://www.kameli.net/lt/)
 * [Fubukimaru](https://github.com/Fubukimaru) > [Blog](http://www.gamerachan.org/fubu/)
 * Andrear > [Blog](http://andrear.altervista.org/home/msxsoftware.php)
-* Ramones > [MSXblog](https://www.msxblog.es/tutoriales-de-programacion-en-ensamblador-ramones/)
+* Ramones > [MSXblog](https://www.msxblog.es/tutoriales-de-programacion-en-ensamblador-ramones/) - [MSXbanzai](http://msxbanzai.tni.nl/dev/faq.html)
 * Sapphire/Z80ST > [WEB](http://z80st.auic.es/)
 * S.V.Bulba > [WEB](http://bulba.at.kz)
-* Dioniso > dioniso072@yahoo.es
+* Dioniso
+* Baze > [WEB](http://baze.sk/3sc/misc/z80bits.html)
 * MSXKun/Paxanga soft > [WEB](http://paxangasoft.retroinvaders.com/)
 * Fernando García > [youTube](https://www.youtube.com/user/bitvision)
 * Eric Boez > [gitHub](https://github.com/ericb59)

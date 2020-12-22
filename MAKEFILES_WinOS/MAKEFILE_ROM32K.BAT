@@ -1,13 +1,11 @@
 @echo off
-REM MAKEFILE for 16K ROMs using SDCC compiler
+REM MAKEFILE for 32K ROMs using SDCC compiler
 REM CFILENAME = Source name without extension
 REM ROMFILENAME = ROM file name without extension
-REM ROMSIZE = 2000 for 8KBytes ROM or 4000 for 16KBytes ROM
 SET CFILENAME=sourcename
 SET ROMFILENAME=ROMNAME
-SET CODELOC=0x4020
-SET ROMSIZE=4000
-SET CRT=libs\crt0_MSX816kROM4000.rel
+SET CODELOC=0x4050
+SET CRT=libs\crt0_MSX32kROM4000.rel
 REM add paths from our objects files into LIBn variables
 REM don't erase empty variables
 SET LIB0=
@@ -37,9 +35,9 @@ if not exist build\%CFILENAME%.ihx goto COMPILA
 del build\%CFILENAME%.ihx
 :COMPILA
 echo Compiling...
-sdcc -mz80 -o build\ --code-loc %CODELOC% --data-loc 0xC000 --use-stdout --no-std-crt0 %CRT% %LIB0% %LIB1% %LIB2% %LIB3% %LIB4% %LIB5% %LIB6% %LIB7% %LIB8% %LIB9% %LIB10% %LIB11% %LIB12% src\%CFILENAME%.c
+sdcc -mz80 -o build\ --code-loc %CODELOC% --data-loc 0xC000 --use-stdout --no-std-crt0 %CRT% %LIB0% %LIB1% %LIB2% %LIB3% %LIB4% %LIB5% %LIB6% %LIB7% %LIB8% %LIB9% %LIB10% %LIB11% %LIB12% source\%CFILENAME%.c
 if not exist build\%CFILENAME%.ihx goto SALIDA
-hex2bin -e bin -l %ROMSIZE% build\%CFILENAME%.ihx
+hex2bin -e bin -s 4000 -l 8000 build\%CFILENAME%.ihx
 copy build\%CFILENAME%.bin bin\%ROMFILENAME%.ROM
 pause
 exit /b
