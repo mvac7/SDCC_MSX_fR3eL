@@ -119,10 +119,12 @@ They are divided into three groups, since in some cases they have been developed
   
 - Libraries for SDCC by Konamiman [Link](https://www.konamiman.com/msx/msx-e.html#sdcc)
 
+- Fusion-C for SDCC by Eric Boez [Link](https://github.com/ericb59/Fusion-C-v1.2)
+
 - MSXLib for SDCC by Marq [Link](http://www.kameli.net/marq/?page_id=974) --> Get it with svn co svn://www.kameli.net/marq/msxlib
 
-- GFX lib for Hitech-C by Janonne [Link](https://github.com/jannone/msx-gfxlib)
+- sdcc-msx by Manuel Martinez Torres [Link](https://github.com/MartinezTorres/sdcc_msx)
 
-- Fusion-C for SDCC by Eric Boez [Link](https://github.com/ericb59/Fusion-C-v1.2)
+- GFX lib for Hitech-C by Janonne [Link](https://github.com/jannone/msx-gfxlib)
 
 - Tutorial práctico de desarrollo de videojuegos para ordenadores MSX (por Frederic García Nieto) [PDF](https://riunet.upv.es/bitstream/handle/10251/145214/Memoria.pdf?sequence=2)
