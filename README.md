@@ -30,7 +30,7 @@ You can improve them, cut what you need or transform them to other compilers, fo
 
 The main reason that has led me to create this project is learning and to use them in my MSX application development.
  
-You can use it freely, but keep in mind that there are better and more complete libraries, such as [Fusion-C](https://github.com/ericb59/Fusion-C-v1.2) by [Eric Boez](https://github.com/ericb59). 
+You can use it freely, but keep in mind that there are better and more complete libraries, such as [Fusion-C](https://github.com/ericb59/Fusion-C-v1.2) by [Eric Boez](https://github.com/ericb59) (see section 'C Libraries for MSX'). 
 
 The choice is yours.
 
@@ -113,17 +113,19 @@ They are divided into three groups, since in some cases they have been developed
 
 
 
-## C libraries for MSX and documentation
+## C Libraries for MSX and Documentation
 
 - Libraries for SDCC by Avelino Herrera [Link](http://msx.avelinoherrera.com/index_en.html)
   
 - Libraries for SDCC by Konamiman [Link](https://www.konamiman.com/msx/msx-e.html#sdcc)
 
-- Fusion-C for SDCC by Eric Boez [Link](https://github.com/ericb59/Fusion-C-v1.2)
+- Fusion-C for SDCC by Eric Boez [GitHub](https://github.com/ericb59/Fusion-C-v1.2)
 
 - MSXLib for SDCC by Marq [Link](http://www.kameli.net/marq/?page_id=974) --> Get it with svn co svn://www.kameli.net/marq/msxlib
 
-- sdcc-msx by Manuel Martinez Torres [Link](https://github.com/MartinezTorres/sdcc_msx)
+- sdcc-msx by Manuel Martinez Torres [GitHub](https://github.com/MartinezTorres/sdcc_msx)
+
+- ubox MSX lib for SDCC by Juan J. Martinez [GitHub](https://github.com/reidrac/ubox-msx-lib)
 
 - GFX lib for Hitech-C by Janonne [Link](https://github.com/jannone/msx-gfxlib)
 

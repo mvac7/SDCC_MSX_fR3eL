@@ -35,7 +35,7 @@ if not exist build\%CFILENAME%.ihx goto COMPILA
 del build\%CFILENAME%.ihx
 :COMPILA
 echo Compiling...
-sdcc -mz80 -o build\ --code-loc %CODELOC% --data-loc 0xC000 --use-stdout --no-std-crt0 %CRT% %LIB0% %LIB1% %LIB2% %LIB3% %LIB4% %LIB5% %LIB6% %LIB7% %LIB8% %LIB9% %LIB10% %LIB11% %LIB12% source\%CFILENAME%.c
+sdcc -mz80 -o build\ --code-loc %CODELOC% --data-loc 0xC000 --use-stdout --no-std-crt0 %CRT% %LIB0% %LIB1% %LIB2% %LIB3% %LIB4% %LIB5% %LIB6% %LIB7% %LIB8% %LIB9% %LIB10% %LIB11% %LIB12% src\%CFILENAME%.c
 if not exist build\%CFILENAME%.ihx goto SALIDA
 hex2bin -e bin -s 4000 -l 8000 build\%CFILENAME%.ihx
 copy build\%CFILENAME%.bin bin\%ROMFILENAME%.ROM
