@@ -1,6 +1,6 @@
 /* =============================================================================
   Joystick MSX SDCC Library (fR3eL Project)
-  Version: header v1.2
+  Version: header v1.3
 
   Description:
     Opensource library with functions to access to joysticks or keyboard 
@@ -11,29 +11,37 @@
 #define __JOYSTICK_H__
 
 
+//Joystick type
+#define CURSORKEYS           0
+#define JOYSTICKA            1
+#define JOYSTICKB            2
 
-#define CURSORKEYS  0
-#define JOYA        1
-#define JOYB        2
+//Joystick state
+#define JOYSTICK_INACTIVE    0
+#define JOYSTICK_UP          1
+#define JOYSTICK_UP_RIGHT    2
+#define JOYSTICK_RIGHT       3
+#define JOYSTICK_DOWN_RIGHT  4
+#define JOYSTICK_DOWN        5
+#define JOYSTICK_DOWN_LEFT   6
+#define JOYSTICK_LEFT        7
+#define JOYSTICK_UP_LEFT     8
 
-#define SPACEBAR       0
-#define JOYA_BUTTONA   1
-#define JOYB_BUTTONA   2
-#define JOYA_BUTTONB   3
-#define JOYB_BUTTONB   4
 
-#define INACTIVE    0
-#define UP          1
-#define UP_RIGHT    2
-#define RIGHT       3
-#define DOWN_RIGHT  4
-#define DOWN        5
-#define DOWN_LEFT   6
-#define LEFT        7
-#define UP_LEFT     8
 
-#define UNPRESSED   0
-#define PRESSED    -1
+//Trigger type 
+#define SPACEBAR_BUTTON      0
+#define KEYBOARD_BUTTON      0
+#define JOYSTICKA_BUTTONA    1
+#define JOYSTICKB_BUTTONA    2
+#define JOYSTICKA_BUTTONB    3
+#define JOYSTICKB_BUTTONB    4
+
+//Trigger state
+#define BUTTON_UNPRESSED     0
+#define BUTTON_PRESSED      -1
+
+
 
 
 

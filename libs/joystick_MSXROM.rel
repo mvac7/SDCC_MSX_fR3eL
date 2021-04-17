@@ -1,6 +1,6 @@
 XL2
 H 9 areas 3 global symbols
-M joystick_ROM
+M joystick_MSXROM
 O -mz80
 S .__.ABS. Def0000
 A _CODE size 24 flags 0 addr 0
@@ -23,8 +23,6 @@ R 00 00 00 00
 T 12 00
 R 00 00 00 00
 T 12 00 DD E5 DD 21 00 00 DD 39 DD 7E 04 CD D8 00
-R 00 00 00 00
-T 20 00
 R 00 00 00 00
 T 20 00 6F DD E1 C9
 R 00 00 00 00

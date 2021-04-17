@@ -62,7 +62,7 @@ I want to give a special thanks to all those who freely share their knowledge wi
 * MSXKun/Paxanga soft > [WEB](http://paxangasoft.retroinvaders.com/)
 * Fernando García > [youTube](https://www.youtube.com/user/bitvision)
 * Eric Boez > [gitHub](https://github.com/ericb59)
-* MSX Assembly Page > [WEB](http://map.grauw.nl/resources/msxbios.php)
+* MSX Assembly Page > [WEB](http://map.grauw.nl/)
 * Portar MSX Tech Doc > [WEB](http://nocash.emubase.de/portar.htm)
 * MSX Resource Center > [WEB](http://www.msx.org/)
 * Karoshi MSX Community (RIP 2007-2020)
@@ -86,8 +86,8 @@ They are divided into three groups, since in some cases they have been developed
 - **Textmode MSX ROM Library** - _Functions for starting and printing in text modes._ [(gitHub project)](https://github.com/mvac7/SDCC_TEXTMODE_MSXROM_Lib)
 - **VDP TMS9918A MSX ROM Library** - _Basic functions to work with the TMS9918A video processor using the MSX BIOS._ [(gitHub project)](https://github.com/mvac7/SDCC_VDP_TMS9918A_MSXROM_Lib)
 - **SPRITES MSX ROM Library** - _Functions to facilitate the use of Sprites of the TMS9918A._ [(gitHub project)](https://github.com/mvac7/SDCC_VDP_SPRITES_MSXROM_Lib)
-- **SPRITES 12 MSX ROM Library** - _Basic functions for managing Sprites with facilities to work with G3 mode (Screen 4)._ [(gitHub project)](https://github.com/mvac7/SDCC_VDP_SPRITES_12_MSXROM_Lib)
-- **SPRITES Small MSX ROM Library** - _Functions for the initialization of Sprites and the PUTSPRITE function._ [(gitHub project)](https://github.com/mvac7/SDCC_VDP_SPRITES_S_MSXROM_Lib)
+- **SPRITES 1/2 MSX ROM Library** - _Basic functions for managing Sprites with facilities to work with G3 mode (Screen 4)._ [(gitHub project)](https://github.com/mvac7/SDCC_VDP_SPRITES_12_MSXROM_Lib)
+- **SPRITES Small MSX ROM Library** - _ClearSprites and PUTSPRITE functions._ [(gitHub project)](https://github.com/mvac7/SDCC_VDP_SPRITES_S_MSXROM_Lib)
 
 
 ### To develop MSX-DOS applications (.COM):
@@ -113,7 +113,7 @@ They are divided into three groups, since in some cases they have been developed
 
 
 
-## C Libraries for MSX and Documentation
+## Other C Libraries for MSX
 
 - Libraries for SDCC by Avelino Herrera [Link](http://msx.avelinoherrera.com/index_en.html)
   
@@ -129,4 +129,16 @@ They are divided into three groups, since in some cases they have been developed
 
 - GFX lib for Hitech-C by Janonne [Link](https://github.com/jannone/msx-gfxlib)
 
-- Tutorial práctico de desarrollo de videojuegos para ordenadores MSX (por Frederic García Nieto) [PDF](https://riunet.upv.es/bitstream/handle/10251/145214/Memoria.pdf?sequence=2)
+
+
+## Documentation
+
+- The MSX Red Book > [WEB](https://github.com/gseidler/The-MSX-Red-Book/blob/master/the_msx_red_book.md)
+
+- MSX Assembly Page > [WEB](http://map.grauw.nl/)
+
+- Portar MSX Tech Doc > [WEB](http://nocash.emubase.de/portar.htm)
+
+- MSX Resource Center Developing Wiki [WEB](https://www.msx.org/wiki/#Developing_for_MSX)
+
+- Tutorial práctico de desarrollo de videojuegos para ordenadores MSX (por Frederic García Nieto) > [PDF](https://riunet.upv.es/bitstream/handle/10251/145214/Memoria.pdf?sequence=2)

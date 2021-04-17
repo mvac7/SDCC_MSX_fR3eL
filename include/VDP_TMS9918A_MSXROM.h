@@ -1,5 +1,5 @@
 /* =============================================================================
-  VDP TMS9918A MSX SDCC Library (fR3eL Project)
+  VDP TMS9918A MSX ROM SDCC Library (fR3eL Project)
 ============================================================================= */
 #ifndef  __VDP_TMS9918A_H__
 #define  __VDP_TMS9918A_H__
@@ -82,6 +82,14 @@
 
 
 
+// boolean
+#ifndef _BOOLEAN
+#define _BOOLEAN
+  typedef enum {false = 0, true = 1} boolean;
+#endif
+
+
+
 
 /* =============================================================================
  SCREEN
@@ -89,8 +97,7 @@
  Input      : [char] number of screen mode
  Output     : -
 ============================================================================= */
-extern void SCREEN(char);
-
+void SCREEN(char mode);
 
 
 
@@ -100,55 +107,29 @@ extern void SCREEN(char);
  Input:       [char] size: 0=8x8; 1=16x16
  Output:      -
 ============================================================================= */ 
-extern void SetSpritesSize(char);
-
+void SetSpritesSize(char size);
 
 
 
 /* =============================================================================
  SetSpritesZoom
  Description: Set zoom type for the sprites.
- Input:       [char] zoom: 0 = x1; 1 = x2
+ Input:       [char] zoom: false/0 = x1; true/1 = x2
  Output:      -
 ============================================================================= */
-extern void SetSpritesZoom(char);
-
-
-
-/* =============================================================================
- CLS 
- Description: 
-             Clear Screen. Fill in 0, all Name Table.
- Input:       -
- Output:      -
-============================================================================= */
-extern void CLS();
-
-
-
-
-/* =============================================================================
- ClearSprites
- Description: 
-             Initialises the sprite attribute table. 
-             The vertical location of the sprite is set to 209.
- Input:       -
- Output:      -
-============================================================================= */
-extern void ClearSprites();
-
+void SetSpritesZoom(boolean zoom);
 
 
 
 /* =============================================================================
  COLOR
- Description: Specifies the foreground and background colors. 
- Input      : [char] ink color                 <<<< Not used. BIOS version only.
+ Description: Specifies the ink, foreground and background colors. 
+ Input      : [char] ink color
               [char] background color
               [char] border color
  Output     : -     
 ============================================================================= */
-extern void COLOR(char, char, char);
+void COLOR(char ink, char background, char border);
 
 
 
@@ -159,7 +140,7 @@ extern void COLOR(char, char, char);
               [char] value
  Output     : - 
 ============================================================================= */
-extern void VPOKE(unsigned int, char);
+void VPOKE(unsigned int vaddr, char value);
 
 
 
@@ -169,7 +150,7 @@ extern void VPOKE(unsigned int, char);
  Input      : [unsigned int] VRAM address
  Output     : [char] value
 ============================================================================= */ 
-extern char VPEEK(unsigned int);
+char VPEEK(unsigned int vaddr);
 
 
 
@@ -181,7 +162,7 @@ extern char VPEEK(unsigned int);
               [char] Value to fill.
  Output     : - 
 ============================================================================= */
-extern void FillVRAM(unsigned int, unsigned int, char);
+void FillVRAM(unsigned int vaddr, unsigned int length, char value);
 
 
 
@@ -193,7 +174,7 @@ extern void FillVRAM(unsigned int, unsigned int, char);
               [unsigned int] blocklength
  Output     : - 
 ============================================================================= */
-extern void CopyToVRAM(unsigned int, unsigned int, unsigned int);
+void CopyToVRAM(unsigned int addr, unsigned int vaddr, unsigned int length);
 
 
 
@@ -205,7 +186,7 @@ extern void CopyToVRAM(unsigned int, unsigned int, unsigned int);
               [unsigned int] blocklength
  Output     : -             
 ============================================================================= */
-extern void CopyFromVRAM(unsigned int, unsigned int, unsigned int);
+void CopyFromVRAM(unsigned int vaddr, unsigned int addr, unsigned int length);
 
 
 
@@ -216,7 +197,7 @@ extern void CopyFromVRAM(unsigned int, unsigned int, unsigned int);
               [char] value
  Output     : -             
 ============================================================================= */
-extern void SetVDP(char, char);
+void SetVDP(char reg, char value);
 
 
 
