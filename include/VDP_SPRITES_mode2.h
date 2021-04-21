@@ -1,5 +1,5 @@
 /* ============================================================================= 
-  VDP SPRITES MSX SDCC Library (fR3eL Project)          
+  VDP SPRITES mode 2 MSX SDCC Library (fR3eL Project)          
 ============================================================================= */
 
 #ifndef  __VDP_SPRITES_H__

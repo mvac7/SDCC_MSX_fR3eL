@@ -133,12 +133,9 @@ They are divided into three groups, since in some cases they have been developed
 
 ## Documentation
 
-- The MSX Red Book > [WEB](https://github.com/gseidler/The-MSX-Red-Book/blob/master/the_msx_red_book.md)
-
-- MSX Assembly Page > [WEB](http://map.grauw.nl/)
-
-- Portar MSX Tech Doc > [WEB](http://nocash.emubase.de/portar.htm)
-
-- MSX Resource Center Developing Wiki [WEB](https://www.msx.org/wiki/#Developing_for_MSX)
-
-- Tutorial práctico de desarrollo de videojuegos para ordenadores MSX (por Frederic García Nieto) > [PDF](https://riunet.upv.es/bitstream/handle/10251/145214/Memoria.pdf?sequence=2)
+* [MSX2 Technical Handbook](https://konamiman.github.io/MSX2-Technical-Handbook/)
+* [The MSX Red Book](https://github.com/gseidler/The-MSX-Red-Book/blob/master/the_msx_red_book.md)
+* [MSX Assembly Page](http://map.grauw.nl/)
+* [Portar MSX Tech Doc](http://nocash.emubase.de/portar.htm)
+* MSX Resource Center [Developing Wiki](https://www.msx.org/wiki/#Developing_for_MSX)
+* Tutorial práctico de desarrollo de videojuegos para ordenadores MSX (por Frederic García Nieto) > [PDF](https://riunet.upv.es/bitstream/handle/10251/145214/Memoria.pdf?sequence=2)
