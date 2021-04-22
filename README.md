@@ -85,10 +85,10 @@ They are divided into three groups, since in some cases they have been developed
 - **Joystick MSX ROM Library** - _Basic functions for reading Joystick controllers or Cursor Keys._ [(gitHub project)](https://github.com/mvac7/SDCC_JOYSTICK_MSXROM_Lib)
 - **Textmode MSX ROM Library** - _Functions for starting and printing in text modes._ [(gitHub project)](https://github.com/mvac7/SDCC_TEXTMODE_MSXROM_Lib)
 - **VDP TMS9918A MSX ROM Library** - _Basic functions to work with the TMS9918A video processor using the MSX BIOS._ [(gitHub project)](https://github.com/mvac7/SDCC_VDP_TMS9918A_MSXROM_Lib)
-- **SPRITES MSX ROM Library** - _Functions to facilitate the use of Sprites of the TMS9918A._ [(gitHub project)](https://github.com/mvac7/SDCC_VDP_SPRITES_MSXROM_Lib)
-- **SPRITES 1/2 MSX ROM Library** - _Basic functions for managing Sprites with facilities to work with G3 mode (Screen 4)._ [(gitHub project)](https://github.com/mvac7/SDCC_VDP_SPRITES_12_MSXROM_Lib)
-- **SPRITES Small MSX ROM Library** - _ClearSprites and PUTSPRITE functions._ [(gitHub project)](https://github.com/mvac7/SDCC_VDP_SPRITES_S_MSXROM_Lib)
-
+- **VDP SPRITES MSX ROM Library** - _Functions to facilitate the use of Sprites of the TMS9918A._ [(gitHub project)](https://github.com/mvac7/SDCC_VDP_SPRITES_MSXROM_Lib)
+- **VDP SPRITES mode 1/2 MSX ROM Library** - _Basic functions for managing Sprites with facilities to work with G3 mode (Screen 4)._ [(gitHub project)](https://github.com/mvac7/SDCC_VDP_SPRITES_12_MSXROM_Lib)
+- **VDP SPRITES Small MSX ROM Library** - _ClearSprites and PUTSPRITE functions._ [(gitHub project)](https://github.com/mvac7/SDCC_VDP_SPRITES_S_MSXROM_Lib)
+- **VDP SPRITES mode 2 MSX ROM SDCC Library** - _Library with functions to display mode 2 sprites in V9938 graphics mode 3_ [(gitHub project)](https://github.com/mvac7/SDCC_VDP_SPRITES_mode2_MSXROM_Lib)
 
 ### To develop MSX-DOS applications (.COM):
 
