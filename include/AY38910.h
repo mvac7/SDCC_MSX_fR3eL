@@ -1,12 +1,10 @@
 /* =============================================================================
-   AY38910.h
-   SDCC AY-3-8910 Functions Library (object type)                                                             
-   Author: mvac7/303bcn
+   PSG AY-3-8910 MSX SDCC Library (fR3eL Project)
+   Version: 1.5 (09/05/2020)
+   Author: mvac7
    Architecture: MSX
    Format: C Object (SDCC .rel)
-   Programming language: C
-   WEB: 
-   mail: mvac7303b@gmail.com
+   Programming language: C and Z80 assembler
    
    Description:                                                              
      Opensource library for acces to PSG AY-3-8910
@@ -29,29 +27,38 @@
 
 
 //envelope shapes
-#define ENV_LowerBeat      0 
-#define ENV_Upper          4 
-#define ENV_LeftSaw        8
-#define ENV_LowerTriangle 10 
-#define ENV_LowerHold     11 
-#define ENV_RightSaw      12
-#define ENV_UpperHold     13
-#define ENV_UpperTriangle 14 
+#define AY_ENV_LowerBeat      1  //(0, 1, 2 and 3)<-- reserve 0 for musical applications that want to use it so as not to trigger the envelope
+#define AY_ENV_Upper          4 
+#define AY_ENV_LeftSaw        8
+#define AY_ENV_LowerTriangle 10 
+#define AY_ENV_LowerHold     11 
+#define AY_ENV_RightSaw      12
+#define AY_ENV_UpperHold     13
+#define AY_ENV_UpperTriangle 14 
  
 
 
 //AY registers
-#define AY_ToneA 0  //Channel A Tone Period (12 bits)
-#define AY_ToneB 2  //Channel B Tone Period (12 bits)
-#define AY_ToneC 4  //Channel C Tone Period (12 bits)
-#define AY_Noise 6  //Noise Period (5 bits)
-#define AY_Mixer 7  //Mixer
-#define AY_AmplA 8  //Channel Volume A (4 bits + B5 active Envelope)
-#define AY_AmplB 9  //Channel Volume B (4 bits + B5 active Envelope)
-#define AY_AmplC 10 //Channel Volume C (4 bits + B5 active Envelope)
-#define AY_Env   11 //Envelope Period (12 bits)
-#define AY_EnvTp 13 //Envelope Type
+#define AY_ToneA      0 //Channel A Tone Period (12 bits)
+#define AY_ToneB      2 //Channel B Tone Period (12 bits)
+#define AY_ToneC      4 //Channel C Tone Period (12 bits)
+#define AY_Noise      6 //Noise Period (5 bits)
+#define AY_Mixer      7 //Mixer
+#define AY_AmpA       8 //Channel Volume A (4 bits + B5 active Envelope)
+#define AY_AmpB       9 //Channel Volume B (4 bits + B5 active Envelope)
+#define AY_AmpC      10 //Channel Volume C (4 bits + B5 active Envelope)
+#define AY_EnvPeriod 11 //Envelope Period (12 bits)
+#define AY_EnvShape  13 //Envelope Shape
 
+
+// AY channels
+#define AY_Channel_A 0
+#define AY_Channel_B 1
+#define AY_Channel_C 2
+
+
+
+extern boolean isAYextern;  // true/1 = Extern AY  Else Intern AY
 
 
 
