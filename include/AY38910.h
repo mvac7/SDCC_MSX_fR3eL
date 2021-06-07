@@ -27,8 +27,8 @@
 
 
 //envelope shapes
-#define AY_ENV_LowerBeat      1  //(0, 1, 2 and 3)<-- reserve 0 for musical applications that want to use it so as not to trigger the envelope
-#define AY_ENV_Upper          4 
+#define AY_ENV_LowerBeat      1  //(0,1,2,3 and 9)<-- 0 can be useful in case you need to control when the envelope is triggered
+#define AY_ENV_Upper          4  //(4,5,6,7 and 15)
 #define AY_ENV_LeftSaw        8
 #define AY_ENV_LowerTriangle 10 
 #define AY_ENV_LowerHold     11 
