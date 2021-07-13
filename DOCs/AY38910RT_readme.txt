@@ -1,4 +1,4 @@
-PSG AY-3-8910 MSX SDCC Library (fR3eL Project)
+PSG AY-3-8910 RT MSX SDCC Library (fR3eL Project)
 Version: v1.5
 Date: 09/05/2021
 Author: mvac7
@@ -10,6 +10,10 @@ Project WEB: https://github.com/mvac7/SDCC_AY38910_Lib
 
 --------------------------------------------------------------------------------    
 History of versions:
+
+- v1.6 (07/06/2021) 
+    + fixes problem with reading the registers in the external AY 
+      from MEGAFLASHROM SCC++
 
 - v1.5 (09/05/2021) 
     + External AY    
@@ -58,8 +62,8 @@ Index:
 --------------------------------------------------------------------------------
 1. Introduction:
 
-This project is an opensource library (object type), with basic functions for 
-work with PSG AY-3-8910 or compatible. 
+This project is an opensource library functions for access to internal or 
+external MSX PSG AY-3-8910 in Real Time.  
 
 Designed for developing MSX applications using Small Device C Compiler (SDCC).
   
@@ -75,9 +79,9 @@ sound parameters of the AY.
 It allows to use the internal PSG of the MSX or an external one 
 (like the one incorporated in the MEGAFLASHROM SCC +).
 
-In the header file there is a definition of boolean type, need for the functions.
-This type uses the values "true" or "false" in lowercase, which equals 1 and 0 
-respectively.
+In the header file there is a definition of boolean type, needed for the 
+functions. This type uses the values "true" or "false" in lowercase, which 
+equals 1 and 0 respectively.
 
 Include definitions to improve the readability of your programs.
 
@@ -148,13 +152,14 @@ with the MSX developer community.
   * AY_EnvTp = 13 ---> Envelope Type
   
   
+
 4.2 Envelope shapes
 
   The header file defines envelope shapes in case you prefer to use it instead 
   of the numerical form:
  
-  * AY_ENV_LowerBeat     = 1 
-  * AY_ENV_Upper         = 4 
+  * AY_ENV_LowerBeat     = 1
+  * AY_ENV_Upper         = 4
   * AY_ENV_LeftSaw       = 8
   * AY_ENV_LowerTriangle = 10 
   * AY_ENV_LowerHold     = 11 
@@ -162,10 +167,13 @@ with the MSX developer community.
   * AY_ENV_UpperHold     = 13
   * AY_ENV_UpperTriangle = 14
 
-Attention! The LowerBeat form is produced with the values: 0, 1, 2 and 3. 
-The value 1 has been assigned, since 0 can be useful in cases where it is 
-required to have control of when the envelope is fired (every time is written 
-to register 13, the sound with the assigned shape is started).
+Attention! The LowerBeat shape may be produced with the values: 0,1,2,3 and 9. 
+The value 1 has been assigned to LowerBeat as 0 can be useful in case you need
+to control when the envelope is triggered. In this case 0 can act as a "don't
+write the envelop" event. Remember that, every time the register 13 is written,
+the sound with the assigned shape is started.
+
+The Upper shape may be produced with the values: 4,5,6,7 and 15.
 
 
 

@@ -1,19 +1,20 @@
 /* =============================================================================
-   PSG AY-3-8910 MSX SDCC Library (fR3eL Project)
-   Version: 1.5 (09/05/2020)
+   PSG AY-3-8910 RT MSX SDCC Library (fR3eL Project)
    Author: mvac7
    Architecture: MSX
    Format: C Object (SDCC .rel)
    Programming language: C and Z80 assembler
    
    Description:                                                              
-     Opensource library for acces to PSG AY-3-8910
+     Opensource library for access to internal or external MSX PSG AY-3-8910 
+     in Real Time.
+     
      It does not use the BIOS so it can be used to program ROMs or 
      MSX-DOS executables. 
 ============================================================================= */
 
-#ifndef  __AY38910_H__
-#define  __AY38910_H__
+#ifndef  __AY38910RT_H__
+#define  __AY38910RT_H__
 
 
 

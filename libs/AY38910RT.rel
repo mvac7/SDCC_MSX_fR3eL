@@ -1,6 +1,6 @@
 XL2
 H 9 areas C global symbols
-M AY38910
+M AY38910RT
 O -mz80
 S __divuint Ref0000
 S .__.ABS. Def0000
