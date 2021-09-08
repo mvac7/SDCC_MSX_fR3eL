@@ -74,11 +74,12 @@ I also want to thank everyone who selflessly shares information and code, as the
 * Guillaume "Aoineko" Blanchard > [(gitHub)](https://github.com/aoineko-fr)
 * MSX Assembly Page > [(WEB)](http://map.grauw.nl/)
 * Portar MSX Tech Doc > [(WEB)](http://nocash.emubase.de/portar.htm)
-* MSX Resource Center > [Wiki](https://www.msx.org/wiki/)
-* Karoshi MSX Community (RIP 2007-2020)
+* MSX Resource Center [Development Wiki](https://www.msx.org/wiki/#Developing_for_MSX)
+* Karoshi MSX Community > [(WEB)](http://karoshi.auic.es/)
 * BlueMSX emulator >> [(WEB)](http://www.bluemsx.com/)
 * OpenMSX emulator >> [(WEB)](http://openmsx.sourceforge.net/)
-* WebMSX emulator >> [(gitHub)](https://github.com/ppeccin/webmsx)
+* [WebMSX](https://webmsx.org/) emulator by Paulo A. Peccin >> [(gitHub)](https://github.com/ppeccin/webmsx)
+* fMSX emulator by Marat Fayzullin [WEB](https://fms.komkon.org/fMSX/)
 * Meisei emulator >> ?
 
 
@@ -149,7 +150,7 @@ The [AY38910BF](https://github.com/mvac7/SDCC_AY38910BF_Lib), [PT3player](https:
 * **RetroDeluxe Game Engine** (SDCC) _by Retro DeLuxe_ [gitHub](https://github.com/retrodeluxe/rlengine-msx)
 * **MSXLib** (SDCC) _by Marq_ [Link](http://www.kameli.net/marq/?page_id=974) --> Get it with svn co svn://www.kameli.net/marq/msxlib
 * **sdcc-msx** _by Manuel Martinez Torres_ [gitHub](https://github.com/MartinezTorres/sdcc_msx)
-* **ubox MSX lib** (SDCC) _by Juan J. Martinez_ [gitHub](https://github.com/reidrac/ubox-msx-lib)
+* **ubox MSX lib** (SDCC) _by Juan J. Martinez_ [gitHub](https://gitlab.com/reidrac/ubox-msx-lib)
 * **GFX lib** (Hitech-C) _by Janonne_ [Link](https://github.com/jannone/msx-gfxlib)
 
 <br/>
@@ -166,6 +167,18 @@ The [AY38910BF](https://github.com/mvac7/SDCC_AY38910BF_Lib), [PT3player](https:
 * [WYZtoSDCCobj Converter Tool](https://github.com/mvac7/mSXdevtools_WYZtoSDCCobj) - WYZ to C Object Converter Tool for WYZ Player MSX SDCC Library
 * [PT3toCdata Converter Tool](https://github.com/mvac7/mSXdevtools_PT3toCdata) - Vortex PT3 to C data Converter Tool.
 
+
+<br/>
+
+## MSX Free Emulators
+
+* OpenMSX emulator >> [(WEB)](http://openmsx.sourceforge.net/)
+* BlueMSX emulator >> [(WEB)](http://www.bluemsx.com/)
+* [WebMSX](https://webmsx.org/) emulator by Paulo A. Peccin >> [(gitHub)](https://github.com/ppeccin/webmsx)
+* fMSX by Marat Fayzullin [WEB](https://fms.komkon.org/fMSX/)
+* Meisei emulator >> ?
+
+
 <br/>
 
 ## Documentation
@@ -174,5 +187,5 @@ The [AY38910BF](https://github.com/mvac7/SDCC_AY38910BF_Lib), [PT3player](https:
 * [The MSX Red Book](https://github.com/gseidler/The-MSX-Red-Book/blob/master/the_msx_red_book.md)
 * [MSX Assembly Page](http://map.grauw.nl/)
 * [Portar MSX Tech Doc](http://nocash.emubase.de/portar.htm)
-* MSX Resource Center [Sevelopment Wiki](https://www.msx.org/wiki/#Developing_for_MSX)
+* MSX Resource Center [Development Wiki](https://www.msx.org/wiki/#Developing_for_MSX)
 * Tutorial práctico de desarrollo de videojuegos para ordenadores MSX (por Frederic García Nieto) > [PDF](https://riunet.upv.es/bitstream/handle/10251/145214/Memoria.pdf?sequence=2)
