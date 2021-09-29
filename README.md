@@ -90,42 +90,42 @@ They are divided into three groups, since in some cases they have been developed
 
 ### To develop MSX ROMs:
 
-- **MSX 8/16K 8000h ROM startup file (CRT)** [(gitHub project)](https://github.com/mvac7/SDCC_startup_MSX816kROM8000)
-- **MSX 8/16K 4000h ROM startup file (CRT)** [(gitHub project)](https://github.com/mvac7/SDCC_startup_MSX816kROM4000)
-- **MSX 32K 4000h ROM startup file (CRT)** [(gitHub project)](https://github.com/mvac7/SDCC_startup_MSX32kROM4000)
-- **Keyboard MSX ROM Library** - _Functions for reading the keyboard of MSX computers._ [(gitHub project)](https://github.com/mvac7/SDCC_KEYBOARD_MSXROM_Lib)
-- **Joystick MSX ROM Library** - _Basic functions for reading Joystick controllers or Cursor Keys._ [(gitHub project)](https://github.com/mvac7/SDCC_JOYSTICK_MSXROM_Lib)
-- **Textmode MSX ROM Library** - _Functions for starting and printing in text modes._ [(gitHub project)](https://github.com/mvac7/SDCC_TEXTMODE_MSXROM_Lib)
-- **VDP TMS9918A MSX ROM Library** - _Basic functions to work with the TMS9918A video processor using the MSX BIOS._ [(gitHub project)](https://github.com/mvac7/SDCC_VDP_TMS9918A_MSXROM_Lib)
-- **VDP SPRITES MSX ROM Library** - _Functions to facilitate the use of Sprites of the TMS9918A._ [(gitHub project)](https://github.com/mvac7/SDCC_VDP_SPRITES_MSXROM_Lib)
-- **VDP SPRITES mode 1/2 MSX ROM Library** - _Basic functions for managing Sprites with facilities to work with G3 mode (Screen 4)._ [(gitHub project)](https://github.com/mvac7/SDCC_VDP_SPRITES_12_MSXROM_Lib)
-- **VDP SPRITES Small MSX ROM Library** - _ClearSprites and PUTSPRITE functions._ [(gitHub project)](https://github.com/mvac7/SDCC_VDP_SPRITES_S_MSXROM_Lib)
-- **VDP SPRITES mode 2 MSX ROM SDCC Library** - _Library with functions to display mode 2 sprites in V9938 graphics mode 3_ [(gitHub project)](https://github.com/mvac7/SDCC_VDP_SPRITES_mode2_MSXROM_Lib)
+- `MSX 8/16K 8000h ROM startup file (CRT)` [`Project`](https://github.com/mvac7/SDCC_startup_MSX816kROM8000)
+- `MSX 8/16K 4000h ROM startup file (CRT)` [`Project`](https://github.com/mvac7/SDCC_startup_MSX816kROM4000)
+- `MSX 32K 4000h ROM startup file (CRT)` [`Project`](https://github.com/mvac7/SDCC_startup_MSX32kROM4000)
+- `Keyboard MSX ROM Library` - _Functions for reading the keyboard of MSX computers._ [`Project`](https://github.com/mvac7/SDCC_KEYBOARD_MSXROM_Lib)
+- `Joystick MSX ROM Library` - _Basic functions for reading Joystick controllers or Cursor Keys._ [`Project`](https://github.com/mvac7/SDCC_JOYSTICK_MSXROM_Lib)
+- `Textmode MSX ROM Library` - _Functions for starting and printing in text modes._ [`Project`](https://github.com/mvac7/SDCC_TEXTMODE_MSXROM_Lib)
+- `VDP TMS9918A MSX ROM Library` - _Basic functions to work with the TMS9918A video processor using the MSX BIOS._ [`Project`](https://github.com/mvac7/SDCC_VDP_TMS9918A_MSXROM_Lib)
+- `VDP SPRITES MSX ROM Library` - _Functions to facilitate the use of Sprites of the TMS9918A._ [`Project`](https://github.com/mvac7/SDCC_VDP_SPRITES_MSXROM_Lib)
+- `VDP SPRITES mode 1/2 MSX ROM Library` - _Basic functions for managing Sprites with facilities to work with G3 mode (Screen 4)._ [`Project`](https://github.com/mvac7/SDCC_VDP_SPRITES_12_MSXROM_Lib)
+- `VDP SPRITES Small MSX ROM Library` - _ClearSprites and PUTSPRITE functions._ [`Project`](https://github.com/mvac7/SDCC_VDP_SPRITES_S_MSXROM_Lib)
+- `VDP SPRITES mode 2 MSX ROM SDCC Library` - _Library with functions to display mode 2 sprites in V9938 graphics mode 3_ [`Project`](https://github.com/mvac7/SDCC_VDP_SPRITES_mode2_MSXROM_Lib)
 
 
 ### To develop MSX-DOS applications (.COM):
 
-- **Keyboard MSX-DOS Library** - _Functions for reading the keyboard of MSX computers._ [(gitHub project)](https://github.com/mvac7/SDCC_KEYBOARD_MSXDOS_Lib)
-- **Joystick MSX-DOS Library** - _Basic functions for reading Joystick controllers or Cursor Keys._ [(gitHub project)](https://github.com/mvac7/SDCC_JOYSTICK_MSXDOS_Lib)
-- **Textmode MSX-DOS Library** - _Functions for starting and printing in text modes._ [(gitHub project)](https://github.com/mvac7/SDCC_TEXTMODE_MSXDOS_Lib)
+- `Keyboard MSX-DOS Library` - _Functions for reading the keyboard of MSX computers._ [`Project`](https://github.com/mvac7/SDCC_KEYBOARD_MSXDOS_Lib)
+- `Joystick MSX-DOS Library` - _Basic functions for reading Joystick controllers or Cursor Keys._ [`Project`](https://github.com/mvac7/SDCC_JOYSTICK_MSXDOS_Lib)
+- `Textmode MSX-DOS Library` - _Functions for starting and printing in text modes._ [`Project`](https://github.com/mvac7/SDCC_TEXTMODE_MSXDOS_Lib)
 
 
 ### To develop anything:
 
-- **Z80 Memory MSX Library** - _Basic functions for Z80's memory and page slots/sublots access._ [(gitHub project)](https://github.com/mvac7/SDCC_MEMORY_MSX_Lib)
-- **Z80 Interrupt M1 Hooks MSX Library** - _Control over the hooks (TIMI and KEYI) of the ISR of the MSX System for the M1 interrupt of the Z80_ [(gitHub project)](https://github.com/mvac7/SDCC_interruptM1_Hooks)
-- **VDP TMS9918A Library** - _Functions to work with the TMS9918A without using the MSX BIOS._ [(Prj)](https://github.com/mvac7/SDCC_VDP_TMS9918A_Lib) - [`DOC`](https://github.com/mvac7/SDCC_VDP_PRINT_Lib/blob/master//HOWTO.md) 
-- **VDP SPRITES Library** - _Functions to facilitate the use of Sprites of the TMS9918A._ [(gitHub)](https://github.com/mvac7/SDCC_VDP_SPRITES_Lib)
-- `VDP PRINT Library v1.3` _Functions Library for display text strings in the graphic modes of the TMS9918A (G1 and G2)._ [(gitHub project)](https://github.com/mvac7/SDCC_VDP_PRINT_Lib)
-- **String BASICs Library** - _Basic functions for the treatment of Character Arrays in SDCC, similar to those of MSX BASIC._ [(gitHub project)](https://github.com/mvac7/SDCC_STRING_B_Lib)
-- **PSG AY-3-8910 RT Library** - _Basic functions to work with PSG AY-3-8910 or compatible._ [(gitHub project)](https://github.com/mvac7/SDCC_AY38910RT_Lib)
-- **PSG AY-3-8910 playFX Library** - _Functions for playing sound effects with the AY-3-8910._ [(gitHub project)](https://github.com/mvac7/SDCC_AY38910_playFX_Lib)
-- **PSG AY-3-8910 BF Library** - _Library to access the internal or external PSG AY-3-8910 through a Buffer._ [(gitHub project)](https://github.com/mvac7/SDCC_AY38910BF_Lib)
-- **PSG ayFX Player Library** - _Play ayFX effects for the PSG AY-3-8910 (requires AY38910BF library)_ [(gitHub project)](https://github.com/mvac7/SDCC_ayFXplayer)
-- **PT3 Player Library for MSX** - _SDCC PT3 Player (Vortex Tracker) Library for MSX (requires AY38910BF library)_ [(gitHub project)](https://github.com/mvac7/SDCC_PT3player)
-- **WYZ Player Library for MSX** - _SDCC WYZ Tracker Player Library for MSX._ [(gitHub project)](https://github.com/mvac7/SDCC_WYZplayer)
-- **Mouse MSX Library** - _Basic functions for reading mouse controller of MSX computers._ [(gitHub project)](https://github.com/mvac7/SDCC_MOUSE_MSX_Lib) 
-- **Z80 RLEWB decompress** - _C functions and Z80 Assembler source for decompress RLEWB data encoding._ [(gitHub project)](https://github.com/mvac7/Z80_RLEWB)
+- `Z80 Memory MSX Library` - _Basic functions for Z80's memory and page slots/sublots access._ [`Project`](https://github.com/mvac7/SDCC_MEMORY_MSX_Lib)
+- `Z80 Interrupt M1 Hooks MSX Library` - _Control over the hooks (TIMI and KEYI) of the ISR of the MSX System for the M1 interrupt of the Z80_ [`Project`](https://github.com/mvac7/SDCC_interruptM1_Hooks) - [`DOC`](https://github.com/mvac7/SDCC_interruptM1_Hooks/blob/main/HOWTO.md)
+- `VDP TMS9918A Library` - _Functions to work with the TMS9918A without using the MSX BIOS._ [`Project`](https://github.com/mvac7/SDCC_VDP_TMS9918A_Lib)  
+- `VDP SPRITES Library` - _Functions to facilitate the use of Sprites of the TMS9918A._ [`Project`](https://github.com/mvac7/SDCC_VDP_SPRITES_Lib)
+- `VDP PRINT Library v1.3` _Functions Library for display text strings in the graphic modes of the TMS9918A (G1 and G2)._ [`Project`](https://github.com/mvac7/SDCC_VDP_PRINT_Lib) - [`DOC`](https://github.com/mvac7/SDCC_VDP_PRINT_Lib/blob/master//HOWTO.md)
+- `String BASICs Library` - _Basic functions for the treatment of Character Arrays in SDCC, similar to those of MSX BASIC._ [`Project`](https://github.com/mvac7/SDCC_STRING_B_Lib)
+- `PSG AY-3-8910 RT Library` - _Basic functions to work with PSG AY-3-8910 or compatible._ [`Project`](https://github.com/mvac7/SDCC_AY38910RT_Lib) - [`DOC`](https://github.com/mvac7/SDCC_AY38910RT_Lib/blob/master/HOWTO.md)
+- `PSG AY-3-8910 playFX Library` - _Functions for playing sound effects with the AY-3-8910._ [`Project`](https://github.com/mvac7/SDCC_AY38910_playFX_Lib)
+- `PSG AY-3-8910 BF Library` - _Library to access the internal or external PSG AY-3-8910 through a Buffer._ [`Project`](https://github.com/mvac7/SDCC_AY38910BF_Lib)
+- `PSG ayFX Player Library` - _Play ayFX effects for the PSG AY-3-8910 (requires AY38910BF library)_ [`Project`](https://github.com/mvac7/SDCC_ayFXplayer)
+- `PT3 Player Library for MSX` - _SDCC PT3 Player (Vortex Tracker) Library for MSX (requires AY38910BF library)_ [`Project`](https://github.com/mvac7/SDCC_PT3player)
+- `WYZ Player Library for MSX` - _SDCC WYZ Tracker Player Library for MSX._ [`Project`](https://github.com/mvac7/SDCC_WYZplayer)
+- `Mouse MSX Library` - _Basic functions for reading mouse controller of MSX computers._ [`Project`](https://github.com/mvac7/SDCC_MOUSE_MSX_Lib) 
+- `Z80 RLEWB decompress` - _C functions and Z80 Assembler source for decompress RLEWB data encoding._ [`Project`](https://github.com/mvac7/Z80_RLEWB)
 
 
 ## AY Sound System
