@@ -104,7 +104,7 @@ They are divided into three groups, since in some cases they have been developed
 
 ### To develop MSX-DOS applications (.COM):
 
-- **Keyboard MSX-DOS Library** - _Functions for reading the keyboard of MSX computers._ [`Project`](https://github.com/mvac7/SDCC_KEYBOARD_MSXDOS_Lib)
+- **Keyboard MSX-DOS Library** - _Functions for reading the keyboard of MSX computers._ [`Project`](https://github.com/mvac7/SDCC_KEYBOARD_MSXDOS_Lib) - [`DOC`](https://github.com/mvac7/SDCC_KEYBOARD_MSXDOS_Lib/blob/master/docs/HOWTO.md)
 - **Joystick MSX-DOS Library** - _Basic functions for reading Joystick controllers or Cursor Keys._ [`Project`](https://github.com/mvac7/SDCC_JOYSTICK_MSXDOS_Lib)
 - **Textmode MSX-DOS Library** - _Functions for starting and printing in text modes._ [`Project`](https://github.com/mvac7/SDCC_TEXTMODE_MSXDOS_Lib)
 
