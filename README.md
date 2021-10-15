@@ -1,22 +1,28 @@
 # MSX fR3eL SDCC Libraries Project
 
-```
-Authors: 
-         mvac7
-         Fubukimaru (Linux Makefiles)
-         Ramones and Adrear (mouse Library)
-         S.V.Bulba, Dioniso, MSXKun and SapphiRe (PT3 Player)
-         SapphiRe (ayFX Player)
-         WYZ (WYZ Player) 
-Architecture: MSX
-Format: C Object (SDCC .rel)
-Programming language: C and Z80 assembler
-```
+---
 
+#### Authors: 
+- mvac7 (Ugly Code Writer)
+- Fubukimaru (Linux Makefiles and documentation fixes)
+- Ramones and Adrear (mouse Library)
+- S.V.Bulba (PT3 Player) 
+- Dioniso (PT3 Player MSX adaptation), 
+- MSXKun (PT3 Player improvements) 
+- SapphiRe (ayFX Player and PT3 Player improvements)
+- WYZ (WYZ Player)
+ 
+#### Architecture: MSX
+
+#### Format: C Object (SDCC .rel)
+
+#### Programming language: C and Z80 assembler
+
+---
 
 # WORK IN PROCESS!
 
-
+---
 
 ## About MSX fR3eL Project 
 
@@ -40,14 +46,18 @@ The choice is yours.
 
 mvac7
 
+<br/>
 
+---
 
 ## Requirements
 
 - Small Device C Compiler (SDCC) v4.1 > http://sdcc.sourceforge.net/
 - Hex2bin v2.5 http://hex2bin.sourceforge.net/ 
 
+<br/>
 
+---
 
 ## Acknowledgments
   
@@ -82,6 +92,9 @@ I also want to thank everyone who selflessly shares information and code, as the
 - fMSX emulator by Marat Fayzullin [`WEB`](https://fms.komkon.org/fMSX/)
 - Meisei emulator by Hap >> `?`
 
+<br/>
+
+---
  
 ## List of Libraries
 
@@ -92,7 +105,7 @@ They are divided into three groups, since in some cases they have been developed
 - **MSX 8/16K 8000h ROM startup file (CRT)** [`Project`](https://github.com/mvac7/SDCC_startup_MSX816kROM8000)
 - **MSX 8/16K 4000h ROM startup file (CRT)** [`Project`](https://github.com/mvac7/SDCC_startup_MSX816kROM4000)
 - **MSX 32K 4000h ROM startup file (CRT)** [`Project`](https://github.com/mvac7/SDCC_startup_MSX32kROM4000)
-- **Keyboard MSX ROM Library** - _Functions for reading the keyboard of MSX computers._ [`Project`](https://github.com/mvac7/SDCC_KEYBOARD_MSXROM_Lib)
+- **Keyboard MSX ROM Library** - _Functions for reading the keyboard of MSX computers._ [`Project`](https://github.com/mvac7/SDCC_KEYBOARD_MSXROM_Lib) - [`DOC`](https://github.com/mvac7/SDCC_KEYBOARD_MSXROM_Lib/blob/master/docs/HOWTO.md)
 - **Joystick MSX ROM Library** - _Basic functions for reading Joystick controllers or Cursor Keys._ [`Project`](https://github.com/mvac7/SDCC_JOYSTICK_MSXROM_Lib)
 - **Textmode MSX ROM Library** - _Functions for starting and printing in text modes._ [`Project`](https://github.com/mvac7/SDCC_TEXTMODE_MSXROM_Lib)
 - **VDP TMS9918A MSX ROM Library** - _Basic functions to work with the TMS9918A video processor using the MSX BIOS._ [`Project`](https://github.com/mvac7/SDCC_VDP_TMS9918A_MSXROM_Lib)
@@ -126,14 +139,15 @@ They are divided into three groups, since in some cases they have been developed
 - **Mouse MSX Library** - _Basic functions for reading mouse controller of MSX computers._ [`Project`](https://github.com/mvac7/SDCC_MOUSE_MSX_Lib) 
 - **Z80 RLEWB decompress** - _C functions and Z80 Assembler source for decompress RLEWB data encoding._ [`Project`](https://github.com/mvac7/Z80_RLEWB)
 
+<br/>
+
+---
 
 ## AY Sound System
 
 The [`AY38910BF`](https://github.com/mvac7/SDCC_AY38910BF_Lib), [`PT3player`](https://github.com/mvac7/SDCC_AY38910BF_Lib) and [`ayFXplayer`](https://github.com/mvac7/SDCC_ayFXplayer) libraries are designed to work together, so you will have a system to provide music and effects in game development.
 
 ![AY Sound System](https://raw.githubusercontent.com/mvac7/SDCC_AY38910BF_Lib/master/doc/AYlibs.png)
-
-
 
 <br/>
 
