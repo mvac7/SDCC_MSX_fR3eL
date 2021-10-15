@@ -22,6 +22,14 @@
 
 # WORK IN PROCESS!
 
+This project is not finished and I cannot guarantee its completion.
+
+There are no libraries for disk access (MSX-DOS).
+
+There are no libraries for hardware like the superior VDPs (V9938 or V9958), or PSGs like the SCC, FM, ...
+
+The project is alive, so it may undergo changes. 
+
 ---
 
 ## About MSX fR3eL Project 
@@ -40,7 +48,7 @@ You can improve them, cut what you need or transform them to other compilers, fo
 
 The main reason that has led me to create this project is learning and to use them in my MSX application development.
  
-You can use it freely, but keep in mind that there are better and more complete libraries, such as [`Fusion-C`](https://github.com/ericb59/Fusion-C-v1.2) by [Eric Boez](https://github.com/ericb59) (see section 'C Libraries for MSX'). 
+You can use it freely, but keep in mind that there are better and more complete libraries, such as [`Fusion-C`](https://github.com/ericb59/Fusion-C-v1.2) by [Eric Boez](https://github.com/ericb59) (See section ['C Libraries or Engines for MSX'](#C-Libraries-or-Engines-for-MSX)). 
 
 The choice is yours.
 
@@ -61,7 +69,8 @@ mvac7
 
 ## Acknowledgments
   
-I want to thank everyone who has contributed directly or indirectly to this project in any way. 
+I want to thank everyone who has contributed directly or indirectly to this project in any way.
+ 
 I also want to thank everyone who selflessly shares information and code, as they contribute to continued development and extend the life of retro platforms.
 
 - Avelino Herrera > [`WEB`](http://msx.avelinoherrera.com/index_es.html)
