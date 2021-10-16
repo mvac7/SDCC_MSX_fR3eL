@@ -2,10 +2,16 @@
 
 ---
 
-#### Authors: 
-- mvac7 (Ugly Code Writer)
+#### Authors:
+
+This project has been developed mainly by mvac7, but includes code and ideas contributed by numerous developers who share their knowledge with the MSX community.
+I add here a list of people who have participated directly or indirectly, in recognition of their work.
+ 
+- mvac7 (Code Writer)
+- Avelino Herrera (Knowledge)
 - Fubukimaru (Linux Makefiles and documentation fixes)
-- Ramones and Adrear (mouse Library)
+- Ramones (Mouse Library) 
+- AndreaR (Mouse Library SDCC adaptation and Knowledge)
 - S.V.Bulba (PT3 Player) 
 - Dioniso (PT3 Player MSX adaptation), 
 - MSXKun (PT3 Player improvements) 
@@ -17,6 +23,8 @@
 #### Format: C Object (SDCC .rel)
 
 #### Programming language: C and Z80 assembler
+
+<br/>
 
 ---
 
@@ -60,25 +68,23 @@ mvac7
 
 ## Requirements
 
-- Small Device C Compiler (SDCC) v4.1 > http://sdcc.sourceforge.net/
-- Hex2bin v2.5 http://hex2bin.sourceforge.net/ 
+- [Small Device C Compiler (SDCC) v4.1](http://sdcc.sourceforge.net/)
+- [Hex2bin v2.5](http://hex2bin.sourceforge.net/)
 
 <br/>
 
 ---
 
 ## Acknowledgments
-  
-I want to thank everyone who has contributed directly or indirectly to this project in any way.
  
-I also want to thank everyone who selflessly shares information and code, as they contribute to continued development and extend the life of retro platforms.
+I want to give a special thanks everyone who selflessly shares information and code, as they contribute to continued development and extend the life of retro platforms.
 
 - Avelino Herrera > [`WEB`](http://msx.avelinoherrera.com/index_es.html)
 - Nerlaska > [`Blog`](http://albertodehoyonebot.blogspot.com.es)
 - Marq/Lieves!Tuore > [`Marq`](http://www.kameli.net/marq/) [`Lieves!Tuore`](http://www.kameli.net/lt/)
 - MSXKun/Paxanga soft > [`WEB`](http://paxangasoft.retroinvaders.com/)
 - Fubukimaru [`gitHub`](https://github.com/Fubukimaru)
-- Andrear > [`Blog`](http://andrear.altervista.org/home/msxsoftware.php)
+- AndreaR > [`Blog`](http://andrear.altervista.org/home/msxsoftware.php)
 - Sapphire/Z80ST > [`WEB`](http://z80st.auic.es/)
 - Fernando García > [`Video Tutorial`](http://www.z80st.es/cursos/bitvision-assembler)
 - Ramones > [`MSXblog`](https://www.msxblog.es/tutoriales-de-programacion-en-ensamblador-ramones/) - [`MSXbanzai`](http://msxbanzai.tni.nl/dev/faq.html)
@@ -91,6 +97,7 @@ I also want to thank everyone who selflessly shares information and code, as the
 - Néstor Sancho (theNestruo) [`gitHub`](https://github.com/theNestruo) 
 - Baze > [`WEB`](http://baze.sk/3sc/misc/z80bits.html)
 - Guillaume "Aoineko" Blanchard > [`gitHub`](https://github.com/aoineko-fr)
+- Konamiman [`gitHub`](https://github.com/Konamiman) [`WEB`](https://www.konamiman.com/msx/msx-e.html)
 - MSX Assembly Page > [`WEB`](http://map.grauw.nl/resources/msxbios.php)
 - Portar MSX Tech Doc > [`WEB`](https://problemkaputt.de/portar.htm)
 - MSX Resource Center > [`WEB`](https://www.msx.org)
@@ -164,7 +171,7 @@ The [`AY38910BF`](https://github.com/mvac7/SDCC_AY38910BF_Lib), [`PT3player`](ht
 
 # Development resources
 
-## C Libraries or Engines for MSX
+## C libraries or Engines for MSX cross development
 
 - **Libraries for SDCC** _by Avelino Herrera_ [`WEB`](http://msx.avelinoherrera.com/index_en.html)  
 - **Libraries for SDCC** _by Konamiman_ [`WEB`](https://www.konamiman.com/msx/msx-e.html#sdcc)
@@ -181,7 +188,8 @@ The [`AY38910BF`](https://github.com/mvac7/SDCC_AY38910BF_Lib), [`PT3player`](ht
 
 - [`nMSXtiles`](https://github.com/pipagerardo/nMSXtiles) - Tiles and Sprites Editor for MSX in SC2 and SC4 graphic mode - By Pentacour and PipaGerardo
 - [`png2msx`](https://github.com/pipagerardo/png2msx) - Tools for graphics and data in MSX. - By PipaGerardo
-- [`PCXTOOLS`](https://github.com/theNestruo/pcxtools) - MSX cross-development command line tools PNG2MSX, PNG2SPR[+] and TMX2BIN - 
+- [`PCXTOOLS`](https://github.com/theNestruo/pcxtools) - MSX cross-development command line tools PNG2MSX, PNG2SPR[+] and TMX2BIN
+- [`IMG2SPR`](http://andrear.altervista.org/home/msxsoftware.php) Sprite generator utility By AndreaR. 
 - [`MSX Pixel Tools`](https://github.com/reidrac/msx-pixel-tools) - Convert PNG images into sprites and tilesets to be used by the MSX in screen 2 mode - By Juan J. Martínez (reidrac)
 - [`CMSXbin`](https://github.com/aoineko-fr/CMSXbin) - Convert binary to text file - By Guillaume "Aoineko" Blanchard
 - [`CMSXimg`](https://github.com/aoineko-fr/CMSXimg) - Command line tool to create images table to add to MSX programs (C/ASM/Bin) - By Guillaume "Aoineko" Blanchard
@@ -192,7 +200,7 @@ The [`AY38910BF`](https://github.com/mvac7/SDCC_AY38910BF_Lib), [`PT3player`](ht
 
 <br/>
 
-## MSX Free Emulators
+## MSX Emulators
 
 - OpenMSX emulator >> [`WEB`](http://openmsx.sourceforge.net/)
 - BlueMSX emulator >> [`WEB`](http://www.bluemsx.com/)
