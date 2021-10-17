@@ -141,7 +141,7 @@ They are divided into three groups, since in some cases they have been developed
 ### To develop anything:
 
 - **Z80 Memory MSX Library** - _Basic functions for Z80's memory and page slots/sublots access._ [`Project`](https://github.com/mvac7/SDCC_MEMORY_MSX_Lib) - [`DOC`](https://github.com/mvac7/SDCC_MEMORY_MSX_Lib/blob/master/docs/HOWTO.md)
-- **Z80 Interrupt M1 Hooks MSX Library** - _Control over the hooks (TIMI and KEYI) of the ISR of the MSX System for the M1 interrupt of the Z80_ [`Project`](https://github.com/mvac7/SDCC_interruptM1_Hooks) - [`DOC`](https://github.com/mvac7/SDCC_interruptM1_Hooks/blob/main/HOWTO.md)
+- **Z80 Interrupt M1 Hooks MSX Library** - _Control over the hooks (TIMI and KEYI) of the ISR of the MSX System for the M1 interrupt of the Z80_ [`Project`](https://github.com/mvac7/SDCC_interruptM1_Hooks) - [`DOC`](https://github.com/mvac7/SDCC_interruptM1_Hooks_Lib/blob/main/docs/HOWTO.md)
 - **VDP TMS9918A Library** - _Functions to work with the TMS9918A without using the MSX BIOS._ [`Project`](https://github.com/mvac7/SDCC_VDP_TMS9918A_Lib)  
 - **VDP SPRITES Library** - _Functions to facilitate the use of Sprites of the TMS9918A._ [`Project`](https://github.com/mvac7/SDCC_VDP_SPRITES_Lib)
 - **VDP PRINT Library v1.3** _Functions Library for display text strings in the graphic modes of the TMS9918A (G1 and G2)._ [`Project`](https://github.com/mvac7/SDCC_VDP_PRINT_Lib) - [`DOC`](https://github.com/mvac7/SDCC_VDP_PRINT_Lib/blob/master/docs/HOWTO.md)
@@ -163,7 +163,7 @@ They are divided into three groups, since in some cases they have been developed
 
 The [`AY38910BF`](https://github.com/mvac7/SDCC_AY38910BF_Lib), [`PT3player`](https://github.com/mvac7/SDCC_AY38910BF_Lib) and [`ayFXplayer`](https://github.com/mvac7/SDCC_ayFXplayer) libraries are designed to work together, so you will have a system to provide music and effects in game development.
 
-![AY Sound System](https://raw.githubusercontent.com/mvac7/SDCC_AY38910BF_Lib/master/doc/AYlibs.png)
+![AY Sound System](https://raw.githubusercontent.com/mvac7/SDCC_AY38910BF_Lib/master/docs/AYlibs.png)
 
 <br/>
 
