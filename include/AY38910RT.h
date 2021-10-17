@@ -18,10 +18,13 @@
 
 
 
-// boolean
-#ifndef _BOOLEAN
-#define _BOOLEAN
-  typedef enum {false = 0, true = 1} boolean;
+//#ifndef _BOOLEAN
+//#define _BOOLEAN
+//  typedef enum {false = 0, true = 1} boolean;
+//#endif
+#ifndef _SWITCHER
+#define _SWITCHER
+  typedef enum {OFF = 0, ON = 1} SWITCHER;
 #endif
 
 
@@ -39,7 +42,8 @@
  
 
 
-//AY registers
+#ifndef AY_REGISTERS
+#define AY_REGISTERS
 #define AY_ToneA      0 //Channel A Tone Period (12 bits)
 #define AY_ToneB      2 //Channel B Tone Period (12 bits)
 #define AY_ToneC      4 //Channel C Tone Period (12 bits)
@@ -48,8 +52,10 @@
 #define AY_AmpA       8 //Channel Volume A (4 bits + B5 active Envelope)
 #define AY_AmpB       9 //Channel Volume B (4 bits + B5 active Envelope)
 #define AY_AmpC      10 //Channel Volume C (4 bits + B5 active Envelope)
-#define AY_EnvPeriod 11 //Envelope Period (12 bits)
+#define AY_EnvPeriod 11 //Envelope Period (16 bits)
 #define AY_EnvShape  13 //Envelope Shape
+#endif
+
 
 
 // AY channels
@@ -58,8 +64,12 @@
 #define AY_Channel_C 2
 
 
+// AY type 
+#define AY_INTERNAL 0
+#define AY_EXTERNAL 1
 
-extern boolean isAYextern;  // true/1 = Extern AY  Else Intern AY
+
+extern char AY_TYPE;      // 1 = External AY  Else Internal AY
 
 
 
@@ -137,11 +147,11 @@ void SetVolume(char channel, char volume);
 
  Function : Mixer. Enable/disable Tone and Noise channels.
  Input    : [char] channel (0, 1 or 2)
-            [boolean] tone state
-            [boolean] noise state
+            [SWITCHER] tone state (ON=1;OFF=0)
+            [SWITCHER] noise state (ON=1;OFF=0)
  Output   : -
 ============================================================================= */
-void SetChannel(char channel, boolean isTone, boolean isNoise);
+void SetChannel(char channel, SWITCHER isTone, SWITCHER isNoise);
 
 
 
