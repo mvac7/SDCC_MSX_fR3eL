@@ -1,5 +1,7 @@
 # MSX fR3eL SDCC Libraries Project
 
+![title logo](https://github.com/mvac7/SDCC_MSX_fR3eL/blob/main/GFX/logos/fR3eL_m_328x104.png)
+
 ---
 
 #### Authors:
@@ -173,14 +175,15 @@ The [`AY38910BF`](https://github.com/mvac7/SDCC_AY38910BF_Lib), [`PT3player`](ht
 
 ## C libraries or Engines for MSX cross development
 
-- **Libraries for SDCC** _by Avelino Herrera_ [`WEB`](http://msx.avelinoherrera.com/index_en.html)  
-- **Libraries for SDCC** _by Konamiman_ [`WEB`](https://www.konamiman.com/msx/msx-e.html#sdcc)
-- **Fusion-C** (SDCC) _by Eric Boez_ [`gitHub`](https://github.com/ericb59/Fusion-C-v1.2)
-- **RetroDeluxe Game Engine** (SDCC) _by Retro DeLuxe_ [`gitHub`](https://github.com/retrodeluxe/rlengine-msx)
-- **MSXLib** (SDCC) _by Marq_ [`WEB`](http://www.kameli.net/marq/?page_id=974) --> Get it with svn co svn://www.kameli.net/marq/msxlib
-- **sdcc-msx** _by Manuel Martinez Torres_ [`gitHub`](https://github.com/MartinezTorres/sdcc_msx)
-- **ubox MSX lib** (SDCC) _by Juan J. Martinez_ [`gitHub`](https://gitlab.com/reidrac/ubox-msx-lib)
-- **GFX lib** (Hitech-C) _by Janonne_ [`gitHub`](https://github.com/jannone/msx-gfxlib)
+- **Libraries for SDCC** `SDCC` _by Avelino Herrera_ [`WEB`](http://msx.avelinoherrera.com/index_en.html)  
+- **Libraries for SDCC** `SDCC` _by Konamiman_ [`WEB`](https://www.konamiman.com/msx/msx-e.html#sdcc)
+- **Fusion-C** `SDCC` _by Eric Boez_ [`gitHub`](https://github.com/ericb59/Fusion-C-v1.2)
+- **RetroDeluxe Game Engine** `SDCC` _by Retro DeLuxe_ [`gitHub`](https://github.com/retrodeluxe/rlengine-msx)
+- **libmsx** `SDCC` _by Daishi Mori (mori0091)_ [`gitHub`](https://github.com/mori0091/libmsx)
+- **MSXLib** `SDCC` _by Marq_ [`WEB`](http://www.kameli.net/marq/?page_id=974) --> Get it with svn co svn://www.kameli.net/marq/msxlib
+- **sdcc-msx** `SDCC` _by Manuel Martinez Torres_ [`gitHub`](https://github.com/MartinezTorres/sdcc_msx)
+- **ubox MSX lib** `SDCC` _by Juan J. Martinez_ [`gitHub`](https://gitlab.com/reidrac/ubox-msx-lib)
+- **GFX lib** `Hitech-C` _by Janonne_ [`gitHub`](https://github.com/jannone/msx-gfxlib)
 
 <br/>
 
