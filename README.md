@@ -173,7 +173,7 @@ The [`AY38910BF`](https://github.com/mvac7/SDCC_AY38910BF_Lib), [`PT3player`](ht
 
 # Development resources
 
-## C libraries or Engines for MSX cross development
+## Libraries or Engines for MSX Cross-Platform Development in C
 
 - **Libraries for SDCC** `SDCC` _by Avelino Herrera_ [`WEB`](http://msx.avelinoherrera.com/index_en.html)  
 - **Libraries for SDCC** `SDCC` _by Konamiman_ [`WEB`](https://www.konamiman.com/msx/msx-e.html#sdcc)
@@ -183,6 +183,7 @@ The [`AY38910BF`](https://github.com/mvac7/SDCC_AY38910BF_Lib), [`PT3player`](ht
 - **MSXLib** `SDCC` _by Marq_ [`WEB`](http://www.kameli.net/marq/?page_id=974) --> Get it with svn co svn://www.kameli.net/marq/msxlib
 - **sdcc-msx** `SDCC` _by Manuel Martinez Torres_ [`gitHub`](https://github.com/MartinezTorres/sdcc_msx)
 - **ubox MSX lib** `SDCC` _by Juan J. Martinez_ [`gitHub`](https://gitlab.com/reidrac/ubox-msx-lib)
+- **MSXgl** `SDCC` _by Aoineko_ [`gitHub`](https://github.com/aoineko-fr/MSXgl) The MSX Game Library in C language
 - **GFX lib** `Hitech-C` _by Janonne_ [`gitHub`](https://github.com/jannone/msx-gfxlib)
 
 <br/>
@@ -219,6 +220,6 @@ The [`AY38910BF`](https://github.com/mvac7/SDCC_AY38910BF_Lib), [`PT3player`](ht
 - [MSX2 Technical Handbook](https://konamiman.github.io/MSX2-Technical-Handbook/)
 - [The MSX Red Book](https://github.com/gseidler/The-MSX-Red-Book/blob/master/the_msx_red_book.md)
 - [MSX Assembly Page](http://map.grauw.nl/)
-- [Portar MSX Tech Doc](http://nocash.emubase.de/portar.htm)
+- [Portar MSX Tech Doc](https://problemkaputt.de/portar.htm)
 - MSX Resource Center [Development Wiki](https://www.msx.org/wiki/#Developing_for_MSX)
 - Tutorial práctico de desarrollo de videojuegos para ordenadores MSX (por Frederic García Nieto) > [PDF](https://riunet.upv.es/bitstream/handle/10251/145214/Memoria.pdf?sequence=2)
