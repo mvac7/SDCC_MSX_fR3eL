@@ -1,14 +1,14 @@
 /* =============================================================================
-                                                                           
-unRLEWBtoRAM                                                                
+ unRLEWBtoRAM                                                                      
+ Function : Decompress RLEWB data to RAM
 
- WB RLE  v1.0
+  
+ CD = Control Digit = $80
 
- $80 nn dd            ; run of n consecutive identical bytes ($1>$FE), value dd
- $80 $0               ; for one $80 value
- $80 $FF              ; end of data block
- <any other value>    ; raw data                                                               
-
+ CD + $0         --> for one $80 value
+ CD + $FF        --> end of data block
+ CD + nn + dd    --> repeat nn ($1-$FE)+1 dd value
+ dd (!= CD)      --> raw data                                                               
 ============================================================================= */
 #ifndef  __UNWBRLE2RAM_H__
 #define  __UNWBRLE2RAM_H__
@@ -22,7 +22,7 @@ unRLEWBtoRAM
             [unsigned int] target RAM address       
  Output   : -                        
 ============================================================================= */
-extern void unRLEWBtoRAM (unsigned int, unsigned int);
+void unRLEWBtoRAM (unsigned int, unsigned int);
 
 
 

@@ -1,37 +1,42 @@
-/* =============================================================================
-                                                                           
-unRLEWBtoVRAM.h                                                                                                                                
+/*============================================================================== 
+ unRLEWBtoVRAM v1.3 (7 february 2022)
 
- WB RLE  v1.1
+ Function : Unpack WB RLE to VRAM
 
- $80 nn dd            ; run of n consecutive identical bytes ($1>$FE), value dd
- $80 $0               ; for one $80 value
- $80 $FF              ; end of data block
- <any other value>    ; raw data                                                               
+ Historic of versions:
+   v1.2 (20 April 2019)
+   v1.1 (26 jun 2014)
+                                                              
+ CD = Control Digit = $80
 
-============================================================================= */
+ CD + $0         --> for one $80 value
+ CD + $FF        --> end of data block
+ CD + nn + dd    --> repeat nn ($1-$FE)+1 dd value
+ dd (!= CD)      --> raw data                            
+==============================================================================*/
 #ifndef  __UNWBRLE2VRAM_H__
 #define  __UNWBRLE2VRAM_H__
 
 
 
 /* =============================================================================
+ unRLEWBtoVRAM
  Function : unpack RLE-WB to VRAM
   
- Input    : [unsigned int] source RAM RLE data address
-            [unsigned int] target VRAM address       
+ Input    : [unsigned int] dataAddr <- source RLEWB data address
+            [unsigned int] VRAMaddr <- target VRAM address       
  Output   : -                  
 ============================================================================= */
-extern void unRLEWBtoVRAM (unsigned int, unsigned int);
+void unRLEWBtoVRAM (unsigned int dataAddr, unsigned int VRAMaddr);
 
 
 
 /* =============================================================================
-unRLEWBtoVR (for Assembler in-line)
+unRLEWBVRAM (for Assembler in-line)
 
  Function : unpack RLE-WB to VRAM
      
- Input    : HL - source RAM RLE data address
+ Input    : HL - source RLEWB data address
             DE - target VRAM address
  Output   : -                 
 ============================================================================= */

@@ -148,8 +148,8 @@ They are divided into three groups, since in some cases they have been developed
 - **VDP SPRITES Library** - _Functions to facilitate the use of Sprites of the TMS9918A._ [`Project`](https://github.com/mvac7/SDCC_VDP_SPRITES_Lib)
 - **VDP PRINT Library v1.3** _Functions Library for display text strings in the graphic modes of the TMS9918A (G1 and G2)._ [`Project`](https://github.com/mvac7/SDCC_VDP_PRINT_Lib) - [`DOC`](https://github.com/mvac7/SDCC_VDP_PRINT_Lib/blob/master/docs/HOWTO.md)
 - **String BASICs Library** - _Basic functions for the treatment of Character Arrays in SDCC, similar to those of MSX BASIC._ [`Project`](https://github.com/mvac7/SDCC_STRING_B_Lib)
-- **PSG AY-3-8910 RT Library** - _Basic functions to work with PSG AY-3-8910 or compatible._ [`Project`](https://github.com/mvac7/SDCC_AY38910RT_Lib) - [`DOC`](https://github.com/mvac7/SDCC_AY38910RT_Lib/blob/master/HOWTO.md)
-- **PSG AY-3-8910 playFX Library** - _Functions for playing sound effects with the AY-3-8910._ [`Project`](https://github.com/mvac7/SDCC_AY38910_playFX_Lib)
+- **PSG AY-3-8910 RT Library** - _Basic functions to work with PSG AY-3-8910 or compatible._ [`Project`](https://github.com/mvac7/SDCC_AY38910RT_Lib) - [`DOC`](https://github.com/mvac7/SDCC_AY38910RT_Lib/blob/master/docs/HOWTO.md)
+- **PSG AY-3-8910 playFX Library** - _Functions for playing sound effects with the AY-3-8910._ [`Project`](https://github.com/mvac7/SDCC_AY38910_playFX_Lib)    
 - **PSG AY-3-8910 BF Library** - _Library to access the internal or external PSG AY-3-8910 through a Buffer._ [`Project`](https://github.com/mvac7/SDCC_AY38910BF_Lib) - [`DOC`](https://github.com/mvac7/SDCC_AY38910BF_Lib/blob/main/docs/HOWTO.md)
 - **PSG ayFX Player Library** - _Play ayFX effects for the PSG AY-3-8910 (requires AY38910BF library)_ [`Project`](https://github.com/mvac7/SDCC_ayFXplayer) - [`DOC`](https://github.com/mvac7/SDCC_ayFXplayer_Lib/blob/main/docs/HOWTO.md)
 - **PT3 Player Library for MSX** - _SDCC PT3 Player (Vortex Tracker) Library for MSX (requires AY38910BF library)_ [`Project`](https://github.com/mvac7/SDCC_PT3player) - [`DOC`](https://github.com/mvac7/SDCC_PT3player/blob/master/docs/HOWTO.md)
@@ -209,6 +209,7 @@ The [`AY38910BF`](https://github.com/mvac7/SDCC_AY38910BF_Lib), [`PT3player`](ht
 - OpenMSX emulator >> [`WEB`](http://openmsx.sourceforge.net/)
 - BlueMSX emulator >> [`WEB`](http://www.bluemsx.com/)
 - [`WebMSX`](https://webmsx.org/) emulator by Paulo A. Peccin >> [`gitHub`](https://github.com/ppeccin/webmsx)
+- [`MSXPen`](https://msxpen.com/) MSX Developer Playground & Code Editor in the Browser by [Rafael Jannone](https://twitter.com/jannone)
 - fMSX by Marat Fayzullin [`WEB`](https://fms.komkon.org/fMSX/)
 - Meisei emulator by Hap >> `?`
 
