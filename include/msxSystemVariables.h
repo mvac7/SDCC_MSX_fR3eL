@@ -101,8 +101,8 @@ definitions & texts by:
                         // =0 when key press click disabled
                         // =1 when key press click enabled
                         // SCREEN ,,n will write to this address
-#define CSRY	  0xF3DC	//1	Current row-position of the cursor
-#define CSRX	  0xF3DD	//1	Current column-position of the cursor
+#define CSRY	0xF3DC	//1	Current row-position of the cursor
+#define CSRX	0xF3DD	//1	Current column-position of the cursor
 #define CNSDFG	0xF3DE	//1	=0 when function keys are not displayed
                         //  =1 when function keys are displayed
 #define RG0SAV	0xF3DF	//1	Content of VDP(0) register (R#0)
@@ -183,26 +183,26 @@ definitions & texts by:
 
 //#F91F	1	Character set SlotID
 //#F920	2	Character set address
-#define EXBRSA	 0xFAF8	//1	Slot address of the SUBROM (EXtended Bios-Rom Slot Address)
+#define EXBRSA	  0xFAF8    //(1B)  Slot address of the SUBROM (EXtended Bios-Rom Slot Address)
 
-#define DRVINF	 0xFB21	//1	Nr. of drives connected to disk interface 1
-//#FB22	1	Slot address of disk interface 1
-//#FB23	1	Nr. of drives connected to disk interface 2
-//#FB24	1	Slot address of disk interface 2
-//#FB25	1	Nr. of drives connected to disk interface 3
-//#FB26	1	Slot address of disk interface 3
-//#FB27	1	Nr. of drives connected to disk interface 4
-//#FB28	1	Slot address of disk interface 4
+#define DRVINF	  0xFB21    //(1B)	Nr. of drives connected to disk interface 1
+                //0xFB22	  (1B)	Slot address of disk interface 1
+                //0xFB23	  (1B)	Nr. of drives connected to disk interface 2
+                //0xFB24	  (1B)	Slot address of disk interface 2
+                //0xFB25	  (1B)	Nr. of drives connected to disk interface 3
+                //0xFB26	  (1B)	Slot address of disk interface 3
+                //0xFB27	  (1B)	Nr. of drives connected to disk interface 4
+                //0xFB28	  (1B)	Slot address of disk interface 4
 
-#define EXPTBL	  0xFCC1	//1	Slot 0: #80 = expanded, 0 = not expanded. Also slot address of the main BIOS-ROM.
-#define EXPTBL1	  0xFCC2	//1	Slot 1: #80 = expanded, 0 = not expanded.
-#define EXPTBL2	  0xFCC3	//1	Slot 2: #80 = expanded, 0 = not expanded.
-#define EXPTBL3	  0xFCC4	//1	Slot 3: #80 = expanded, 0 = not expanded.
+#define EXPTBL	  0xFCC1    //(1B)	Slot 0: #80 = expanded, 0 = not expanded. Also slot address of the main BIOS-ROM.
+                //0xFCC2      (1B)	Slot 1: #80 = expanded, 0 = not expanded.
+                //0xFCC3      (1B)	Slot 2: #80 = expanded, 0 = not expanded.
+                //0xFCC4      (1B)	Slot 3: #80 = expanded, 0 = not expanded.
 
-#define SLTTBL	  0xFCC5	//1	Mirror of slot 0 secondary slot selection register.
-#define SLTTBL1   0xFCC6	//1	Mirror of slot 1 secondary slot selection register.
-#define SLTTBL2   0xFCC7	//1	Mirror of slot 2 secondary slot selection register.
-#define SLTTBL3   0xFCC8	//1	Mirror of slot 3 secondary slot selection register.
+#define SLTTBL	  0xFCC5	//(1B)	Mirror of slot 0 secondary slot selection register.
+                //0xFCC6      (1B)	Mirror of slot 1 secondary slot selection register.
+                //0xFCC7      (1B)	Mirror of slot 2 secondary slot selection register.
+                //0xFCC8      (1B)	Mirror of slot 3 secondary slot selection register.
 
 #define RG08SAV   0xFFE7    //Content of VDP(09) register (R#08)
 #define RG09SAV   0xFFE8    //Content of VDP(10) register (R#09)
