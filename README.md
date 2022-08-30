@@ -58,7 +58,7 @@ You can improve them, cut what you need or transform them to other compilers, fo
 
 The main reason that has led me to create this project is learning and to use them in my MSX application development.
  
-You can use it freely, but keep in mind that there are better and more complete libraries, such as [`Fusion-C`](https://github.com/ericb59/Fusion-C-v1.2) by [Eric Boez](https://github.com/ericb59) (See section ['C Libraries or Engines for MSX'](#C-Libraries-or-Engines-for-MSX)). 
+You can use it freely, but keep in mind that there are better and more complete libraries, such as [`Fusion-C`](https://github.com/ericb59/Fusion-C-v1.2) by [Eric Boez](https://github.com/ericb59) or [`MSXgl`](https://github.com/aoineko-fr/MSXgl) by [Aoineko](https://github.com/aoineko-fr) (See section ['C Libraries or Engines for MSX'](#C-Libraries-or-Engines-for-MSX)). 
 
 The choice is yours.
 
@@ -192,15 +192,16 @@ The [`AY38910BF`](https://github.com/mvac7/SDCC_AY38910BF_Lib), [`PT3player`](ht
 ## Development Tools
 
 - [`nMSXtiles`](https://github.com/pipagerardo/nMSXtiles) - Tiles and Sprites Editor for MSX in SC2 and SC4 graphic mode - By Pentacour and PipaGerardo
+- [`99x8Edit`](https://github.com/YusukeLab/99x8Edit) - Graphic editor for systems based on TI TMS9918 and Yamaha V9938 - By Yusuke Miyauchi
 - [`png2msx`](https://github.com/pipagerardo/png2msx) - Tools for graphics and data in MSX. - By PipaGerardo
 - [`PCXTOOLS`](https://github.com/theNestruo/pcxtools) - MSX cross-development command line tools PNG2MSX, PNG2SPR[+] and TMX2BIN
-- [`IMG2SPR`](http://andrear.altervista.org/home/msxsoftware.php) Sprite generator utility By AndreaR. 
+- [`IMG2SPR`](http://andrear.altervista.org/home/msxsoftware.php) Sprite generator utility By AndreaR 
 - [`MSX Pixel Tools`](https://github.com/reidrac/msx-pixel-tools) - Convert PNG images into sprites and tilesets to be used by the MSX in screen 2 mode - By Juan J. Martínez (reidrac)
 - [`CMSXbin`](https://github.com/aoineko-fr/CMSXbin) - Convert binary to text file - By Guillaume "Aoineko" Blanchard
 - [`CMSXimg`](https://github.com/aoineko-fr/CMSXimg) - Command line tool to create images table to add to MSX programs (C/ASM/Bin) - By Guillaume "Aoineko" Blanchard
 - [`CMSXmath`](https://github.com/aoineko-fr/CMSXmath) - Command line tool to create pre-calculated mathematics tables - By Guillaume "Aoineko" Blanchard
 - [`WYZtoSDCCobj Converter Tool`](https://github.com/mvac7/mSXdevtools_WYZtoSDCCobj) - WYZ to C Object Converter Tool for WYZ Player MSX SDCC Library
-- [`PT3toCdata Converter Tool`](https://github.com/mvac7/mSXdevtools_PT3toCdata) - Vortex PT3 to C data Converter Tool.
+- [`PT3toCdata Converter Tool`](https://github.com/mvac7/mSXdevtools_PT3toCdata) - Vortex PT3 to C data Converter Tool
 
 
 <br/>
@@ -225,3 +226,5 @@ The [`AY38910BF`](https://github.com/mvac7/SDCC_AY38910BF_Lib), [`PT3player`](ht
 - [Portar MSX Tech Doc](https://problemkaputt.de/portar.htm)
 - MSX Resource Center [Development Wiki](https://www.msx.org/wiki/#Developing_for_MSX)
 - Tutorial práctico de desarrollo de videojuegos para ordenadores MSX (por Frederic García Nieto) > [PDF](https://riunet.upv.es/bitstream/handle/10251/145214/Memoria.pdf?sequence=2)
+
+---
