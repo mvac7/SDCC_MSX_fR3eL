@@ -58,7 +58,7 @@ You can improve them, cut what you need or transform them to other compilers, fo
 
 The main reason that has led me to create this project is learning and to use them in my MSX application development.
  
-You can use it freely, but keep in mind that there are better and more complete libraries, such as [`Fusion-C`](https://github.com/ericb59/Fusion-C-v1.2) by [Eric Boez](https://github.com/ericb59) or [`MSXgl`](https://github.com/aoineko-fr/MSXgl) by [Aoineko](https://github.com/aoineko-fr) (See section ['C Libraries or Engines for MSX'](#C-Libraries-or-Engines-for-MSX)). 
+You can use it freely, but keep in mind that there are better and more complete libraries, such as [`Fusion-C`](https://github.com/ericb59/Fusion-C-v1.2) by [Eric Boez](https://github.com/ericb59) or [`MSXgl`](https://github.com/aoineko-fr/MSXgl) by [Aoineko](https://github.com/aoineko-fr) (See section [`C Libraries or Engines for MSX`](#C-Libraries-or-Engines-for-MSX)). 
 
 The choice is yours.
 
@@ -136,7 +136,7 @@ They are divided into three groups, since in some cases they have been developed
 ### To develop MSX-DOS applications (.COM):
 
 - **Keyboard MSX-DOS Library** - _Functions for reading the keyboard of MSX computers._ [`Project`](https://github.com/mvac7/SDCC_KEYBOARD_MSXDOS_Lib) - [`DOC`](https://github.com/mvac7/SDCC_KEYBOARD_MSXDOS_Lib/blob/master/docs/HOWTO.md)
-- **Joystick MSX-DOS Library** - _Basic functions for reading Joystick controllers or Cursor Keys._ [`Project`](https://github.com/mvac7/SDCC_JOYSTICK_MSXDOS_Lib)
+- **Joystick MSX-DOS Library** - _Basic functions for reading Joystick controllers or Cursor Keys._ [`Project`](https://github.com/mvac7/SDCC_JOYSTICK_MSXDOS_Lib) - [`DOC`](https://github.com/mvac7/SDCC_JOYSTICK_MSXDOS_Lib/blob/main/docs/HOWTO.md)
 - **Textmode MSX-DOS Library** - _Functions for starting and printing in text modes._ [`Project`](https://github.com/mvac7/SDCC_TEXTMODE_MSXDOS_Lib)
 
 

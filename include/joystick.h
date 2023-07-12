@@ -1,6 +1,6 @@
 /* =============================================================================
   Joystick MSX SDCC Library (fR3eL Project)
-  Version: header v1.3
+  Version: header v1.4
 
   Description:
     Opensource library with functions to access to joysticks or keyboard 
@@ -47,14 +47,16 @@
 
 
 /* =============================================================================
-STICK
+ STICK
 
- Description: Returns the joystick status
+ Description: 
+    Returns the joystick status.
+    Similar to the MSX BASIC STICK instruction.
  
  Input    : [char] joy port: 
                   0=cursor keys 
-                  1=joystick A 
-                  2=joystick B
+                  1=joystick 1 
+                  2=joystick 2
  Output   : [char]
                   0=inactive
                   1=up
@@ -73,21 +75,23 @@ char STICK(char joy);
 /* =============================================================================
  STRIG
   
- Description: Returns current trigger status
-            
- Input    : [char] 
+ Description: 
+    Returns selected trigger status. 
+    Similar to the MSX BASIC STRIG instruction.
+             
+ Input    : [char]  trigger number
                     0 - space key
-                    1 - button 1 joy A
-                    2 - button 1 joy B
-                    3 - button 2 joy A
-                    4 - button 2 joy B
+                    1 - joystick 1 button 1   
+                    2 - joystick 2 button 1
+                    3 - joystick 1 button 2
+                    4 - joystick 2 button 2
                     
- Output   : [char] status:
+ Output   : [signed char] status:
                     0 = inactive
                    -1 = when the space key or the joystick/mouse button is 
                         pressed down 
 ============================================================================= */
-signed char STRIG(char joy);
+signed char STRIG(char triggerN);
 
 
 
