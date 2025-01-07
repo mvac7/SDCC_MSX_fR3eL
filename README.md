@@ -10,7 +10,7 @@
 <tr><td>Architecture</td><td>MSX</td></tr>
 <tr><td>Format</td><td>C Object (SDCC .rel)</td></tr>
 <tr><td>Programming language</td><td>C and Z80 assembler</td></tr>
-<tr><td>Compiler</td><td>[`SDCC`](http://sdcc.sourceforge.net/)</td></tr>
+<tr><td>Compiler</td><td>SDCC v4.4 or newer</td></tr>
 </table>
 
 
@@ -155,7 +155,7 @@ They are divided into three groups, since in some cases they have been developed
 - **memoryZ80 Library** _Provides you with functions to read or write to the memory._ [`Project`](https://github.com/mvac7/SDCC_MEMORY_MSX_Lib) - [`DOC`](https://github.com/mvac7/SDCC_MEMORY_MSX_Lib/blob/master/docs/HOWTO.md)
 - **memoryMSXSlots Library** _Allows you to configure the pages of the slots and subslots._ [`Project`](https://github.com/mvac7/SDCC_MEMORY_MSX_Lib) - [`DOC`](https://github.com/mvac7/SDCC_MEMORY_MSX_Lib/blob/master/docs/HOWTO.md)
 - **Z80 Interrupt M1 MSX Libraries** - _libraries to work with Z80 Mode 1 interrupts_ [`Project`](https://github.com/mvac7/SDCC_interruptM1_Libraries)
-	- ISR _Functions to control the Interrupt Service Routine (ISR)_ [`Project`]https://github.com/mvac7/SDCC_interruptM1_Libraries/tree/main/ISR) - [`DOC`](https://github.com/mvac7/SDCC_interruptM1_Libraries/blob/main/ISR/docs/HOWTO.md)
+	- ISR _Functions to control the Interrupt Service Routine (ISR)_ [`Project`](https://github.com/mvac7/SDCC_interruptM1_Libraries/tree/main/ISR) - [`DOC`](https://github.com/mvac7/SDCC_interruptM1_Libraries/blob/main/ISR/docs/HOWTO.md)
 	- Hooks _Functions to control the MSX system interrupt hooks_ [`Project`](https://github.com/mvac7/SDCC_interruptM1_Libraries/tree/main/Hooks) - [`DOC`](https://github.com/mvac7/SDCC_interruptM1_Libraries/blob/main/Hooks/docs/HOWTO.md)
 - **Z80 Interrupt M1 ISR MSX Library** - _Interrupt Service Routine (ISR) controller for Z80 Mode 1 interrupts in MSX system._ [`Project`](https://github.com/mvac7/SDCC_interruptM1_ISR_Lib) - [`DOC`](https://github.com/mvac7/SDCC_interruptM1_ISR_Lib/blob/main/docs/HOWTO.md)
 - **VDP TMS9918A Library** - _Functions to work with the TMS9918A without using the MSX BIOS._ [`Project`](https://github.com/mvac7/SDCC_VDP_TMS9918A_Lib)  
@@ -228,10 +228,9 @@ The [`AY38910BF`](https://github.com/mvac7/SDCC_AY38910BF_Lib), [`PT3player`](ht
 - fMSX by Marat Fayzullin [`WEB`](https://fms.komkon.org/fMSX/)
 - Meisei emulator by Hap >> [`gitHub`](https://github.com/pipagerardo/meisei)
 
-
 <br/>
 
-## Documentation (English)
+## Documentation
 
 ### MSX
 - [MSX2 Technical Handbook](https://konamiman.github.io/MSX2-Technical-Handbook/)
@@ -241,6 +240,13 @@ The [`AY38910BF`](https://github.com/mvac7/SDCC_AY38910BF_Lib), [`PT3player`](ht
 - [Portar MSX Tech Doc](https://problemkaputt.de/portar.htm)
 - MSX Resource Center [Development Wiki](https://www.msx.org/wiki/#Developing_for_MSX)
 
+<br/>
+
+### Tutorials
+- **MoltSXalats** - Blog about programming with FUSION-C - [English](https://moltsxalats.wixsite.com/fusionc) - [Català](https://moltsxalats.wixsite.com/fusionc/ca) - [Español](https://moltsxalats.wixsite.com/fusionc/es)
+- Tutorial práctico de desarrollo de videojuegos para ordenadores MSX (por Frederic García Nieto) > [PDF](https://riunet.upv.es/bitstream/handle/10251/145214/Memoria.pdf?sequence=2)
+
+<br/>
 
 ### MSX Hardware
 
@@ -249,26 +255,28 @@ The [`AY38910BF`](https://github.com/mvac7/SDCC_AY38910BF_Lib), [`PT3player`](ht
 - Texas Instruments VDP Programmer’s Guide [`PDF`](http://map.grauw.nl/resources/video/ti-vdp-programmers-guide.pdf)
 - Texas Instruments TMS9918A VDP by Sean Young [`TXT`](http://bifi.msxnet.org/msxnet/tech/tms9918a.txt)
 
+<br/>
+
 #### VDP V9938
 - V9938 Technical Data Book [`PDF`](http://map.grauw.nl/resources/video/yamaha_v9938.pdf) [`TXT`](http://map.grauw.nl/resources/video/v9938/v9938.xhtml)
 - V9938 Programmers Guide [`PDF`](http://rs.gr8bit.ru/Documentation/V9938-programmers-guide.pdf)
 
+<br/>
+
 #### VDP V9958
 - V9958 Technical Data Book [`PDF`](http://map.grauw.nl/resources/video/yamaha_v9958_ocr.pdf)
+
+<br/>
 
 #### PSG AY-3-8910
 - GI AY-3-8910 Datasheet [`PDF`](http://map.grauw.nl/resources/sound/generalinstrument_ay-3-8910.pdf)
 - The MSX Red Book [3. Programmable Sound Generator](https://github.com/gseidler/The-MSX-Red-Book/blob/master/the_msx_red_book.md#chapter_3)
 
-
-### Programming languages
-- [z80 Heaven](http://z80-heaven.wikidot.com/) z80 info
-- Wikibooks [C Programming](https://en.wikibooks.org/wiki/C_Programming)
-
 <br/>
 
-## Documentación (Español)
+### Programming languages
+- Z80 Assembler - [z80 Heaven](http://z80-heaven.wikidot.com/)
+- Wikibooks [C Programming](https://en.wikibooks.org/wiki/C_Programming)
 
-- Tutorial práctico de desarrollo de videojuegos para ordenadores MSX (por Frederic García Nieto) > [PDF](https://riunet.upv.es/bitstream/handle/10251/145214/Memoria.pdf?sequence=2)
 
 ---
