@@ -4,27 +4,35 @@
 
 ---
 
-#### Authors:
+## Project info
+
+<table>
+<tr><td>Architecture</td><td>MSX</td></tr>
+<tr><td>Format</td><td>C Object (SDCC .rel)</td></tr>
+<tr><td>Programming language</td><td>C and Z80 assembler</td></tr>
+<tr><td>Compiler</td><td>[`SDCC`](http://sdcc.sourceforge.net/)</td></tr>
+</table>
+
+
+<br/>
+
+### Authors:
 
 This project has been developed mainly by mvac7, but includes code and ideas contributed by numerous developers who share their knowledge with the MSX community.
 I add here a list of people who have participated directly or indirectly, in recognition of their work.
  
 - mvac7 (Code Writer)
 - Avelino Herrera (Knowledge)
+- Konamiman (CRTs and Knowledge)
 - Fubukimaru (Linux Makefiles and documentation fixes)
 - Ramones (Mouse Library) 
 - AndreaR (Mouse Library SDCC adaptation and Knowledge)
 - S.V.Bulba (PT3 Player) 
 - Dioniso (PT3 Player MSX adaptation), 
-- MSXKun (PT3 Player improvements) 
+- MSXKun (PT3 Player improvements and Knowledge) 
 - SapphiRe (ayFX Player and PT3 Player improvements)
 - WYZ (WYZ Player)
- 
-#### Architecture: MSX
 
-#### Format: C Object (SDCC .rel)
-
-#### Programming language: C and Z80 assembler
 
 <br/>
 
@@ -81,6 +89,10 @@ mvac7
  
 I want to give a special thanks everyone who selflessly shares information and code, as they contribute to continued development and extend the life of retro platforms.
 
+- MSX Assembly Page > [`WEB`](http://map.grauw.nl/resources/msxbios.php)
+- MSX Resource Center > [`WEB`](https://www.msx.org)
+- Portar MSX Tech Doc > [`WEB`](https://problemkaputt.de/portar.htm)
+
 - Avelino Herrera > [`WEB`](http://msx.avelinoherrera.com/index_es.html)
 - Nerlaska > [`Blog`](http://albertodehoyonebot.blogspot.com.es)
 - Marq/Lieves!Tuore > [`Marq`](http://www.kameli.net/marq/) [`Lieves!Tuore`](http://www.kameli.net/lt/)
@@ -100,15 +112,12 @@ I want to give a special thanks everyone who selflessly shares information and c
 - Baze > [`WEB`](http://baze.sk/3sc/misc/z80bits.html)
 - Guillaume "Aoineko" Blanchard > [`gitHub`](https://github.com/aoineko-fr)
 - Konamiman [`gitHub`](https://github.com/Konamiman) [`WEB`](https://www.konamiman.com/msx/msx-e.html)
-- MSX Assembly Page > [`WEB`](http://map.grauw.nl/resources/msxbios.php)
-- Portar MSX Tech Doc > [`WEB`](https://problemkaputt.de/portar.htm)
-- MSX Resource Center > [`WEB`](https://www.msx.org)
 - Karoshi MSX Community > [`WEB`](http://karoshi.auic.es/)
 - BlueMSX emulator >> [`WEB`](http://www.bluemsx.com/)
 - OpenMSX emulator >> [`WEB`](http://openmsx.sourceforge.net/)
 - [`WebMSX`](https://webmsx.org/) emulator by Paulo A. Peccin >> [`gitHub`](https://github.com/ppeccin/webmsx)
-- fMSX emulator by Marat Fayzullin [`WEB`](https://fms.komkon.org/fMSX/)
-- Meisei emulator by Hap >> `?`
+- fMSX emulator by Marat Fayzullin >> [`WEB`](https://fms.komkon.org/fMSX/)
+- Meisei emulator by Hap >> [`gitHub`](https://github.com/pipagerardo/meisei)
 
 <br/>
 
@@ -118,23 +127,24 @@ I want to give a special thanks everyone who selflessly shares information and c
 
 They are divided into three groups, since in some cases they have been developed to work in specific execution environments: ROMs or MSX-DOS.
 
-### To develop MSX ROMs:
+### To develop MSX ROM or MSX BASIC binary (use MSX BIOS):
 
 - **MSX 8/16K 8000h ROM startup file (CRT)** [`Project`](https://github.com/mvac7/SDCC_startup_MSX816kROM8000)
 - **MSX 8/16K 4000h ROM startup file (CRT)** [`Project`](https://github.com/mvac7/SDCC_startup_MSX816kROM4000)
 - **MSX 32K 4000h ROM startup file (CRT)** [`Project`](https://github.com/mvac7/SDCC_startup_MSX32kROM4000)
 - **Keyboard MSX ROM Library** - _Functions for reading the keyboard of MSX computers._ [`Project`](https://github.com/mvac7/SDCC_KEYBOARD_MSXROM_Lib) - [`DOC`](https://github.com/mvac7/SDCC_KEYBOARD_MSXROM_Lib/blob/master/docs/HOWTO.md)
 - **Joystick MSX ROM Library** - _Basic functions for reading Joystick controllers or Cursor Keys._ [`Project`](https://github.com/mvac7/SDCC_JOYSTICK_MSXROM_Lib)
-- **Textmode MSX ROM Library** - _Functions for starting and printing in text modes._ [`Project`](https://github.com/mvac7/SDCC_TEXTMODE_MSXROM_Lib)
+- **Textmode MSX ROM Library** - _Functions for starting and printing in text modes._ [`Project`](https://github.com/mvac7/SDCC_TEXTMODE_MSXROM_Lib) - [`DOC`]( https://github.com/mvac7/SDCC_TEXTMODE_MSXROM_Lib/blob/master/docs/HOWTO.md)
 - **VDP TMS9918A MSX ROM Library** - _Basic functions to work with the TMS9918A video processor using the MSX BIOS._ [`Project`](https://github.com/mvac7/SDCC_VDP_TMS9918A_MSXROM_Lib)
 - **VDP SPRITES MSX ROM Library** - _Functions to facilitate the use of Sprites of the TMS9918A._ [`Project`](https://github.com/mvac7/SDCC_VDP_SPRITES_MSXROM_Lib)
 - **VDP SPRITES mode 1/2 MSX ROM Library** - _Basic functions for managing Sprites with facilities to work with G3 mode (Screen 4)._ [`Project`](https://github.com/mvac7/SDCC_VDP_SPRITES_12_MSXROM_Lib)
 - **VDP SPRITES Small MSX ROM Library** - _ClearSprites and PUTSPRITE functions._ [`Project`](https://github.com/mvac7/SDCC_VDP_SPRITES_S_MSXROM_Lib)
-- **VDP SPRITES mode 2 MSX ROM SDCC Library** - _Library with functions to display mode 2 sprites in V9938 graphics mode 3_ [`Project`](https://github.com/mvac7/SDCC_VDP_SPRITES_mode2_MSXROM_Lib)
+- **VDP SPRITES mode 2 MSX ROM Library** - _Library with functions to display mode 2 sprites in V9938 graphics mode 3_ [`Project`](https://github.com/mvac7/SDCC_VDP_SPRITES_mode2_MSXROM_Lib)
 
 
 ### To develop MSX-DOS applications (.COM):
 
+- **MSX-DOS startup file (CRT)** [`Project`](https://github.com/mvac7/SDCC_startup_MSXDOS)
 - **Keyboard MSX-DOS Library** - _Functions for reading the keyboard of MSX computers._ [`Project`](https://github.com/mvac7/SDCC_KEYBOARD_MSXDOS_Lib) - [`DOC`](https://github.com/mvac7/SDCC_KEYBOARD_MSXDOS_Lib/blob/master/docs/HOWTO.md)
 - **Joystick MSX-DOS Library** - _Basic functions for reading Joystick controllers or Cursor Keys._ [`Project`](https://github.com/mvac7/SDCC_JOYSTICK_MSXDOS_Lib) - [`DOC`](https://github.com/mvac7/SDCC_JOYSTICK_MSXDOS_Lib/blob/main/docs/HOWTO.md)
 - **Textmode MSX-DOS Library** - _Functions for starting and printing in text modes._ [`Project`](https://github.com/mvac7/SDCC_TEXTMODE_MSXDOS_Lib)
@@ -142,8 +152,11 @@ They are divided into three groups, since in some cases they have been developed
 
 ### To develop anything:
 
-- **Z80 Memory MSX Library** - _Basic functions for Z80's memory and page slots/sublots access._ [`Project`](https://github.com/mvac7/SDCC_MEMORY_MSX_Lib) - [`DOC`](https://github.com/mvac7/SDCC_MEMORY_MSX_Lib/blob/master/docs/HOWTO.md)
-- **Z80 Interrupt M1 Hooks MSX Library** - _Control over the hooks (TIMI and KEYI) of the ISR of the MSX System for the M1 interrupt of the Z80_ [`Project`](https://github.com/mvac7/SDCC_interruptM1_Hooks_Lib) - [`DOC`](https://github.com/mvac7/SDCC_interruptM1_Hooks_Lib/blob/main/docs/HOWTO.md)
+- **memoryZ80 Library** _Provides you with functions to read or write to the memory._ [`Project`](https://github.com/mvac7/SDCC_MEMORY_MSX_Lib) - [`DOC`](https://github.com/mvac7/SDCC_MEMORY_MSX_Lib/blob/master/docs/HOWTO.md)
+- **memoryMSXSlots Library** _Allows you to configure the pages of the slots and subslots._ [`Project`](https://github.com/mvac7/SDCC_MEMORY_MSX_Lib) - [`DOC`](https://github.com/mvac7/SDCC_MEMORY_MSX_Lib/blob/master/docs/HOWTO.md)
+- **Z80 Interrupt M1 MSX Libraries** - _libraries to work with Z80 Mode 1 interrupts_ [`Project`](https://github.com/mvac7/SDCC_interruptM1_Libraries)
+	- ISR _Functions to control the Interrupt Service Routine (ISR)_ [`Project`]https://github.com/mvac7/SDCC_interruptM1_Libraries/tree/main/ISR) - [`DOC`](https://github.com/mvac7/SDCC_interruptM1_Libraries/blob/main/ISR/docs/HOWTO.md)
+	- Hooks _Functions to control the MSX system interrupt hooks_ [`Project`](https://github.com/mvac7/SDCC_interruptM1_Libraries/tree/main/Hooks) - [`DOC`](https://github.com/mvac7/SDCC_interruptM1_Libraries/blob/main/Hooks/docs/HOWTO.md)
 - **Z80 Interrupt M1 ISR MSX Library** - _Interrupt Service Routine (ISR) controller for Z80 Mode 1 interrupts in MSX system._ [`Project`](https://github.com/mvac7/SDCC_interruptM1_ISR_Lib) - [`DOC`](https://github.com/mvac7/SDCC_interruptM1_ISR_Lib/blob/main/docs/HOWTO.md)
 - **VDP TMS9918A Library** - _Functions to work with the TMS9918A without using the MSX BIOS._ [`Project`](https://github.com/mvac7/SDCC_VDP_TMS9918A_Lib)  
 - **VDP SPRITES Library** - _Functions to facilitate the use of Sprites of the TMS9918A._ [`Project`](https://github.com/mvac7/SDCC_VDP_SPRITES_Lib)
@@ -156,7 +169,7 @@ They are divided into three groups, since in some cases they have been developed
 - **PT3 Player Library for MSX** - _SDCC PT3 Player (Vortex Tracker) Library for MSX (requires AY38910BF library)_ [`Project`](https://github.com/mvac7/SDCC_PT3player) - [`DOC`](https://github.com/mvac7/SDCC_PT3player/blob/master/docs/HOWTO.md)
 - **WYZ Player Library for MSX** - _SDCC WYZ Tracker Player Library for MSX._ [`Project`](https://github.com/mvac7/SDCC_WYZplayer)
 - **Mouse MSX Library** - _Basic functions for reading mouse controller of MSX computers._ [`Project`](https://github.com/mvac7/SDCC_MOUSE_MSX_Lib) 
-- **Z80 RLEWB decompress** - _C functions and Z80 Assembler source for decompress RLEWB data encoding._ [`Project`](https://github.com/mvac7/Z80_RLEWB)
+- **WRLE decompress (aka RLEWB)** - _C Library for decompress WRLE data encoding._ [`Project`](https://github.com/mvac7/Z80_RLEWB)
 
 <br/>
 
@@ -179,12 +192,12 @@ The [`AY38910BF`](https://github.com/mvac7/SDCC_AY38910BF_Lib), [`PT3player`](ht
 - **Libraries for SDCC** `SDCC` _by Avelino Herrera_ [`WEB`](http://msx.avelinoherrera.com/index_en.html)  
 - **Libraries for SDCC** `SDCC` _by Konamiman_ [`WEB`](https://www.konamiman.com/msx/msx-e.html#sdcc)
 - **Fusion-C** `SDCC` _by Eric Boez_ [`gitHub`](https://github.com/ericb59/Fusion-C-v1.2)
+- **MSXgl** `SDCC` _by Aoineko_ [`gitHub`](https://github.com/aoineko-fr/MSXgl) The MSX Game Library in C language
 - **RetroDeluxe Game Engine** `SDCC` _by Retro DeLuxe_ [`gitHub`](https://github.com/retrodeluxe/rlengine-msx)
 - **libmsx** `SDCC` _by Daishi Mori (mori0091)_ [`gitHub`](https://github.com/mori0091/libmsx)
 - **MSXLib** `SDCC` _by Marq_ [`WEB`](http://www.kameli.net/marq/?page_id=974) --> Get it with svn co svn://www.kameli.net/marq/msxlib
 - **sdcc-msx** `SDCC` _by Manuel Martinez Torres_ [`gitHub`](https://github.com/MartinezTorres/sdcc_msx)
-- **ubox MSX lib** `SDCC` _by Juan J. Martinez_ [`gitHub`](https://gitlab.com/reidrac/ubox-msx-lib)
-- **MSXgl** `SDCC` _by Aoineko_ [`gitHub`](https://github.com/aoineko-fr/MSXgl) The MSX Game Library in C language
+- **ubox MSX lib** `SDCC` _by Juan J. Martinez_ [`gitLab`](https://gitlab.com/reidrac/ubox-msx-lib) · [`WEB`](https://www.usebox.net/jjm/ubox-msx-lib/)
 - **GFX lib** `Hitech-C` _by Janonne_ [`gitHub`](https://github.com/jannone/msx-gfxlib)
 
 <br/>
@@ -213,18 +226,49 @@ The [`AY38910BF`](https://github.com/mvac7/SDCC_AY38910BF_Lib), [`PT3player`](ht
 - [`WebMSX`](https://webmsx.org/) emulator by Paulo A. Peccin >> [`gitHub`](https://github.com/ppeccin/webmsx)
 - [`MSXPen`](https://msxpen.com/) MSX Developer Playground & Code Editor in the Browser by [Rafael Jannone](https://twitter.com/jannone)
 - fMSX by Marat Fayzullin [`WEB`](https://fms.komkon.org/fMSX/)
-- Meisei emulator by Hap >> `?`
+- Meisei emulator by Hap >> [`gitHub`](https://github.com/pipagerardo/meisei)
 
 
 <br/>
 
-## Documentation
+## Documentation (English)
 
+### MSX
 - [MSX2 Technical Handbook](https://konamiman.github.io/MSX2-Technical-Handbook/)
 - [The MSX Red Book](https://github.com/gseidler/The-MSX-Red-Book/blob/master/the_msx_red_book.md)
-- [MSX Assembly Page](http://map.grauw.nl/)
+- [MSX Assembly Page](https://map.grauw.nl/)
+	- [Z80/R800 instruction set](https://map.grauw.nl/resources/z80instr.php)
 - [Portar MSX Tech Doc](https://problemkaputt.de/portar.htm)
 - MSX Resource Center [Development Wiki](https://www.msx.org/wiki/#Developing_for_MSX)
+
+
+### MSX Hardware
+
+#### VDP TMS9918A
+- Texas Instruments TMS9918A application manual [`PDF`](http://map.grauw.nl/resources/video/texasinstruments_tms9918.pdf)
+- Texas Instruments VDP Programmer’s Guide [`PDF`](http://map.grauw.nl/resources/video/ti-vdp-programmers-guide.pdf)
+- Texas Instruments TMS9918A VDP by Sean Young [`TXT`](http://bifi.msxnet.org/msxnet/tech/tms9918a.txt)
+
+#### VDP V9938
+- V9938 Technical Data Book [`PDF`](http://map.grauw.nl/resources/video/yamaha_v9938.pdf) [`TXT`](http://map.grauw.nl/resources/video/v9938/v9938.xhtml)
+- V9938 Programmers Guide [`PDF`](http://rs.gr8bit.ru/Documentation/V9938-programmers-guide.pdf)
+
+#### VDP V9958
+- V9958 Technical Data Book [`PDF`](http://map.grauw.nl/resources/video/yamaha_v9958_ocr.pdf)
+
+#### PSG AY-3-8910
+- GI AY-3-8910 Datasheet [`PDF`](http://map.grauw.nl/resources/sound/generalinstrument_ay-3-8910.pdf)
+- The MSX Red Book [3. Programmable Sound Generator](https://github.com/gseidler/The-MSX-Red-Book/blob/master/the_msx_red_book.md#chapter_3)
+
+
+### Programming languages
+- [z80 Heaven](http://z80-heaven.wikidot.com/) z80 info
+- Wikibooks [C Programming](https://en.wikibooks.org/wiki/C_Programming)
+
+<br/>
+
+## Documentación (Español)
+
 - Tutorial práctico de desarrollo de videojuegos para ordenadores MSX (por Frederic García Nieto) > [PDF](https://riunet.upv.es/bitstream/handle/10251/145214/Memoria.pdf?sequence=2)
 
 ---

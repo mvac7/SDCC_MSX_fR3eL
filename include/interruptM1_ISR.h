@@ -1,28 +1,16 @@
 /* =============================================================================
-  Interrupt Mode 1 MSX ISR SDCC Library (fR3eL Project)
-  Version: 1.1 (1 September 2021)
-  Author: mvac7
-  Architecture: MSX
-  Format: C Object (SDCC .rel)
-  Programming language: C and Z80 assembler
-
-  Description:
-    Functions for the control of the ISR of the interrupt Mode 1 in MSX systems.  
-  
-History of versions:
-- v1.1 (1 September 2021) More functions to control ISR
-
-Based on the library created by Avelino Herrera 
-                          http://msx.avelinoherrera.com/index_es.html#sdccmsxdos
+Z80 interrupt Mode 1 MSX SDCC Library (fR3eL Project)
+Library with basic functions to control the Interrupt Service Routine (ISR) for 
+Z80 Mode 1 interrupts on MSX system.
+https://github.com/mvac7/SDCC_MSX_fR3eL
 ============================================================================= */
 
 #ifndef  __INTERRUPT_M1_ISR_H__
 #define  __INTERRUPT_M1_ISR_H__
 
 
-
-#ifndef _iBASICs_
-#define _iBASICs_
+#ifndef _Z80interruptDefs_
+#define _Z80interruptDefs_
 
 #define  DisableI         __asm di __endasm
 #define  EnableI          __asm ei __endasm
@@ -34,10 +22,6 @@ Based on the library created by Avelino Herrera
 
 
 
-
-// ----------------------------------------------------------------------------> ISR
-
-
 /* =============================================================================
  Save_ISR
 
@@ -45,7 +29,8 @@ Based on the library created by Avelino Herrera
  Input    : -
  Output   : -
 ============================================================================= */
-void Save_ISR();
+void Save_ISR(void);
+
 
 
 /* =============================================================================
@@ -58,6 +43,7 @@ void Save_ISR();
 void Install_ISR(void (*isr)(void));
 
 
+
 /* =============================================================================
  Restore_ISR
 
@@ -65,7 +51,8 @@ void Install_ISR(void (*isr)(void));
  Input    : -
  Output   : -
 ============================================================================= */
-void Restore_ISR();
+void Restore_ISR(void);
+
 
 
 /* =============================================================================
@@ -76,8 +63,7 @@ void Restore_ISR();
  Input    : -
  Output   : -
 ============================================================================= */
-void Disable_ISR();
-
+void Disable_ISR(void);
 
 
 
@@ -91,7 +77,7 @@ Note:
   You can optimize it, commenting on those records that you know you don't use 
   (such as alternate records) or removing the KEYI hook. 
 ============================================================================= */
-void ISR_Basic();
+void ISR_Basic(void);
 
 
 

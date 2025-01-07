@@ -1,15 +1,9 @@
 /* =============================================================================
-   SDCC Keyboard Functions Library
-   Version: 1.0 (7 March 2016)
-   Author: mvac7 
-   Architecture: MSX
-   Programming language: C
-   Format: C object (SDCC .rel)   
-   mail: mvac7303b@gmail.com
-
-   Description:
-     Functions for reading the keyboard of MSX computers.     
+Keyboard MSX SDCC Library (fR3eL Project) 
+Functions for reading the keyboard of MSX computers.
+https://github.com/mvac7/SDCC_MSX_fR3eL
 ============================================================================= */
+
 #ifndef __KEYBOARD_H__
 #define __KEYBOARD_H__
 
@@ -28,6 +22,7 @@
 #endif
 
 
+
 /* =============================================================================
    KillBuffer
  
@@ -35,18 +30,18 @@
    Input    : -
    Output   : -
 ============================================================================= */
-void KillBuffer();
+void KillBuffer(void);
 
 
 
 /* =============================================================================
    INKEY
   
-   Function : One character input (waiting) and return its code
+   Function : Waits for a key press and returns its value
    Input    : -
    Output   : [char] key code
 ============================================================================= */
-char INKEY();
+char INKEY(void);
 
 
 

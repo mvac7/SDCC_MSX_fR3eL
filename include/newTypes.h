@@ -20,17 +20,17 @@
 #endif
 
 // unsigned char
-#ifndef _BYTE
-#define _BYTE
-  typedef unsigned char byte;
-#endif
+//#ifndef _BYTE
+//#define _BYTE
+//  typedef unsigned char byte;
+//#endif
 
 //definiciones de A.Herrera 
 //http://msx.atlantes.org/index_es.html
-#ifndef _INT8
-#define _INT8
-  typedef signed char int8;
-#endif
+//#ifndef _INT8
+//#define _INT8
+//  typedef signed char int8;
+//#endif
 //typedef unsigned char uint8;
 //typedef signed int int16_t;
 //typedef unsigned int uint16_t;
