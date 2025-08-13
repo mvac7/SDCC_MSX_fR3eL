@@ -1,0 +1,43 @@
+# fR3eL Project
+# MAKEFILE for MSX 8/16K ROM at address 0x8000 for SDCC compiler
+# CFILENAME = Source name without extension
+CFILENAME=SOURCENAME
+# ROMFILENAME = ROM file name without extension (8 uppercase characters)
+ROMFILENAME=ROMNAME
+# ROMSIZE = 2000 for 8KBytes ROM or 4000 for 16KBytes ROM
+ROMSIZE=4000
+DATALOC=0xC000
+CODELOC=0x8020
+CRT=crt0/crt0_MSX816kROM8000.rel
+
+# add paths from our objects files into LIB variable
+LIBS=
+
+all: bin/$(ROMFILENAME).ROM
+	# get SDCC version
+	sdcc -v
+
+build:
+	echo "mkdir build"
+	mkdir build
+
+bin:
+	echo "mkdir bin"
+	mkdir bin
+
+
+build/$(CFILENAME).ihx: build bin
+	echo "Compiling..."
+	sdcc -mz80 -o build/ --code-loc $(CODELOC) --data-loc $(DATALOC) --use-stdout --no-std-crt0 $(CRT) $(LIBS) src/$(CFILENAME).c
+
+build/$(CFILENAME).bin: build/$(CFILENAME).ihx
+	hex2bin -e bin -l $(ROMSIZE) build/$(CFILENAME).ihx
+
+bin/$(ROMFILENAME).ROM: build/$(CFILENAME).bin 
+	cp build/$(CFILENAME).bin bin/$(ROMFILENAME).ROM
+
+clean: build/$(CFILENAME).ihx
+	rm build/$(CFILENAME).ihx
+	rm bin/$(ROMFILENAME).ROM
+	
+

@@ -1,0 +1,118 @@
+## Old names
+
+AY38910BF
+AY38910BF_S
+AY38910RT
+ayFXplayer
+crt0_MSX32kROM4000
+crt0_MSX816kROM4000
+crt0_MSX816kROM8000
+crt0_MSXDOS
+crt0_MSXDOS_advanced
+interruptM1_Hooks
+interruptM1_ISR
+joystick_MSXDOS
+joystick_MSXROM
+keyboard_MSXDOS
+keyboard_MSXROM
+memoryMSXSlots
+memoryZ80
+mouse
+PSG_AY38910_playFX
+PT3player
+stringB
+textmode_MSXDOS
+textmode_MSXROM
+unRLEWBtoRAM
+unRLEWBtoVRAM_MSXDOS
+unRLEWBtoVRAM_MSXROM
+VDP_PRINT
+VDP_SPRITES
+VDP_SPRITES_12_MSXROM
+VDP_SPRITES_mode2_MSXROM
+VDP_SPRITES_MSXROM
+VDP_SPRITES_S_MSXROM
+VDP_TMS9918A
+VDP_TMS9918A_MSXROM
+VDP_VPRINT
+WYZplayer
+
+
+-----------------------------CRT
+#### Startup files (CRT):
+
+crt0_MSX32kROM4000
+crt0_MSX816kROM4000
+crt0_MSX816kROM8000
+crt0_MSXDOS
+crt0_MSXDOS_advanced
+
+-----------------------------
+Type + ---- (or/and) Environment
+
+
+#### Environment tag
+
+MSXBIOS   - use MSX BIOS (for ROMs or MSX BASIC environments)
+MSXDOS    - use MSX BIOS via interslot (only MSX-DOS environment)
+MSX       - use something specific to the MSX system
+<nothing> or Z80 - may be useful on other Z80 platforms
+-----------------------------
+
+memory_Slots_MSX
+memory_Z80
+
+interrupt_M1Hooks_MSX
+interrupt_M1ISR
+
+keyboard_MSXDOS
+keyboard_MSXBIOS
+
+joystick_MSX
+joystick_MSXBIOS
+
+mouse_MSX
+
+string_Basics
+
+-----------------------------Video
+VDP_TMS9918A_MSX
+VDP_TMS9918A_MSXBIOS
+
+VDP_PRINT
+
+
+VDP_SPRITES
+
+VDP_SPRITES_mode2 ?
+
+------- ???????????????????????
+? VDP_SPRITES_12_MSXBIOS
+? VDP_SPRITES_mode2_MSXBIOS
+? VDP_SPRITES_MSXBIOS
+? VDP_SPRITES_S_MSXBIOS
+------- ???????????????????????
+
+textmode_MSXDOS
+textmode_MSXBIOS
+
+
+-----------------------------Audio
+AY38910BF
+AY38910BF_S (Simple, Basics or Player)?
+
+AY38910RT
+
+ayFXplayer
+
+PT3player
+WYZplayer
+
+PSG_AY38910_playFX --- ???
+
+
+-----------------------------data encoder
+unRLEWBtoRAM_Z80
+unRLEWBtoVRAM_MSXDOS
+unRLEWBtoVRAM_MSXBIOS
+-----------------------------

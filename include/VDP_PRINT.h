@@ -1,98 +1,106 @@
 /* =============================================================================
-  VDP PRINT MSX SDCC Library (fR3eL Project)
-
-  Description:
-     Functions Library for display text strings in the graphic modes of the 
-     TMS9918A (G1 and G2).   
+VDP_PRINT MSX SDCC Library (fR3eL Project)
+Functions for display text strings in the graphic modes of the TMS9918A(G1 & G2)
+https://github.com/mvac7/SDCC_MSX_fR3eL
 ============================================================================= */
 #ifndef __VPRINT_H__
 #define __VPRINT_H__
 
 
-
-extern unsigned int VVRAMaddr;
+extern char VPRINT_ntext[6];
+extern unsigned int VPRINT_vaddr;
 
 
 
 /* =============================================================================
-  VLOCATE
-  
-  Description:
-    Moves the cursor to the specified location and optionally 
-    provides the VRAM address from the pattern name table, 
-    for the indicated screen position.
-  
-  Inputs:
-    column (byte) 0 - 31
-    line (byte) 0 - 23
-    
-  Outputs:
-    [unsigned int] VRAM address
+VLOCATE
+Description:
+		Moves the cursor to the specified location and optionally 
+		provides the VRAM address from the pattern name table, 
+		for the indicated screen position.
+Inputs:	column (char) 0 - 31
+		line   (char) 0 - 23
+Output:	-
 ============================================================================= */
-unsigned int VLOCATE(char column, char line);
+void VLOCATE(char column, char line);
 
 
 
 /* =============================================================================
-  VPRINT
-  
-  Description:
-    Prints a string of characters on the screen.
-    Places it in the position indicated by VLOCATE or in the last printed position.
-    
- Inputs:
-    [char*] string 
+GetStringLength
+Description:
+		Provides the length of a string.
+Inputs:	[char*] string
+Output:	[unsigned int] length
+============================================================================= */
+//unsigned int GetStringLength(char* text);
+
+
+
+/* =============================================================================
+VPRINT
+Description:
+		Prints a string of characters on the screen.
+		Places it in the position indicated by VLOCATE or in the last printed 
+		position.
+Inputs:	[char*] string
+Output:	-
 ============================================================================= */
 void VPRINT(char* text);
 
 
 
 /* =============================================================================
-  VPRINTN
-
-  Description:
-    Prints a character string with a limited length on the screen.
-
- Inputs:
-    text (char*) string
-    length (unsigned int) length of the string to print
+VPRINTN
+Description:
+		Prints a character string with a limited length on the screen.
+Inputs:	text (char*) string
+		length (unsigned int) length of the string to print
+Output:	-
 ============================================================================= */
 void VPRINTN(char* text, unsigned int length);
 
 
 
 /* =============================================================================
-  VPrintNumber
-  
-  Description:
-    Prints a number.
-   
-  Inputs:
-    [unsigned int] number
-    [char] length
+VPrintNumber
+Description:
+		Prints a number.
+Inputs:	[unsigned int] number
+		[char] length
+Output:	-
 ============================================================================= */
-void VPrintNumber(unsigned int value, char length);
+void VPrintNumber(unsigned int value);
 
 
 
 /* =============================================================================
-  num2Dec16
-
-  16-bit Integer to ASCII (decimal)
-  original code by baze http://baze.sk/3sc/misc/z80bits.html#5.1
-  (update) Add functionality to replace leading zeros by spaces.  
-  
-  Inputs:
-    - value (unsigned int)  
-    - *address (unsigned int) pointer to the string where the number is to be translated 
+PrintFNumber
+Description: 
+		Prints an unsigned integer on the screen with formatting parameters.
+	   
+Input:	(unsigned int or char) numeric value
+		(char) zero/empty Char: (0 = "", 32=' ', 48='0', etc.)
+		(char) length: 1 to 5          
+Output:	-
 ============================================================================= */
-void num2Dec16(unsigned int aNumber, char *address);
+void VPrintFNumber(unsigned int value, char emptyChar, char length);
 
 
 
-//void VPRINTO(byte column, byte line, char* text, char offset);
-//void vpokeBlockOffset(uint vaddr, char* text, char offset);
-//void vprintLines(byte column, byte line, char* text)
+/* =============================================================================
+PrintNumber
+Description: 
+		Prints an unsigned integer on the screen.
+
+		16-bit Integer to ASCII (decimal) based on num2Dec16 by baze
+		https://baze.sk/3sc/misc/z80bits.html#5.1
+		
+Input:	(unsigned int) numeric value
+		(unsigned int) text parameters (emptyChar<<8)+length
+Output:	-
+============================================================================= */
+void num2Dec16(unsigned int aNumber, unsigned int variables);
 
 
 

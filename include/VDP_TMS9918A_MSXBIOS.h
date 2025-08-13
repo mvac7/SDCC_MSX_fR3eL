@@ -1,5 +1,5 @@
 /* =============================================================================
-VDP_TMS9918A MSX SDCC Library (fR3eL Project)
+  VDP TMS9918A MSX BIOS Library (fR3eL Project)
 ============================================================================= */
 #ifndef  __VDP_TMS9918A_H__
 #define  __VDP_TMS9918A_H__
@@ -162,18 +162,15 @@ Sprite hiding coordinates
 
 
 
+
 /* =============================================================================
 SCREEN
-Description:
+Description:	
 		Initializes the display to one of the four standardized modes on the MSX.
-		- All screen modes will be initialized with the pattern name table set 
-		  to 0, just like the CLS function.  
-		- Initialization of the color table in GRAPHIC1 mode 
-		  (based on the values ​​previously given by the COLOR function).
-		- Initializing the Sprite Attribute Table (OAM) in graphic modes.
-		
+		Same as the SCREEN instruction in MSX BASIC.
+
 Input:	[char] number of screen mode
-			0 = Text1
+			0 = TextMode1
 			1 = Graphic1
 			2 = Graphic2
 			3 = MultiColor
@@ -184,53 +181,9 @@ void SCREEN(char mode);
 
 
 /* =============================================================================
-SortG2map 
-Description: 
-		Initializes the pattern name table, with sorted values. 
-		Designed to be able to display a Graphic2 (256x192px) image.
-Input:	-
-Output:	-
-============================================================================= */
-void SortG2map(void);
-
-
-
-/* =============================================================================
-SortMCmap 
-Description: 
-		Initializes the pattern name table, with sorted values. 
-		Designed to be able to display a MultiColor (64x48 blocks) image.
-Input:	-
-Output:	-
-============================================================================= */
-void SortMCmap(void);
-
-
-
-/* =============================================================================
-CLS 
-Description: 
-		 Clear Screen
-		 Fill VRAM Name Table with the value 0
-Input:	-
-Output:	-
-============================================================================= */
-void CLS(void);
-
-
-
-/* =============================================================================
 COLOR
-Description:
-		Specifies the ink, foreground and background colors.
-		This function has different behaviors depending on the screen mode.
-		In Text1 mode, the color change is instantaneous except the 
-		border color which has no effect.
-		In Graphic1, Graphic2 and Multicolor modes, only the border color has 
-		an instant effect. 
-		Ink and background colors are only used when starting the screen in
-		Graphic1 mode.
-
+Description: 
+		Set the foreground, background, and border screen colors.
 Input:	[char] ink color
 		[char] background color
 		[char] border color
@@ -241,11 +194,24 @@ void COLOR(char ink, char background, char border);
 
 
 /* =============================================================================
+CLS 
+Description: 
+		 Clear Screen
+		 Fills the Name Table with the value 0
+		 Note: Does not hide Sprite planes.
+Input:	-
+Output:	-
+============================================================================= */
+void CLS(void);
+
+
+
+/* =============================================================================
 VPOKE
-Description:
-		Writes a value to the video RAM. 
+Description: 
+		Writes a value to VRAM 
 Input:	[unsigned int] VRAM address
-		[char] value		
+		[char] value
 Output:	- 
 ============================================================================= */
 void VPOKE(unsigned int vaddr, char value);
@@ -253,23 +219,9 @@ void VPOKE(unsigned int vaddr, char value);
 
 
 /* =============================================================================
-FastVPOKE
-Description:
-		Writes a value to the last position in video RAM and increments it.
-		This is a quick way to write consecutive values ​​to VRAM.
-		Requires the VDP to be in write mode, using the SetVDPtoWRITE or VPOKE 
-		function at the beginning of the sequence.
-Input:	[char] value
-Output:	- 
-============================================================================= */
-extern void FastVPOKE(char value);
-
-
-
-/* =============================================================================
 VPEEK
-Description:
-		Reads a value from video RAM. 
+Description: 
+		Reads a value from VRAM
 Input:	[unsigned int] VRAM address
 Output:	[char] value
 ============================================================================= */ 
@@ -278,29 +230,15 @@ char VPEEK(unsigned int vaddr);
 
 
 /* =============================================================================
-FastVPEEK
-Description:
-		Reads the value from the last position in video RAM and increments it.
-		This is a fast way to read consecutive values ​​from VRAM.
-		It requires the VDP to be in read mode, using the SetVDPtoREAD or VPEEK 
-		function at the beginning of the sequence.
-Input:	-
-Output:	[char] value
-============================================================================= */
-extern char FastVPEEK(void);
-
-
-
-/* =============================================================================
 FillVRAM                               
 Description:
-		Fills an area of ​​VRAM with the same value.
-Input:	[unsigned int] VRAM address
-		[unsigned int] block size
-		[char] Value to fill
+		Fill a large area of the VRAM of the same byte
+Input:	[unsigned int] address of VRAM
+		[unsigned int] blocklength
+		[char] Value to fill.
 Output:	- 
 ============================================================================= */
-void FillVRAM(unsigned int vaddr, unsigned int size, char value);
+void FillVRAM(unsigned int vaddr, unsigned int length, char value);
 
 
 
@@ -308,12 +246,12 @@ void FillVRAM(unsigned int vaddr, unsigned int size, char value);
 CopyToVRAM
 Description:
 		Block transfer from memory to VRAM 
-Input:	[unsigned int] Memory address
-		[unsigned int] VRAM address
-		[unsigned int] block size
+Input:	[unsigned int] address of RAM
+		[unsigned int] address of VRAM
+		[unsigned int] blocklength
 Output:	- 
 ============================================================================= */
-void CopyToVRAM(unsigned int addr, unsigned int vaddr, unsigned int size);
+void CopyToVRAM(unsigned int addr, unsigned int vaddr, unsigned int length);
 
 
 
@@ -321,12 +259,12 @@ void CopyToVRAM(unsigned int addr, unsigned int vaddr, unsigned int size);
 CopyFromVRAM
 Description:
 		Block transfer from VRAM to memory
-Input:	[unsigned int] VRAM address                     
-		[unsigned int] RAM address
-		[unsigned int] block size
+Input:	[unsigned int] address of VRAM                     
+		[unsigned int] address of RAM
+		[unsigned int] blocklength
 Output:	-
 ============================================================================= */
-void CopyFromVRAM(unsigned int vaddr, unsigned int addr, unsigned int size);
+void CopyFromVRAM(unsigned int vaddr, unsigned int addr, unsigned int length);
 
 
 
@@ -334,9 +272,9 @@ void CopyFromVRAM(unsigned int vaddr, unsigned int addr, unsigned int size);
 GetVDP
 Description:
 		Gets the value in a VDP register.
-		Provides the mirror value of a VDP register stored in system variables.
-Input:	[char] register number (0-7)           
-Output:	[char] value
+		Provides the mirror value stored in system variables.
+Input:	[char] VDP register number             
+Output:	[char] Value            
 ============================================================================= */
 char GetVDP(char reg);
 
@@ -346,7 +284,7 @@ char GetVDP(char reg);
 SetVDP
 Description:
 		Writes a value to a VDP register
-Input:	[char] register number (0-7)                    
+Input:	[char] VDP register                     
 		[char] value
 Output:	-
 ============================================================================= */
@@ -356,45 +294,18 @@ void SetVDP(char reg, char value);
 
 
 
+//############################################################################## SPRITEs functions
 
-/* =============================================================================
-SetVDPtoREAD
-Description:
-		Sets the VDP to read VRAM mode and indicates the start address.
-Input:	[unsigned int] VRAM address
-Output:	-
-============================================================================= */
-void SetVDPtoREAD(unsigned int vaddr);
-
-
-
-/* =============================================================================
-SetVDPtoWRITE
-Description: 
-		Sets the VDP to write VRAM mode and indicates the start address.
-Input:	[unsigned int] VRAM address
-Output:	-  
-============================================================================= */
-void SetVDPtoWRITE(unsigned int vaddr);
-
-
-
-
-
-/* #############################################################################
-##                                                         SPRITE functions   ##
-################################################################################ */
 
 
 /* =============================================================================
 ClearSprites
 Description: 
-		Initialises the sprite attribute table (OAM). 
-		The vertical location of the sprite is set to 209.
+		Initialises the Sprite Attribute Table (OAM) and Sprite Pattern Table.
 Input:	-
 Output:	-
 ============================================================================= */
-void ClearSprites(void);
+void ClearSprites(void) ;
 
 
 
@@ -438,99 +349,12 @@ void PUTSPRITE(char plane, char x, char y, char color, char pattern);
 /* =============================================================================
 GetSPRattrVRAM
 Description: 
-		Gets the VRAM address of the Sprite attributes of the specified plane
+		Gets the address in video memory of the Sprite attributes of specified 
+		plane.
 Input:	[char] sprite plane (0-31) 
 Output:	[unsigned int] VRAM address
 ============================================================================= */
 unsigned int GetSPRattrVRAM(char plane);
-
-
-
-
-
-
-
-/* ############################################################################# 
-                                                         ASSEMBLE INLINE RUTINES
-
-
---------------------------------------------------------------------------------
-Label:	writeVDP
-Description:
-		Writes a value to a VDP register and 
-		saves the value in the system variables.
-Input:	A  - value
-        C  - register number (0-7) 
-Output:	-
-Registers: IY, DE
-
---------------------------------------------------------------------------------
-Label:	readVDP
-Description:
-		Gets the value in a VDP register.
-		Provides the mirror value of a VDP register stored in system variables.
-Input:	A - register number (0-7)           
-Output:	A - value
-Regs:	HL,DE
-
---------------------------------------------------------------------------------
-Label:	WriteByteToVRAM                                
-Description:
-		Writes a value to the video RAM. Same as VPOKE.
-Input:	HL - VRAM address
-		A - value
-Output:	-
-Regs:	A'
-
---------------------------------------------------------------------------------
-Label:	ReadByteFromVRAM                                
-Description:
-		Reads a value from video RAM.
-Input:	HL - VRAM address
-Output:	A - value
-Regs:	-
-
---------------------------------------------------------------------------------
-Label: fillVR                                
-Description:
-		Fill a large area of the VRAM of the same value.
-Input:	HL - VRAM address
-		DE - Size
-		A  - value
-Output:	-
-Regs:	BC
-
---------------------------------------------------------------------------------
-Label: LDIR2VRAM
-Description:
-		Block transfer from memory to VRAM 
-Input:	DE - source Memory address
-		HL - target VRAM address
-		BC - block size
-Output:	-
-Regs:	A
-
-
---------------------------------------------------------------------------------
-Label: GetBLOCKfromVRAM
-Description: 
-		Block transfer from VRAM to memory.  
-Input:	HL - source VRAM address                     
-		DE - target RAM address
-		BC - block size
-Output:	-
-Regs:	A
-
---------------------------------------------------------------------------------
-Label: GetSpritePattern
-Description: 
-		Returns the pattern value according to the Sprite size 
-		(multiplied by 4 when its 16x16).
-Input:	E - sprite pattern 
-Output: A - pattern position
-Regs:	-
-
-============================================================================= */
 
 
 

@@ -10,21 +10,8 @@
 // boolean
 #ifndef _BOOLEAN
 #define _BOOLEAN
-  typedef enum {false = 0, true = 1} boolean;	// or if you prefer you can rename it to bool
+  typedef enum {false = 0, true = 1} boolean;
 #endif
-
-#ifndef _SWITCHER
-#define _SWITCHER
-  typedef enum {OFF = 0, ON = 1} switcher;
-#endif
-
-#ifndef _CONFIRMATION
-#define _CONFIRMATION
-  typedef enum {NO = 0, YES = 1} confirmation;
-#endif
-
-//OK CANCEL
-
 
 // unsigned integer
 #ifndef _UINT

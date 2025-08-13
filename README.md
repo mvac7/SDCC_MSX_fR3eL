@@ -8,20 +8,72 @@
 
 <table>
 <tr><td>Architecture</td><td>MSX</td></tr>
-<tr><td>Format</td><td>C Object (SDCC .rel)</td></tr>
-<tr><td>Programming language</td><td>C and Z80 assembler</td></tr>
-<tr><td>Compiler</td><td>SDCC v4.4 or newer</td></tr>
+<tr><td>Environment</td><td>ROM, MSX-DOS or MSX BASIC</td></tr>
+<tr><td>Format</td><td>SDCC Relocatable object file (.rel)</td></tr>
+<tr><td>Compiler</td><td>SDCC v4.4</td></tr>
 </table>
 
+<br/>
+
+---
+
+# Attention, please!
+
+| Z80 calling conventions |
+| :---       |
+| Some libraries aren't adapted to the improvements added in the new SDCC releases (Z80 calling conventions), so they won't work.<br/>I'm working on adapting them and adding improvements.<br/>Thank you for your patience. |
+
+This project is **WORK IN PROCESS**.
+
+This project is not finished and I cannot guarantee its completion.
+
+There are no libraries for disk access (MSX-DOS).
+
+There are no libraries for hardware like the superior VDPs (V9938 or V9958), or PSGs like the SCC, FM, ...
+
+The project is alive, so it may undergo changes. 
+
+I'm currently adapting the library code to the Z80 calling conventions included in SDCC version 4.1.12. #5
+I'm taking this opportunity to add improvements and reorganize the different parts of the project, which is why it's taking longer than expected.
+Among these changes, I'm renaming the projects so they're more easily identifiable. #6
+
+You can use it freely, but keep in mind that there are better and more complete libraries, such as [`Fusion-C`](https://github.com/ericb59/Fusion-C-v1.2) by [Eric Boez](https://github.com/ericb59), [`MSXgl`](https://github.com/aoineko-fr/MSXgl) by [Aoineko](https://github.com/aoineko-fr) or [libmsx](https://github.com/mori0091/libmsx) by Daishi Mori [(mori0091)](https://github.com/mori0091).
+(See section [`C Libraries or Engines for MSX`](#C-Libraries-or-Engines-for-MSX)). 
+
+The choice is yours.
+
+Thanks for waiting.
+
+	mvac7 __aka a0rante__
 
 <br/>
+
+---
+
+## About MSX fR3eL Project 
+
+This repository compiles all the fR3eL libraries for the development in C language of MSX applications with the SDCC cross compiler.
+
+It also provides startups (CRTs) and Makefiles for different types of application formats (ROM or MSX-DOS), in a C project structure prepared to start a new project.
+
+Most of the libraries use the BIOS of the MSX System, with what is achieved lightness and compatibility but not speed. 
+
+It will not be a problem, for most of the cases where the use is controlled, but if you need to perform tasks that work with large volumes of data (such as dynamic graphics), you may need to program more optimal functions and adapted to the requirements of your project.
+                                                                                                                                                                                   
+Unlike other libraries that are more homogeneous, here you can find in some cases several libraries addressing the same task in different ways (as in the case of SPRITES). That is so you can choose the solution that best suits your needs.
+
+You can improve them, cut what you need or transform them to other compilers, for your personal projects or you can share them with the community. 
+
+<br/>
+
+---
 
 ### Authors:
 
 This project has been developed mainly by mvac7, but includes code and ideas contributed by numerous developers who share their knowledge with the MSX community.
 I add here a list of people who have participated directly or indirectly, in recognition of their work.
  
-- mvac7 (Code Writer)
+- mvac7 (Coder and project manager)
 - Avelino Herrera (Knowledge)
 - Konamiman (CRTs and Knowledge)
 - Fubukimaru (Linux Makefiles and documentation fixes)
@@ -32,45 +84,16 @@ I add here a list of people who have participated directly or indirectly, in rec
 - MSXKun (PT3 Player improvements and Knowledge) 
 - SapphiRe (ayFX Player and PT3 Player improvements)
 - WYZ (WYZ Player)
-
+- baze - Includes a 16-bit integer to ASCII conversion routine, based on [num2Dec16](http://baze.sk/3sc/misc/z80bits.html#5.1)
 
 <br/>
 
 ---
 
-# WORK IN PROCESS!
+## License
 
-This project is not finished and I cannot guarantee its completion.
-
-There are no libraries for disk access (MSX-DOS).
-
-There are no libraries for hardware like the superior VDPs (V9938 or V9958), or PSGs like the SCC, FM, ...
-
-The project is alive, so it may undergo changes. 
-
----
-
-## About MSX fR3eL Project 
-
-This repository compiles all the fR3eL libraries for the development in C language of MSX applications with the SDCC cross compiler.
-
-It also provides startups (CRTs) and Makefiles for different types of application formats (ROM or MSX-DOS), in a directory structure prepared to start a project.
-
-Most of the libraries use the BIOS of the MSX System, with what is achieved lightness and compatibility but not speed. 
-
-It will not be a problem, for most of the cases where the use is controlled, but if you need to perform tasks that work with large volumes of data (such as dynamic graphics), you may need to program more optimal functions and adapted to the requirements of your project.
-                                                                                                                                                                                   
-Unlike other libraries that are more homogeneous, here you can find in some cases several libraries addressing the same task in different ways (as in the case of SPRITES). That is so you can choose the solution that best suits your needs.
-
-You can improve them, cut what you need or transform them to other compilers, for your personal projects or you can share them with the community. 
-
-The main reason that has led me to create this project is learning and to use them in my MSX application development.
- 
-You can use it freely, but keep in mind that there are better and more complete libraries, such as [`Fusion-C`](https://github.com/ericb59/Fusion-C-v1.2) by [Eric Boez](https://github.com/ericb59) or [`MSXgl`](https://github.com/aoineko-fr/MSXgl) by [Aoineko](https://github.com/aoineko-fr) (See section [`C Libraries or Engines for MSX`](#C-Libraries-or-Engines-for-MSX)). 
-
-The choice is yours.
-
-mvac7
+This project is open source under the [MIT license](LICENSE).
+You can add part or all of this code in your application development or include it in other libraries/engines.
 
 <br/>
 
@@ -78,7 +101,7 @@ mvac7
 
 ## Requirements
 
-- [Small Device C Compiler (SDCC) v4.1](http://sdcc.sourceforge.net/)
+- [Small Device C Compiler (SDCC) v4.4](http://sdcc.sourceforge.net/)
 - [Hex2bin v2.5](http://hex2bin.sourceforge.net/)
 
 <br/>
@@ -88,12 +111,6 @@ mvac7
 ## Acknowledgments
  
 I want to give a special thanks everyone who selflessly shares information and code, as they contribute to continued development and extend the life of retro platforms.
-
-- MSX Assembly Page > [`WEB`](http://map.grauw.nl/resources/msxbios.php)
-- MSX Resource Center > [`WEB`](https://www.msx.org)
-- Portar MSX Tech Doc > [`WEB`](https://problemkaputt.de/portar.htm)
-
-<br/>
 
 - Avelino Herrera > [`WEB`](http://msx.avelinoherrera.com/index_es.html)
 - Nerlaska > [`Blog`](http://albertodehoyonebot.blogspot.com.es)
@@ -114,12 +131,27 @@ I want to give a special thanks everyone who selflessly shares information and c
 - Baze > [`WEB`](http://baze.sk/3sc/misc/z80bits.html)
 - Guillaume "Aoineko" Blanchard > [`gitHub`](https://github.com/aoineko-fr)
 - Konamiman [`gitHub`](https://github.com/Konamiman) [`WEB`](https://www.konamiman.com/msx/msx-e.html)
+
+<br/>
+
+- MSX Assembly Page > [`WEB`](http://map.grauw.nl/resources/msxbios.php)
+- MSX Resource Center > [`WEB`](https://www.msx.org)
+- Portar MSX Tech Doc > [`WEB`](https://problemkaputt.de/portar.htm)
 - Karoshi MSX Community > [`WEB`](http://karoshi.auic.es/)
-- BlueMSX emulator >> [`WEB`](http://www.bluemsx.com/)
-- OpenMSX emulator >> [`WEB`](http://openmsx.sourceforge.net/)
-- [`WebMSX`](https://webmsx.org/) emulator by Paulo A. Peccin >> [`gitHub`](https://github.com/ppeccin/webmsx)
-- fMSX emulator by Marat Fayzullin >> [`WEB`](https://fms.komkon.org/fMSX/)
-- Meisei emulator by Hap >> [`gitHub`](https://github.com/pipagerardo/meisei)
+
+<br/>
+
+---
+
+## Startup files (CRT)
+
+| Library | Description |
+| :---    | :---        |
+| [crt0_MSX816kROM4000](https://github.com/mvac7/SDCC_startup_MSX816kROM4000)  | MSX 8/16K 4000h ROM startup file (CRT) |
+| [crt0_MSX816kROM8000](https://github.com/mvac7/SDCC_startup_MSX816kROM8000)  | MSX 8/16K 8000h ROM startup file (CRT) |
+| [crt0_MSX32kROM4000](https://github.com/mvac7/SDCC_startup_MSX32kROM4000)    | MSX 32K 4000h ROM startup file (CRT)   |
+| [crt0_MSXDOS](https://github.com/mvac7/SDCC_startup_MSXDOS/tree/main/CRT0_simple) | Simple CRT for MSX-DOS applications without parameters |
+| [crt0_MSXDOS_advanced](https://github.com/mvac7/SDCC_startup_MSXDOS/tree/main/CRT0_advanced) | Advanced CRT for MSX-DOS applications with parameter input |
 
 <br/>
 
@@ -127,51 +159,59 @@ I want to give a special thanks everyone who selflessly shares information and c
  
 ## List of Libraries
 
-They are divided into three groups, since in some cases they have been developed to work in specific execution environments: ROMs or MSX-DOS.
+They are divided into three groups, since in some cases they have been developed to work in specific execution environments: 
+- with BIOS (ROM or MSX BASIC) 
+- without BIOs (MSX-DOS)
+- for any of the environments
 
-### To develop MSX ROM or MSX BASIC binary (use MSX BIOS):
+<br/>
+ 
 
-- **MSX 8/16K 8000h ROM startup file (CRT)** [`Project`](https://github.com/mvac7/SDCC_startup_MSX816kROM8000)
-- **MSX 8/16K 4000h ROM startup file (CRT)** [`Project`](https://github.com/mvac7/SDCC_startup_MSX816kROM4000)
-- **MSX 32K 4000h ROM startup file (CRT)** [`Project`](https://github.com/mvac7/SDCC_startup_MSX32kROM4000)
-- **Keyboard MSX ROM Library** - _Functions for reading the keyboard of MSX computers._ [`Project`](https://github.com/mvac7/SDCC_KEYBOARD_MSXROM_Lib) - [`DOC`](https://github.com/mvac7/SDCC_KEYBOARD_MSXROM_Lib/blob/master/docs/HOWTO.md)
-- **Joystick MSX ROM Library** - _Basic functions for reading Joystick controllers or Cursor Keys._ [`Project`](https://github.com/mvac7/SDCC_JOYSTICK_MSXROM_Lib)
-- **Textmode MSX ROM Library** - _Functions for starting and printing in text modes._ [`Project`](https://github.com/mvac7/SDCC_TEXTMODE_MSXROM_Lib) - [`DOC`]( https://github.com/mvac7/SDCC_TEXTMODE_MSXROM_Lib/blob/master/docs/HOWTO.md)
-- **VDP TMS9918A MSX ROM Library** - _Basic functions to work with the TMS9918A video processor using the MSX BIOS._ [`Project`](https://github.com/mvac7/SDCC_VDP_TMS9918A_MSXROM_Lib)
-- **VDP SPRITES MSX ROM Library** - _Functions to facilitate the use of Sprites of the TMS9918A._ [`Project`](https://github.com/mvac7/SDCC_VDP_SPRITES_MSXROM_Lib)
-- **VDP SPRITES mode 1/2 MSX ROM Library** - _Basic functions for managing Sprites with facilities to work with G3 mode (Screen 4)._ [`Project`](https://github.com/mvac7/SDCC_VDP_SPRITES_12_MSXROM_Lib)
-- **VDP SPRITES Small MSX ROM Library** - _ClearSprites and PUTSPRITE functions._ [`Project`](https://github.com/mvac7/SDCC_VDP_SPRITES_S_MSXROM_Lib)
-- **VDP SPRITES mode 2 MSX ROM Library** - _Library with functions to display mode 2 sprites in V9938 graphics mode 3_ [`Project`](https://github.com/mvac7/SDCC_VDP_SPRITES_mode2_MSXROM_Lib)
+| Note: |
+| :---  |
+| Libraries that do not specify an environment can be used in `ROM`, `MSX-DOS` or `MSX BASIC` |
 
 
-### To develop MSX-DOS applications (.COM):
+### General Pourpose
 
-- **MSX-DOS startup file (CRT)** [`Project`](https://github.com/mvac7/SDCC_startup_MSXDOS)
-- **Keyboard MSX-DOS Library** - _Functions for reading the keyboard of MSX computers._ [`Project`](https://github.com/mvac7/SDCC_KEYBOARD_MSXDOS_Lib) - [`DOC`](https://github.com/mvac7/SDCC_KEYBOARD_MSXDOS_Lib/blob/master/docs/HOWTO.md)
-- **Joystick MSX-DOS Library** - _Basic functions for reading Joystick controllers or Cursor Keys._ [`Project`](https://github.com/mvac7/SDCC_JOYSTICK_MSXDOS_Lib) - [`DOC`](https://github.com/mvac7/SDCC_JOYSTICK_MSXDOS_Lib/blob/main/docs/HOWTO.md)
-- **Textmode MSX-DOS Library** - _Functions for starting and printing in text modes._ [`Project`](https://github.com/mvac7/SDCC_TEXTMODE_MSXDOS_Lib)
+- **MSX Memory** C function library for accessing Z80 memory and slots/subslots on MSX computers. [`Project`](https://github.com/mvac7/fR3eL_memory_MSX_Libraries) - [`DOC`](https://github.com/mvac7/fR3eL_memory_MSX_Libraries/blob/master/docs/HOWTO.md)
+	- _memory_Z80.rel_ Provides you with functions to read or write to the memory.
+	- _memory_Slots_MSX.rel_ Allows you to configure the pages of the slots and subslots.
+- **Interrupt M1** Libraries to work with Z80 Mode 1 interrupts. [`Project`](https://github.com/mvac7/fR3eL_interruptM1_Libraries) - [`DOC`](https://github.com/mvac7/fR3eL_interruptM1_Libraries/blob/main/ISR/docs/HOWTO.md)
+	- _interruptM1_ISR.rel_ Functions to control the Interrupt Service Routine (ISR).
+	- _interruptM1_Hooks.rel_ Functions to control the MSX system interrupt hooks.
+- **Keyboard** - Library with Basic functions for reading the keyboard of MSX computers. [`Project`](https://github.com/mvac7/fR3eL_keyboard_MSX_Libraries) - [`DOC`](https://github.com/mvac7/fR3eL_keyboard_MSX_Libraries/blob/master/docs/HOWTO.md)
+	- _keyboard_MSXBIOS_ Uses the MSX BIOS. It takes up very little memory. `ROM` or `MSX BASIC` 
+	- _keyboard_MSXDOS_ Uses the MSX BIOS functions via inter-slot call (CALSLT). `MSX-DOS`
+- **Joystick** - Library with basic functions for reading Joystick controllers or Cursor Keys. [`Project`](https://github.com/mvac7/fR3eL_joystick_MSX_Lib) - [`DOC`](https://github.com/mvac7/fR3eL_joystick_MSX_Lib/blob/master/docs/HOWTO.md)
+	- _joystick_MSX_ Does not use the MSX BIOS. For all environments.
+	- _joystick_MSXBIOS_ Uses the MSX BIOS. It takes up very little memory. `ROM` or `MSX BASIC`
+- **String Basics** - Basic functions for the managing C Strings. [`Project`](https://github.com/mvac7/fR3eL_string_Basics_Lib) - [`DOC`](https://github.com/mvac7/fR3eL_string_Basics_Lib/blob/master/docs/HOWTO.md)
 
+<br/>
 
-### To develop anything:
+### Video
 
-- **memoryZ80 Library** _Provides you with functions to read or write to the memory._ [`Project`](https://github.com/mvac7/SDCC_MEMORY_MSX_Lib) - [`DOC`](https://github.com/mvac7/SDCC_MEMORY_MSX_Lib/blob/master/docs/HOWTO.md)
-- **memoryMSXSlots Library** _Allows you to configure the pages of the slots and subslots._ [`Project`](https://github.com/mvac7/SDCC_MEMORY_MSX_Lib) - [`DOC`](https://github.com/mvac7/SDCC_MEMORY_MSX_Lib/blob/master/docs/HOWTO.md)
-- **Z80 Interrupt M1 MSX Libraries** - _libraries to work with Z80 Mode 1 interrupts_ [`Project`](https://github.com/mvac7/SDCC_interruptM1_Libraries)
-	- ISR _Functions to control the Interrupt Service Routine (ISR)_ [`Project`](https://github.com/mvac7/SDCC_interruptM1_Libraries/tree/main/ISR) - [`DOC`](https://github.com/mvac7/SDCC_interruptM1_Libraries/blob/main/ISR/docs/HOWTO.md)
-	- Hooks _Functions to control the MSX system interrupt hooks_ [`Project`](https://github.com/mvac7/SDCC_interruptM1_Libraries/tree/main/Hooks) - [`DOC`](https://github.com/mvac7/SDCC_interruptM1_Libraries/blob/main/Hooks/docs/HOWTO.md)
-- **Z80 Interrupt M1 ISR MSX Library** - _Interrupt Service Routine (ISR) controller for Z80 Mode 1 interrupts in MSX system._ [`Project`](https://github.com/mvac7/SDCC_interruptM1_ISR_Lib) - [`DOC`](https://github.com/mvac7/SDCC_interruptM1_ISR_Lib/blob/main/docs/HOWTO.md)
-- **VDP TMS9918A Library** - _Functions to work with the TMS9918A without using the MSX BIOS._ [`Project`](https://github.com/mvac7/SDCC_VDP_TMS9918A_Lib)  
-- **VDP SPRITES Library** - _Functions to facilitate the use of Sprites of the TMS9918A._ [`Project`](https://github.com/mvac7/SDCC_VDP_SPRITES_Lib)
-- **VDP PRINT Library v1.3** _Functions Library for display text strings in the graphic modes of the TMS9918A (G1 and G2)._ [`Project`](https://github.com/mvac7/SDCC_VDP_PRINT_Lib) - [`DOC`](https://github.com/mvac7/SDCC_VDP_PRINT_Lib/blob/master/docs/HOWTO.md)
-- **String BASICs Library** - _Basic functions for the treatment of Character Arrays in SDCC, similar to those of MSX BASIC._ [`Project`](https://github.com/mvac7/SDCC_STRING_B_Lib)
+- **VDP_TMS9918A** - Library with basic functions to work with the TMS9918A video processor. [`Project`](https://github.com/mvac7/fR3eL_VDP_TMS9918A_Lib) - [`DOC`](https://github.com/mvac7/fR3eL_VDP_TMS9918A_Lib/blob/master/docs/HOWTO.md)
+- **VDP_TMS9918A_MSXBIOS** - Library with basic functions to work with the TMS9918A video processor. `ROM` or `MSX BASIC`  [`Project`](https://github.com/mvac7/SDCC_VDP_TMS9918A_MSXROM_Lib) - [`DOC`](https://github.com/mvac7/fR3eL_VDP_TMS9918A_MSXBIOS_Lib/blob/master/docs/HOWTO.md)
+- **VDP_SPRITES** - Library for directly accessing sprite attributes from the TMS9918A/28A/29A video processor._ [`Project`](https://github.com/mvac7/fR3eL_VDP_SPRITES_Lib) - [`DOC`](https://github.com/mvac7/fR3eL_VDP_SPRITES_Lib/blob/master/docs/HOWTO.md)
+- **VDP_PRINT** Library for displaying text strings in TMS9918A graphics modes (Graphic1 and Graphic2). [`Project`](https://github.com/mvac7/fR3eL_VDP_PRINT_Lib) - [`DOC`](https://github.com/mvac7/fR3eL_VDP_PRINT_Lib/blob/master/docs/HOWTO.md)
+- **Textmode** - with functions for developing text-mode applications. Includes functions for screen initialization and printing of texts and numbers. [`Project`](https://github.com/mvac7/fR3eL_textmode_MSX_Lib) - [`DOC`](https://github.com/mvac7/fR3eL_textmode_MSX_Lib/blob/master/docs/HOWTO.md)
+	- _textmode_MSXBIOS_ Uses the MSX BIOS. It takes up very little memory. `ROM` or `MSX BASIC` 
+	- _textmode_MSXDOS_ Uses the MSX BIOS functions via inter-slot call (CALSLT). `MSX-DOS`
+
+<br/>
+
+### Pending conversion to SDCC v4.4
+
+- **Mouse** - Basic functions for reading mouse controller of MSX computers. [`Project`](https://github.com/mvac7/SDCC_MOUSE_MSX_Lib) 
+- **WRLE decompress (aka RLEWB)** - _C Library for decompress WRLE data encoding. [`Project`](https://github.com/mvac7/Z80_RLEWB)
 - **PSG AY-3-8910 RT Library** - _Basic functions to work with PSG AY-3-8910 or compatible._ [`Project`](https://github.com/mvac7/SDCC_AY38910RT_Lib) - [`DOC`](https://github.com/mvac7/SDCC_AY38910RT_Lib/blob/master/docs/HOWTO.md)
 - **PSG AY-3-8910 playFX Library** - _Functions for playing sound effects with the AY-3-8910._ [`Project`](https://github.com/mvac7/SDCC_AY38910_playFX_Lib)    
 - **PSG AY-3-8910 BF Library** - _Library to access the internal or external PSG AY-3-8910 through a Buffer._ [`Project`](https://github.com/mvac7/SDCC_AY38910BF_Lib) - [`DOC`](https://github.com/mvac7/SDCC_AY38910BF_Lib/blob/main/docs/HOWTO.md)
 - **PSG ayFX Player Library** - _Play ayFX effects for the PSG AY-3-8910 (requires AY38910BF library)_ [`Project`](https://github.com/mvac7/SDCC_ayFXplayer) - [`DOC`](https://github.com/mvac7/SDCC_ayFXplayer_Lib/blob/main/docs/HOWTO.md)
 - **PT3 Player Library for MSX** - _SDCC PT3 Player (Vortex Tracker) Library for MSX (requires AY38910BF library)_ [`Project`](https://github.com/mvac7/SDCC_PT3player) - [`DOC`](https://github.com/mvac7/SDCC_PT3player/blob/master/docs/HOWTO.md)
 - **WYZ Player Library for MSX** - _SDCC WYZ Tracker Player Library for MSX._ [`Project`](https://github.com/mvac7/SDCC_WYZplayer)
-- **Mouse MSX Library** - _Basic functions for reading mouse controller of MSX computers._ [`Project`](https://github.com/mvac7/SDCC_MOUSE_MSX_Lib) 
-- **WRLE decompress (aka RLEWB)** - _C Library for decompress WRLE data encoding._ [`Project`](https://github.com/mvac7/Z80_RLEWB)
 
 <br/>
 
@@ -185,7 +225,16 @@ The [`AY38910BF`](https://github.com/mvac7/SDCC_AY38910BF_Lib), [`PT3player`](ht
 
 <br/>
 
+## fR3eL's Development Tools
+
+- [`WYZtoSDCCobj Converter Tool`](https://github.com/mvac7/mSXdevtools_WYZtoSDCCobj) - WYZ to C Object Converter Tool for WYZ Player MSX SDCC Library
+- [`PT3toCdata Converter Tool`](https://github.com/mvac7/mSXdevtools_PT3toCdata) - Vortex PT3 to C data Converter Tool
+
+<br/>
+
 ---
+
+
 
 # Development resources
 
@@ -215,9 +264,7 @@ The [`AY38910BF`](https://github.com/mvac7/SDCC_AY38910BF_Lib), [`PT3player`](ht
 - [`CMSXbin`](https://github.com/aoineko-fr/CMSXbin) - Convert binary to text file - By Guillaume "Aoineko" Blanchard
 - [`CMSXimg`](https://github.com/aoineko-fr/CMSXimg) - Command line tool to create images table to add to MSX programs (C/ASM/Bin) - By Guillaume "Aoineko" Blanchard
 - [`CMSXmath`](https://github.com/aoineko-fr/CMSXmath) - Command line tool to create pre-calculated mathematics tables - By Guillaume "Aoineko" Blanchard
-- [`WYZtoSDCCobj Converter Tool`](https://github.com/mvac7/mSXdevtools_WYZtoSDCCobj) - WYZ to C Object Converter Tool for WYZ Player MSX SDCC Library
-- [`PT3toCdata Converter Tool`](https://github.com/mvac7/mSXdevtools_PT3toCdata) - Vortex PT3 to C data Converter Tool
-
+- [`MSX Tile Forge`](https://github.com/DamnedAngel/msx-tile-forge) - A Pallete, Tile, Supertile, Palette, and Map Editor for MSX, built with Python and Tkinter - By DamnedAngel
 
 <br/>
 
@@ -256,12 +303,14 @@ The [`AY38910BF`](https://github.com/mvac7/SDCC_AY38910BF_Lib), [`PT3player`](ht
 - Texas Instruments TMS9918A application manual [`PDF`](http://map.grauw.nl/resources/video/texasinstruments_tms9918.pdf)
 - Texas Instruments VDP Programmer’s Guide [`PDF`](http://map.grauw.nl/resources/video/ti-vdp-programmers-guide.pdf)
 - Texas Instruments TMS9918A VDP by Sean Young [`TXT`](http://bifi.msxnet.org/msxnet/tech/tms9918a.txt)
+- The MSX Red Book · [2 Video Display Processor](https://github.com/gseidler/The-MSX-Red-Book/blob/master/the_msx_red_book.md#chapter_2)
 
 <br/>
 
 #### VDP V9938
 - V9938 Technical Data Book [`PDF`](http://map.grauw.nl/resources/video/yamaha_v9938.pdf) [`TXT`](http://map.grauw.nl/resources/video/v9938/v9938.xhtml)
 - V9938 Programmers Guide [`PDF`](http://rs.gr8bit.ru/Documentation/V9938-programmers-guide.pdf)
+- Portar Doc [Video Display Processor](https://problemkaputt.de/portar.htm#videodisplayprocessor)
 
 <br/>
 
@@ -279,6 +328,3 @@ The [`AY38910BF`](https://github.com/mvac7/SDCC_AY38910BF_Lib), [`PT3player`](ht
 ### Programming languages
 - Z80 Assembler - [z80 Heaven](http://z80-heaven.wikidot.com/)
 - Wikibooks [C Programming](https://en.wikibooks.org/wiki/C_Programming)
-
-
----
