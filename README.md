@@ -33,11 +33,11 @@ There are no libraries for hardware like the superior VDPs (V9938 or V9958), or 
 
 The project is alive, so it may undergo changes. 
 
-I'm currently adapting the library code to the Z80 calling conventions included in SDCC version 4.1.12. [#5](issues/5)
+I'm currently adapting the library code to the Z80 calling conventions included in SDCC version 4.1.12. [#5](https://github.com/mvac7/SDCC_MSX_fR3eL/issues/5)
 I'm taking this opportunity to add improvements and reorganize the different parts of the project, which is why it's taking longer than expected.
-Among these changes, I'm renaming the projects so they're more easily identifiable. [#6](issues/6)
+Among these changes, I'm renaming the projects so they're more easily identifiable. [#6](https://github.com/mvac7/SDCC_MSX_fR3eL/issues/6)
 
-You can use it freely, but keep in mind that there are better and more complete libraries, such as [`Fusion-C`](https://github.com/ericb59/Fusion-C-v1.2) by [Eric Boez](https://github.com/ericb59), [`MSXgl`](https://github.com/aoineko-fr/MSXgl) by [Aoineko](https://github.com/aoineko-fr) or [libmsx](https://github.com/mori0091/libmsx) by Daishi Mori [(mori0091)](https://github.com/mori0091).
+You can use it freely, but keep in mind that there are better and more complete libraries, such as [`Fusion-C`](https://github.com/ericb59/Fusion-C-v1.2) by [_Eric Boez_](https://github.com/ericb59), [`MSXgl`](https://github.com/aoineko-fr/MSXgl) by [_Aoineko_](https://github.com/aoineko-fr) or [`libmsx`](https://github.com/mori0091/libmsx) by [_Daishi Mori_](https://github.com/mori0091).
 (See section [`C Libraries or Engines for MSX`](#C-Libraries-or-Engines-for-MSX)). 
 
 The choice is yours.
@@ -119,15 +119,15 @@ I want to give a special thanks everyone who selflessly shares information and c
 - Fubukimaru [`gitHub`](https://github.com/Fubukimaru)
 - AndreaR > [`Blog`](http://andrear.altervista.org/home/msxsoftware.php)
 - Sapphire/Z80ST > [`WEB`](http://z80st.auic.es/)
-- Fernando García > [`Video Tutorial`](http://www.z80st.es/cursos/bitvision-assembler)
+- Fernando GarcÃ­a > [`Video Tutorial`](http://www.z80st.es/cursos/bitvision-assembler)
 - Ramones > [`MSXblog`](https://www.msxblog.es/tutoriales-de-programacion-en-ensamblador-ramones/) - [`MSXbanzai`](http://msxbanzai.tni.nl/dev/faq.html)
 - Eric Boez > [`gitHub`](https://github.com/ericb59)
 - WYZ [`WEB`](https://sites.google.com/site/wyzplayer/home)
 - S.V.Bulba > [`WEB`](http://bulba.at.kz)
 - Dioniso >> `?`
 - PipaGerardo [`gitHub`](https://github.com/pipagerardo)
-- Ramón de las Heras [`@pentacour`](https://twitter.com/pentacour)
-- Néstor Sancho (theNestruo) [`gitHub`](https://github.com/theNestruo) 
+- RamÃ³n de las Heras [`@pentacour`](https://twitter.com/pentacour)
+- NÃ©stor Sancho (theNestruo) [`gitHub`](https://github.com/theNestruo) 
 - Baze > [`WEB`](http://baze.sk/3sc/misc/z80bits.html)
 - Guillaume "Aoineko" Blanchard > [`gitHub`](https://github.com/aoineko-fr)
 - Konamiman [`gitHub`](https://github.com/Konamiman) [`WEB`](https://www.konamiman.com/msx/msx-e.html)
@@ -147,7 +147,7 @@ I want to give a special thanks everyone who selflessly shares information and c
 
 Uses a standard structure for C projects:
 
-´´´
+```
 /bin			<--- final file (ROM, COM or BIN)
 /build			<--- compiler output files
 /crt0			<--- SDCC startup files (CRT)
@@ -156,7 +156,7 @@ Uses a standard structure for C projects:
 /src			<--- source code
 MAKEFILE.BAT	<--- Windows script
 makefile		<--- Linux script
-´´´
+```
 
 <br/>
 
@@ -266,11 +266,15 @@ The [`AY38910BF`](https://github.com/mvac7/SDCC_AY38910BF_Lib), [`PT3player`](ht
 - [`WYZtoSDCCobj Converter Tool`](https://github.com/mvac7/mSXdevtools_WYZtoSDCCobj) - WYZ to C Object Converter Tool for WYZ Player MSX SDCC Library
 - [`PT3toCdata Converter Tool`](https://github.com/mvac7/mSXdevtools_PT3toCdata) - Vortex PT3 to C data Converter Tool
 
-- [`WYZ Tracker`](https://github.com/AugustoRuiz/WYZTracker) by Augusto Ruiz 
-- [`Vortex Tracker`](https://bulba.untergrund.net/vortex_e.htm) by Sergey Bulba
+<br/>
 
-- [`AY Sound FX Editor`](https://shiru.untergrund.net/software.shtml) by Shiru
-- [`AY Sound FX Editor (Improved)`](https://github.com/Threetwosevensixseven/ayfxedit-improved) by Shiru and Robin Verhagen-Guest
+- [`WYZ Tracker`](https://github.com/AugustoRuiz/WYZTracker) _by Augusto Ruiz_
+- [`Vortex Tracker`](https://bulba.untergrund.net/vortex_e.htm) _by Sergey Bulba_
+
+<br/>
+
+- [`AY Sound FX Editor`](https://shiru.untergrund.net/software.shtml) _by Shiru_
+- [`AY Sound FX Editor (Improved)`](https://github.com/Threetwosevensixseven/ayfxedit-improved) by _Shiru_ and _Robin Verhagen-Guest_
 
 <br/>
 
@@ -296,34 +300,35 @@ The [`AY38910BF`](https://github.com/mvac7/SDCC_AY38910BF_Lib), [`PT3player`](ht
 - **libmsx** `SDCC` _by Daishi Mori (mori0091)_ [`gitHub`](https://github.com/mori0091/libmsx)
 - **MSXLib** `SDCC` _by Marq_ [`WEB`](http://www.kameli.net/marq/?page_id=974) --> Get it with svn co svn://www.kameli.net/marq/msxlib
 - **sdcc-msx** `SDCC` _by Manuel Martinez Torres_ [`gitHub`](https://github.com/MartinezTorres/sdcc_msx)
-- **ubox MSX lib** `SDCC` _by Juan J. Martinez_ [`gitLab`](https://gitlab.com/reidrac/ubox-msx-lib) · [`WEB`](https://www.usebox.net/jjm/ubox-msx-lib/)
+- **ubox MSX lib** `SDCC` _by Juan J. Martinez_ [`gitLab`](https://gitlab.com/reidrac/ubox-msx-lib) Â· [`WEB`](https://www.usebox.net/jjm/ubox-msx-lib/)
 - **GFX lib** `Hitech-C` _by Janonne_ [`gitHub`](https://github.com/jannone/msx-gfxlib)
 
 <br/>
 
 ## Development Tools
 
-- [`nMSXtiles`](https://github.com/pipagerardo/nMSXtiles) - Tiles and Sprites Editor for MSX in SC2 and SC4 graphic mode - By Pentacour and PipaGerardo
-- [`99x8Edit`](https://github.com/YusukeLab/99x8Edit) - Graphic editor for systems based on TI TMS9918 and Yamaha V9938 - By Yusuke Miyauchi
-- [`png2msx`](https://github.com/pipagerardo/png2msx) - Tools for graphics and data in MSX. - By PipaGerardo
-- [`PCXTOOLS`](https://github.com/theNestruo/pcxtools) - MSX cross-development command line tools PNG2MSX, PNG2SPR[+] and TMX2BIN
-- [`IMG2SPR`](http://andrear.altervista.org/home/msxsoftware.php) Sprite generator utility By AndreaR 
-- [`MSX Pixel Tools`](https://github.com/reidrac/msx-pixel-tools) - Convert PNG images into sprites and tilesets to be used by the MSX in screen 2 mode - By Juan J. Martínez (reidrac)
+- [`nMSXtiles`](https://github.com/pipagerardo/nMSXtiles) - Tiles and Sprites Editor for MSX in SC2 and SC4 graphic mode - _by Pentacour_ and _PipaGerardo_
+- [`99x8Edit`](https://github.com/YusukeLab/99x8Edit) - Graphic editor for systems based on TI TMS9918 and Yamaha V9938 - _by Yusuke Miyauchi_
+- [`png2msx`](https://github.com/pipagerardo/png2msx) - Tools for graphics and data in MSX. - _by PipaGerardo_
+- [`PCXTOOLS`](https://github.com/theNestruo/pcxtools) - MSX cross-development command line tools PNG2MSX, PNG2SPR[+] and TMX2BIN - _by theNestruo_
+- [`IMG2SPR`](http://andrear.altervista.org/home/msxsoftware.php) Sprite generator utility - _by AndreaR_
+- [`MSX Pixel Tools`](https://github.com/reidrac/msx-pixel-tools) - Convert PNG images into sprites and tilesets to be used by the MSX in screen 2 mode - _by Juan J. MartÃ­nez (reidrac)_
 - [`CMSXbin`](https://github.com/aoineko-fr/CMSXbin) - Convert binary to text file - By Guillaume "Aoineko" Blanchard
-- [`CMSXimg`](https://github.com/aoineko-fr/CMSXimg) - Command line tool to create images table to add to MSX programs (C/ASM/Bin) - By Guillaume "Aoineko" Blanchard
-- [`CMSXmath`](https://github.com/aoineko-fr/CMSXmath) - Command line tool to create pre-calculated mathematics tables - By Guillaume "Aoineko" Blanchard
-- [`MSX Tile Forge`](https://github.com/DamnedAngel/msx-tile-forge) - A Pallete, Tile, Supertile, Palette, and Map Editor for MSX, built with Python and Tkinter - By DamnedAngel
+- [`CMSXimg`](https://github.com/aoineko-fr/CMSXimg) - Command line tool to create images table to add to MSX programs (C/ASM/Bin) - _by Guillaume "Aoineko" Blanchard_
+- [`CMSXmath`](https://github.com/aoineko-fr/CMSXmath) - Command line tool to create pre-calculated mathematics tables - _by Guillaume "Aoineko" Blanchard_
+- [`MSX Tile Forge`](https://github.com/DamnedAngel/msx-tile-forge) - A Pallete, Tile, Supertile, Palette, and Map Editor for MSX, built with Python and Tkinter - _by DamnedAngel_
 
 <br/>
 
 ## MSX Emulators
 
-- OpenMSX emulator >> [`WEB`](http://openmsx.sourceforge.net/)
-- BlueMSX emulator >> [`WEB`](http://www.bluemsx.com/)
-- [`WebMSX`](https://webmsx.org/) emulator by Paulo A. Peccin >> [`gitHub`](https://github.com/ppeccin/webmsx)
-- [`MSXPen`](https://msxpen.com/) MSX Developer Playground & Code Editor in the Browser by [Rafael Jannone](https://twitter.com/jannone)
-- fMSX by Marat Fayzullin [`WEB`](https://fms.komkon.org/fMSX/)
-- Meisei emulator by Hap >> [`gitHub`](https://github.com/pipagerardo/meisei)
+- [`OpenMSX`](http://openmsx.sourceforge.net/) Emulator
+- [`BlueMSX`](http://www.bluemsx.com/) Emulator
+- [`Meisei`](https://github.com/pipagerardo/meisei) emulator - _by Hap_ and _PipaGerardo_
+- [`WebMSX`](https://webmsx.org/) Emulator  >> [`gitHub`](https://github.com/ppeccin/webmsx) - _by Paulo A. Peccin_
+- [`MSXPen`](https://msxpen.com/) MSX Developer Playground & Code Editor in the Browser - _by_ [_Rafael Jannone_](https://twitter.com/jannone)
+- [`fMSX`](https://fms.komkon.org/fMSX/) - _by Marat Fayzullin_
+
 
 <br/>
 
@@ -335,13 +340,13 @@ The [`AY38910BF`](https://github.com/mvac7/SDCC_AY38910BF_Lib), [`PT3player`](ht
 - [MSX Assembly Page](https://map.grauw.nl/)
 	- [Z80/R800 instruction set](https://map.grauw.nl/resources/z80instr.php)
 - [Portar MSX Tech Doc](https://problemkaputt.de/portar.htm)
-- MSX Resource Center [Development Wiki](https://www.msx.org/wiki/#Developing_for_MSX)
+- MSX Resource Center Â· [Development Wiki](https://www.msx.org/wiki/#Developing_for_MSX)
 
 <br/>
 
 ### Tutorials
-- **MoltSXalats** - Blog about programming with FUSION-C - [English](https://moltsxalats.wixsite.com/fusionc) - [Català](https://moltsxalats.wixsite.com/fusionc/ca) - [Español](https://moltsxalats.wixsite.com/fusionc/es)
-- Tutorial práctico de desarrollo de videojuegos para ordenadores MSX (por Frederic García Nieto) > [PDF](https://riunet.upv.es/bitstream/handle/10251/145214/Memoria.pdf?sequence=2)
+- **MoltSXalats** - Blog about programming with FUSION-C - [English](https://moltsxalats.wixsite.com/fusionc) - [CatalÃ ](https://moltsxalats.wixsite.com/fusionc/ca) - [EspaÃ±ol](https://moltsxalats.wixsite.com/fusionc/es)
+- Tutorial prÃ¡ctico de desarrollo de videojuegos para ordenadores MSX (por Frederic GarcÃ­a Nieto) > [PDF](https://riunet.upv.es/bitstream/handle/10251/145214/Memoria.pdf?sequence=2)
 
 <br/>
 
@@ -349,9 +354,9 @@ The [`AY38910BF`](https://github.com/mvac7/SDCC_AY38910BF_Lib), [`PT3player`](ht
 
 #### VDP TMS9918A
 - Texas Instruments TMS9918A application manual [`PDF`](http://map.grauw.nl/resources/video/texasinstruments_tms9918.pdf)
-- Texas Instruments VDP Programmer’s Guide [`PDF`](http://map.grauw.nl/resources/video/ti-vdp-programmers-guide.pdf)
+- Texas Instruments VDP Programmer's Guide [`PDF`](http://map.grauw.nl/resources/video/ti-vdp-programmers-guide.pdf)
 - Texas Instruments TMS9918A VDP by Sean Young [`TXT`](http://bifi.msxnet.org/msxnet/tech/tms9918a.txt)
-- The MSX Red Book · [2 Video Display Processor](https://github.com/gseidler/The-MSX-Red-Book/blob/master/the_msx_red_book.md#chapter_2)
+- The MSX Red Book Â· [2 Video Display Processor](https://github.com/gseidler/The-MSX-Red-Book/blob/master/the_msx_red_book.md#chapter_2)
 
 <br/>
 
