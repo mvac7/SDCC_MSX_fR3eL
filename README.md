@@ -33,9 +33,9 @@ There are no libraries for hardware like the superior VDPs (V9938 or V9958), or 
 
 The project is alive, so it may undergo changes. 
 
-I'm currently adapting the library code to the Z80 calling conventions included in SDCC version 4.1.12. #5
+I'm currently adapting the library code to the Z80 calling conventions included in SDCC version 4.1.12. [#5](issues/5)
 I'm taking this opportunity to add improvements and reorganize the different parts of the project, which is why it's taking longer than expected.
-Among these changes, I'm renaming the projects so they're more easily identifiable. #6
+Among these changes, I'm renaming the projects so they're more easily identifiable. [#6](issues/6)
 
 You can use it freely, but keep in mind that there are better and more complete libraries, such as [`Fusion-C`](https://github.com/ericb59/Fusion-C-v1.2) by [Eric Boez](https://github.com/ericb59), [`MSXgl`](https://github.com/aoineko-fr/MSXgl) by [Aoineko](https://github.com/aoineko-fr) or [libmsx](https://github.com/mori0091/libmsx) by Daishi Mori [(mori0091)](https://github.com/mori0091).
 (See section [`C Libraries or Engines for MSX`](#C-Libraries-or-Engines-for-MSX)). 
@@ -44,7 +44,7 @@ The choice is yours.
 
 Thanks for waiting.
 
-	mvac7 __aka a0rante__
+mvac7 _aka a0rante_
 
 <br/>
 
@@ -143,6 +143,35 @@ I want to give a special thanks everyone who selflessly shares information and c
 
 ---
 
+## Project Structure
+
+Uses a standard structure for C projects:
+
+´´´
+/bin			<--- final file (ROM, COM or BIN)
+/build			<--- compiler output files
+/crt0			<--- SDCC startup files (CRT)
+/include		<--- general and library includes from fR3eL
+/libs			<--- fR3eL libraries
+/src			<--- source code
+MAKEFILE.BAT	<--- Windows script
+makefile		<--- Linux script
+´´´
+
+<br/>
+
+In the [c_project_structure](https://github.com/mvac7/SDCC_MSX_fR3eL/tree/main/c_project_structure) folder you will find the basis for starting a project for different MSX environments.
+
+- MSX 32K ROM
+- MSX 8 or 16K ROM (at 4000h address)
+- MSX 8 or 16K ROM (at 8000h address)
+- MSX-DOS (without parameters)
+- MSX-DOS with parameters
+
+<br/>
+
+---
+
 ## Startup files (CRT)
 
 | Library | Description |
@@ -205,19 +234,24 @@ They are divided into three groups, since in some cases they have been developed
 ### Pending conversion to SDCC v4.4
 
 - **Mouse** - Basic functions for reading mouse controller of MSX computers. [`Project`](https://github.com/mvac7/SDCC_MOUSE_MSX_Lib) 
-- **WRLE decompress (aka RLEWB)** - _C Library for decompress WRLE data encoding. [`Project`](https://github.com/mvac7/Z80_RLEWB)
-- **PSG AY-3-8910 RT Library** - _Basic functions to work with PSG AY-3-8910 or compatible._ [`Project`](https://github.com/mvac7/SDCC_AY38910RT_Lib) - [`DOC`](https://github.com/mvac7/SDCC_AY38910RT_Lib/blob/master/docs/HOWTO.md)
-- **PSG AY-3-8910 playFX Library** - _Functions for playing sound effects with the AY-3-8910._ [`Project`](https://github.com/mvac7/SDCC_AY38910_playFX_Lib)    
-- **PSG AY-3-8910 BF Library** - _Library to access the internal or external PSG AY-3-8910 through a Buffer._ [`Project`](https://github.com/mvac7/SDCC_AY38910BF_Lib) - [`DOC`](https://github.com/mvac7/SDCC_AY38910BF_Lib/blob/main/docs/HOWTO.md)
-- **PSG ayFX Player Library** - _Play ayFX effects for the PSG AY-3-8910 (requires AY38910BF library)_ [`Project`](https://github.com/mvac7/SDCC_ayFXplayer) - [`DOC`](https://github.com/mvac7/SDCC_ayFXplayer_Lib/blob/main/docs/HOWTO.md)
-- **PT3 Player Library for MSX** - _SDCC PT3 Player (Vortex Tracker) Library for MSX (requires AY38910BF library)_ [`Project`](https://github.com/mvac7/SDCC_PT3player) - [`DOC`](https://github.com/mvac7/SDCC_PT3player/blob/master/docs/HOWTO.md)
-- **WYZ Player Library for MSX** - _SDCC WYZ Tracker Player Library for MSX._ [`Project`](https://github.com/mvac7/SDCC_WYZplayer)
+- **WRLE decompress (aka RLEWB)** - C Library for decompress WRLE data encoding. [`Project`](https://github.com/mvac7/Z80_RLEWB)
+- **PSG AY-3-8910 RT Library** - Basic functions to work with PSG AY-3-8910 or compatible. [`Project`](https://github.com/mvac7/SDCC_AY38910RT_Lib) - [`DOC`](https://github.com/mvac7/SDCC_AY38910RT_Lib/blob/master/docs/HOWTO.md)
+- **PSG AY-3-8910 BF Library** - Library to access the internal or external PSG AY-3-8910 through a Buffer. [`Project`](https://github.com/mvac7/SDCC_AY38910BF_Lib) - [`DOC`](https://github.com/mvac7/SDCC_AY38910BF_Lib/blob/main/docs/HOWTO.md)
+- **PSG ayFX Player Library** - Play ayFX effects for the PSG AY-3-8910 (requires AY38910BF library) [`Project`](https://github.com/mvac7/SDCC_ayFXplayer) - [`DOC`](https://github.com/mvac7/SDCC_ayFXplayer_Lib/blob/main/docs/HOWTO.md)
+- **PT3 Player Library for MSX** - SDCC PT3 Player (Vortex Tracker) Library for MSX (requires AY38910BF library) [`Project`](https://github.com/mvac7/SDCC_PT3player) - [`DOC`](https://github.com/mvac7/SDCC_PT3player/blob/master/docs/HOWTO.md)
+- **WYZ Player Library for MSX** - SDCC WYZ Tracker Player Library for MSX. [`Project`](https://github.com/mvac7/SDCC_WYZplayer)
+
+<br/>
+
+### Deprecated
+
+- **PSG AY-3-8910 playFX Library** - Functions for playing sound effects with the AY-3-8910. [`Project`](https://github.com/mvac7/SDCC_AY38910_playFX_Lib)  
 
 <br/>
 
 ---
 
-## AY Sound System
+## fR3eL AY Sound System
 
 The [`AY38910BF`](https://github.com/mvac7/SDCC_AY38910BF_Lib), [`PT3player`](https://github.com/mvac7/SDCC_AY38910BF_Lib) and [`ayFXplayer`](https://github.com/mvac7/SDCC_ayFXplayer) libraries are designed to work together, so you will have a system to provide music and effects in game development.
 
@@ -225,16 +259,30 @@ The [`AY38910BF`](https://github.com/mvac7/SDCC_AY38910BF_Lib), [`PT3player`](ht
 
 <br/>
 
+---
+
 ## fR3eL's Development Tools
 
 - [`WYZtoSDCCobj Converter Tool`](https://github.com/mvac7/mSXdevtools_WYZtoSDCCobj) - WYZ to C Object Converter Tool for WYZ Player MSX SDCC Library
 - [`PT3toCdata Converter Tool`](https://github.com/mvac7/mSXdevtools_PT3toCdata) - Vortex PT3 to C data Converter Tool
 
+- [`WYZ Tracker`](https://github.com/AugustoRuiz/WYZTracker) by Augusto Ruiz 
+- [`Vortex Tracker`](https://bulba.untergrund.net/vortex_e.htm) by Sergey Bulba
+
+- [`AY Sound FX Editor`](https://shiru.untergrund.net/software.shtml) by Shiru
+- [`AY Sound FX Editor (Improved)`](https://github.com/Threetwosevensixseven/ayfxedit-improved) by Shiru and Robin Verhagen-Guest
+
 <br/>
 
 ---
 
+##  Projects that use fR3eL
 
+- [The Alan Randoms Project](https://github.com/mvac7/TARP) (TARP) _Random music maker for MSX computers._
+
+<br/>
+
+---
 
 # Development resources
 
